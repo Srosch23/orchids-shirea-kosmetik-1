@@ -43,6 +43,12 @@ export const Footer = () => {
               <a href="https://www.google.com/search?q=Shirea+Kosmetik+München" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
                 Google Bewertung
               </a>
+              <a href="https://cdn.gamma.app/p904rbteeuhbiao/0712b9442e4e4c1cb353e45d2d5648f9/original/Datenschutzerklaerung_Shirea.pdf" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
+                Datenschutzerklärung
+              </a>
+              <a href="https://cdn.gamma.app/p904rbteeuhbiao/8353567fdb4243518b6c575dd9942ce7/original/AGB_Shirea_Kosmetikstudio.pdf" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
+                AGB
+              </a>
             </div>
           </div>
         </div>
