@@ -1,5 +1,6 @@
-import { Sparkles, Eye, Droplets, Heart } from "lucide-react";
+import { Sparkles, Eye, Droplets, Heart, FileDown } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -57,6 +58,20 @@ export const Services = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="border-2"
+            asChild
+          >
+            <a href="https://cdn.gamma.app/p904rbteeuhbiao/253607b7bcc344178e3f4216fecda112/original/Brown-Modern-Interior-Trifold-Brochure-8.pdf" target="_blank" rel="noopener noreferrer">
+              <FileDown className="mr-2 h-5 w-5" />
+              Detaillierte Preisliste als PDF
+            </a>
+          </Button>
         </div>
       </div>
     </section>
