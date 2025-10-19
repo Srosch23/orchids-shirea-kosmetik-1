@@ -67,7 +67,7 @@ export const Services = () => {
             className="border-2"
             asChild
           >
-            <a href="/Preisliste_Shirea.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Preisliste_Shirea.pdf" download="Preisliste_Shirea.pdf">
               <FileDown className="mr-2 h-5 w-5" />
               Detaillierte Preisliste als PDF
             </a>
