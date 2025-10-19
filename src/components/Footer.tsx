@@ -43,10 +43,10 @@ export const Footer = () => {
               <a href="https://www.google.com/search?q=Shirea+Kosmetik+München" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
                 Google Bewertung
               </a>
-              <a href="/Datenschutzerklaerung_Shirea.pdf" download="Datenschutzerklaerung_Shirea.pdf" className="block hover:text-background transition-colors">
+              <a href="/datenschutz" className="block hover:text-background transition-colors">
                 Datenschutzerklärung
               </a>
-              <a href="/AGB_Shirea_Kosmetikstudio.pdf" download="AGB_Shirea_Kosmetikstudio.pdf" className="block hover:text-background transition-colors">
+              <a href="/agb" className="block hover:text-background transition-colors">
                 AGB
               </a>
             </div>
