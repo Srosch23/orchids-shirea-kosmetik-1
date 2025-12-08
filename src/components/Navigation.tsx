@@ -1,20 +1,21 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "Über mich", href: "#about" },
-  { label: "Leistungen", href: "#services" },
-  { label: "Behandlungen", href: "#treatments" },
-  { label: "BYONIK®", href: "#byonik" },
-  { label: "Slimyonik", href: "#slimyonik" },
-  { label: "Wellness", href: "#wellness" },
-  { label: "Kontakt", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Über mich", href: "/ueber-mich" },
+  { label: "Leistungen", href: "/leistungen" },
+  { label: "Galerie", href: "/galerie" },
+  { label: "Preise", href: "/preise" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,45 +25,41 @@ export const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  useEffect(() => {
     setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  }, [location]);
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-2xl md:text-3xl font-serif font-bold text-primary"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
           >
             SHIREÁ
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.href}
-                onClick={() => handleNavClick(item.href)}
-                className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-primary/5"
+                to={item.href}
+                className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-primary/5 ${
+                  location.pathname === item.href
+                    ? "text-primary"
+                    : "text-foreground/80 hover:text-primary"
+                }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
             <Button size="sm" className="ml-4" asChild>
               <a
@@ -90,13 +87,17 @@ export const Navigation = () => {
           <div className="lg:hidden bg-background/95 backdrop-blur-md border-t">
             <div className="flex flex-col py-4">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className="px-4 py-3 text-left font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors"
+                  to={item.href}
+                  className={`px-4 py-3 font-medium transition-colors hover:bg-primary/5 ${
+                    location.pathname === item.href
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-primary"
+                  }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
               <div className="px-4 pt-4">
                 <Button className="w-full" asChild>
