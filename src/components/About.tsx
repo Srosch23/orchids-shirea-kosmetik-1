@@ -2,7 +2,7 @@ import shahiraImage from "@/assets/shahira-portrait.jpg";
 
 export const About = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/30">
+    <section id="about" className="py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
           <div className="animate-slide-up">

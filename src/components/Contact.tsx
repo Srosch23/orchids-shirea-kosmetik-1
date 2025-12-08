@@ -5,7 +5,7 @@ import treatmentRoom from "@/assets/treatment-room.jpg";
 
 export const Contact = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm uppercase tracking-wider text-primary font-medium">
@@ -15,7 +15,10 @@ export const Contact = () => {
             Vereinbaren Sie jetzt Ihren Termin
           </h2>
           <p className="text-muted-foreground text-lg">
-            Ich freue mich auf Ihre Nachricht und bin gerne für Sie da!
+            Kontaktieren Sie mich gerne; ich berate Sie persönlich und freue mich auf unser Gespräch!
+          </p>
+          <p className="text-lg mt-4">
+            Ihre Reise zu strahlender Schönheit beginnt hier. Ich freue mich darauf, Sie auf Ihrem Weg zu gesunder, strahlender Haut zu begleiten.
           </p>
         </div>
         
@@ -62,13 +65,13 @@ export const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Adresse</h3>
                     <a 
-                      href="https://www.google.com/maps/search/?api=1&query=SHIREÁ,+Klenzestraße+57+c,+80469+München" 
+                      href="https://www.google.com/maps/search/?api=1&query=Sonnenstraße+4+München" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      Klenzestraße 57 c<br />
-                      80469 München
+                      Sonnenstraße 4<br />
+                      80331 München
                     </a>
                   </div>
                 </div>
@@ -84,9 +87,12 @@ export const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-2">Öffnungszeiten</h3>
                     <div className="space-y-1 text-muted-foreground text-sm">
-                      <p>Freitag & Samstag: 09:00 – 18:00 Uhr</p>
-                      <p>Dienstag & Donnerstag: nach Vereinbarung</p>
+                      <p>Dienstag & Donnerstag: 14:00 – 19:00 Uhr</p>
+                      <p>Freitag & Samstag: 10:00 – 19:00 Uhr</p>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-3 italic">
+                      Für eine optimale Terminplanung bitte ich Sie, Termine mindestens 48 Stunden im Voraus abzusagen.
+                    </p>
                   </div>
                 </div>
               </CardContent>

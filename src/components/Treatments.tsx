@@ -5,138 +5,119 @@ const treatments = [
   {
     title: "Klassische Gesichtsbehandlung",
     duration: "ca. 60 Min.",
-    price: "ab 45 €",
     description: "Entdecken Sie die wahre Strahlkraft Ihrer Haut mit der klassischen Gesichtsbehandlung! Eine präzise Hautanalyse gewährleistet eine auf Ihre Bedürfnisse abgestimmte Pflege, die Ihren Teint zum Leuchten bringt.",
   },
   {
     title: "Spezialbehandlung bei Hyperpigmentierung",
-    duration: "ca. 60 Min.",
-    price: "ab 65 €",
+    subtitle: "Für einen ebenmäßigen & strahlenden Teint",
+    duration: "ca. 70 Min.",
     description: "Diese zielgerichtete Behandlung hellt bestehende Hyperpigmentierungen effektiv auf und beugt der Entstehung neuer Pigmentflecken vor. Durch Zellerneuerung und intensive Feuchtigkeitspflege erzielen wir ein sichtbar strahlendes und gleichmäßiges Hautbild.",
-    benefits: ["Ebenmäßiger Teint", "Aufhellung von Pigmentflecken", "Intensive Feuchtigkeitspflege"],
   },
   {
     title: "Sensitive Balance Behandlung",
+    subtitle: "Beruhigende & stärkende Pflege für empfindliche, irritierte und gereizte Haut",
     duration: "ca. 70 Min.",
-    price: "ab 70 €",
-    description: "Diese Behandlung ist besonders wohltuend für sehr empfindliche und gereizte Haut. Die innovative BioCell-Maske beruhigt, stärkt die Hautbarriere, verbessert den Feuchtigkeitshaushalt und bringt die Haut zurück in ihr natürliches Gleichgewicht.",
-    benefits: ["Beruhigt gereizte Haut", "Stärkt Hautbarriere", "Verbessert Feuchtigkeitshaushalt"],
+    description: "Diese Behandlung ist besonders wohltuend für sehr empfindliche und gereizte Haut. Die innovative BioCell-Maske beruhigt, stärkt die Hautbarriere, verbessert den Feuchtigkeitshaushalt und bringt die Haut zurück in ihr natürliches Gleichgewicht. Fühlen Sie sich wieder wohl in Ihrer Haut!",
   },
   {
     title: "Detox-Behandlung",
+    subtitle: "Entschlackung & Revitalisierung für Ihre Haut",
     duration: "ca. 70 Min.",
-    price: "ab 70 €",
     description: "Die Detox-Behandlung unterstützt die Haut dabei, Schadstoffe zu lösen und die Zellerneuerung zu aktivieren. Sie verleiht Ihrer Haut Frische, Energie und ein gesundes Strahlen.",
-    benefits: ["Entschlackung", "Zellerneuerung", "Revitalisierung"],
   },
   {
     title: "Anti-Aging-Behandlung",
-    duration: "ca. 60 Min.",
-    price: "ab 55 €",
-    description: "Verwöhnen Sie Ihre Haut mit der luxuriösen Anti-Aging-Behandlung! Hochwirksame Hyaluron- und Vitamin-Komplexe polstern die Haut von innen auf, glätten feine Linien und schenken Ihnen ein sichtbar jüngeres, strafferes und pralleres Hautbild.",
-    benefits: ["Straffere Haut", "Glättung von Linien", "Pralleres Hautbild"],
+    duration: "ca. 70 Min.",
+    description: "Verwöhnen Sie Ihre Haut mit der luxuriösen Anti-Aging-Behandlung! Hochwirksame Hyaluron- und Vitamin-Komplexe polstern die Haut von innen auf, glätten feine Linien und schenken Ihnen ein sichtbar jüngeres, strafferes und pralleres Hautbild. Erleben Sie eine Verwandlung, die Sie lieben werden!",
   },
+];
+
+const innovativeTreatments = [
   {
     title: "Mikrodermabrasion",
-    duration: "ca. 60 Min.",
-    price: "ab 99 €",
-    description: "Mikrodermabrasion ist eine hochwirksame Methode zur gezielten Abtragung der obersten Hautschicht mittels feiner Kristalle. Nach der Behandlung erscheint die Haut sofort frischer und strahlender und ist optimal aufnahmefähig für nachfolgende Pflegeprodukte.",
+    description: "Eine hochwirksame Methode zur gezielten Abtragung der obersten Hautschicht mittels feiner Kristalle. Die Haut erscheint sofort frischer und strahlender.",
     benefits: ["Glättet feine Linien und Fältchen", "Verfeinert Poren nachhaltig", "Mildert Pigmentflecken und Aknenarben"],
   },
   {
     title: "Microneedling",
-    duration: "ca. 60 Min.",
-    price: "ab 120 €",
-    description: "Entdecken Sie Microneedling, die innovative Methode für eine Haut, die sich von innen heraus erneuert. Durch präzise Mikro-Impulse wird Ihre natürliche Kollagen- und Elastinproduktion sanft angeregt.",
-    benefits: ["Straffere Haut und verbesserte Elastizität", "Reduzierung von Linien, Fältchen und Narben", "Ebenmäßigerer Teint", "Verfeinertes, vitales Hautbild"],
-  },
-  {
-    title: "Wimpernlifting",
-    duration: "ca. 45 Min.",
-    price: "ab 59 €",
-    description: "Für einen perfekten Augenaufschlag – ganz ohne Mascara oder künstliche Wimpern. Die Naturwimpern werden sanft nach oben gebogen und professionell fixiert.",
-    benefits: ["Langanhaltender Schwung (6-8 Wochen)", "Ausdrucksstarker Blick", "Schonend für die Naturwimpern"],
-  },
-  {
-    title: "Augenbrauenlifting",
-    duration: "ca. 45 Min.",
-    price: "ab 65 €",
-    description: "Für volle, perfekt geformte Brauen. Die Härchen werden in die gewünschte Form gebracht und dauerhaft fixiert – für einen langanhaltend gepflegten Look.",
-    benefits: ["Perfekte Form", "Langanhaltend", "Natürlicher Look"],
-  },
-  {
-    title: "Waxing",
-    duration: "ab 15 Min.",
-    price: "ab 15 €",
-    description: "Klassische Haarentfernung mit warmem Wachs – effektiv, schnell und gründlich für wochenlang glatte Haut.",
-    benefits: ["Effektiv und schnell", "Wochenlang glatte Haut", "Gründliche Entfernung"],
-  },
-  {
-    title: "Sugaring",
-    duration: "ab 15 Min.",
-    price: "ab 18 €",
-    description: "Besonders hautschonende Methode durch natürliche Zuckerpaste – ideal auch für empfindliche Hauttypen. Seidig glatte Haut ohne lästige Stoppeln.",
-    benefits: ["Besonders hautschonend", "Natürliche Zuckerpaste", "Ideal für empfindliche Haut"],
-  },
-  {
-    title: "Klassische Massage",
-    duration: "ab 30 Min.",
-    price: "ab 30 €",
-    description: "Löst effektiv Muskelverspannungen, fördert die Durchblutung und sorgt für tiefe körperliche Entspannung.",
-    benefits: ["Löst Verspannungen", "Fördert Durchblutung", "Tiefe Entspannung"],
-  },
-  {
-    title: "Aromaölmassage",
-    duration: "ab 30 Min.",
-    price: "ab 35 €",
-    description: "Ätherische Öle harmonisieren Körper und Geist, reduzieren Stress und revitalisieren Ihre Sinne.",
-    benefits: ["Harmonisiert Körper & Geist", "Stressreduktion", "Revitalisierend"],
+    description: "Innovative Methode zur Hauterneuerung von innen. Präzise Mikro-Impulse regen die natürliche Kollagen- und Elastinproduktion an, für sichtbar jugendlichere Haut.",
+    benefits: ["Straffere Haut und verbesserte Elastizität", "Reduzierung von Linien, Fältchen und Narben", "Milderung von Pigmentstörungen", "Verfeinertes, ebenmäßiges Hautbild"],
   },
 ];
 
 export const Treatments = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
+    <section id="treatments" className="py-24 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm uppercase tracking-wider text-primary font-medium">
-            Behandlungen
+            Gesichtsbehandlungen
           </span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mt-2 mb-4">
-            Entdecken Sie Ihre perfekte Behandlung
+            Finden Sie die Behandlung, die zu Ihnen passt
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* Classic Facial Treatments */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
           {treatments.map((treatment, index) => (
             <Card 
               key={index}
               className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl group overflow-hidden"
             >
               <CardHeader className="bg-gradient-to-br from-primary/5 to-accent/5 pb-6">
-                <CardTitle className="text-2xl font-serif mb-2">
+                <CardTitle className="text-xl font-serif mb-1">
                   {treatment.title}
                 </CardTitle>
-                <div className="flex items-center justify-between text-sm text-muted-foreground">
-                  <span>{treatment.duration}</span>
-                  <span className="font-semibold text-primary text-lg">{treatment.price}</span>
-                </div>
+                {treatment.subtitle && (
+                  <p className="text-sm text-primary font-medium">{treatment.subtitle}</p>
+                )}
+                <p className="text-sm text-muted-foreground mt-2">
+                  Behandlungsdauer: {treatment.duration}
+                </p>
               </CardHeader>
               <CardContent className="pt-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  {treatment.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Innovative Treatments */}
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="text-sm uppercase tracking-wider text-primary font-medium">
+            Innovative Methoden
+          </span>
+          <h3 className="text-3xl md:text-4xl font-serif font-bold mt-2">
+            Innovative Hautbehandlungen
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {innovativeTreatments.map((treatment, index) => (
+            <Card 
+              key={index}
+              className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl"
+            >
+              <CardHeader>
+                <CardTitle className="text-xl font-serif">
+                  {treatment.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {treatment.description}
                 </p>
-                
-                {treatment.benefits && (
-                  <ul className="space-y-2">
-                    {treatment.benefits.map((benefit, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <ul className="space-y-2">
+                  {treatment.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           ))}
