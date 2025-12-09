@@ -8,7 +8,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-2xl font-serif font-bold mb-4">SHIREÁ</h3>
             <p className="text-background/80 text-sm leading-relaxed">
-              Facial & Beauty Space by Shahira<br />
+              Facial & Beauty Space by Schahira<br />
               Ihre Expertin für natürliche Schönheit und professionelle Hautpflege in München.
             </p>
           </div>

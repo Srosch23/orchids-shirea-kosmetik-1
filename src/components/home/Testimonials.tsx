@@ -11,7 +11,7 @@ const testimonials = [
   {
     name: "Sandra L.",
     treatment: "Klassische Gesichtsbehandlung",
-    text: "Shahira nimmt sich wirklich Zeit für jeden Kunden. Die individuelle Beratung und die professionelle Behandlung sind einfach top!",
+    text: "Schahira nimmt sich wirklich Zeit für jeden Kunden. Die individuelle Beratung und die professionelle Behandlung sind einfach top!",
     rating: 5,
   },
   {
