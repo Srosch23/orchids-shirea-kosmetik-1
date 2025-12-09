@@ -15,11 +15,11 @@ const categories = [
     description: "Von klassischen Anwendungen bis hin zu innovativen Methoden für strahlende Haut.",
     treatments: [
       { name: "Klassische Gesichtsbehandlung", duration: "60 Min.", price: "ab 65 €", link: "/behandlungen/klassische-gesichtsbehandlung" },
-      { name: "Anti-Aging Behandlung", duration: "70 Min.", price: "ab 85 €", link: "/behandlungen/anti-aging" },
-      { name: "Mikrodermabrasion", duration: "45 Min.", price: "ab 99 €", link: "/behandlungen/mikrodermabrasion" },
-      { name: "Microneedling", duration: "60 Min.", price: "ab 129 €", link: "/behandlungen/microneedling" },
-      { name: "Hyperpigmentierung", duration: "70 Min.", price: "ab 89 €", link: "/behandlungen/hyperpigmentierung" },
-      { name: "Detox-Behandlung", duration: "70 Min.", price: "ab 79 €", link: "/behandlungen/detox" },
+      { name: "Anti-Aging Behandlung", duration: "75 Min.", price: "ab 95 €", link: "/behandlungen/anti-aging-behandlung" },
+      { name: "Mikrodermabrasion", duration: "45 Min.", price: "ab 69 €", link: "/behandlungen/mikrodermabrasion" },
+      { name: "Microneedling", duration: "60 Min.", price: "ab 149 €", link: "/behandlungen/microneedling" },
+      { name: "Hyperpigmentierung", duration: "60 Min.", price: "ab 85 €", link: "/behandlungen/hyperpigmentierung" },
+      { name: "Detox-Behandlung", duration: "60 Min.", price: "ab 75 €", link: "/behandlungen/detox-behandlung" },
     ],
   },
   {
@@ -29,9 +29,9 @@ const categories = [
     description: "Innovative pulsgesteuerte Laserbehandlung für tiefenwirksame Hautverjüngung.",
     treatments: [
       { name: "BYONIK® Anti-Aging Gesicht", duration: "75 Min.", price: "169 €", link: "/behandlungen/byonik-anti-aging" },
-      { name: "BYONIK® Gesicht, Hals & Dekolleté", duration: "120 Min.", price: "269 €", link: "/behandlungen/byonik-komplett" },
-      { name: "BYONIK® Lift Fresh-Up", duration: "60 Min.", price: "149 €", link: "/behandlungen/byonik-lift" },
-      { name: "BYONIK® Eye Revolution", duration: "25 Min.", price: "79 €", link: "/behandlungen/byonik-eye" },
+      { name: "BYONIK® Gesicht, Hals & Dekolleté", duration: "90 Min.", price: "219 €", link: "/behandlungen/byonik-gesicht-hals-dekollete" },
+      { name: "BYONIK® Lift Fresh-Up", duration: "30 Min.", price: "79 €", link: "/behandlungen/byonik-lift-fresh-up" },
+      { name: "BYONIK® Eye Revolution", duration: "45 Min.", price: "89 €", link: "/behandlungen/byonik-eye-revolution" },
     ],
   },
   {
@@ -42,7 +42,7 @@ const categories = [
     treatments: [
       { name: "Wimpernlifting", duration: "45 Min.", price: "ab 59 €", link: "/behandlungen/wimpernlifting" },
       { name: "Augenbrauenlifting", duration: "30 Min.", price: "ab 39 €", link: "/behandlungen/augenbrauenlifting" },
-      { name: "Wimpern- & Brauenlifting Kombi", duration: "60 Min.", price: "ab 89 €", link: "/behandlungen/lifting-kombi" },
+      { name: "Wimpern- & Brauenlifting Kombi", duration: "60 Min.", price: "ab 89 €", link: "/behandlungen/wimpern-brauen-kombi" },
     ],
   },
   {
