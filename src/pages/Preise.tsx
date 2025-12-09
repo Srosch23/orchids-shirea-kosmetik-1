@@ -2,8 +2,8 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FileDown, Calendar, Star } from "lucide-react";
-import { Link } from "react-router-dom";
+import { FileDown, Calendar, Star, ArrowLeft } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const priceCategories = [
   {
@@ -80,11 +80,22 @@ const priceCategories = [
 ];
 
 const Preise = () => {
+  const navigate = useNavigate();
+
   return (
     <MainLayout>
       {/* Hero */}
       <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
         <div className="container mx-auto px-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate(-1)}
+            className="mb-6 -ml-2 text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Zurück
+          </Button>
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-sm uppercase tracking-wider text-primary font-medium">
               Transparente Preise

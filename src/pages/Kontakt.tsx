@@ -1,41 +1,28 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { 
-  Phone, Mail, MapPin, Instagram, MessageCircle, Clock, Calendar,
-  Send
+  Phone, Mail, MapPin, Instagram, MessageCircle, Clock, Calendar, ArrowLeft
 } from "lucide-react";
-import treatmentRoom from "@/assets/treatment-room.jpg";
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const Kontakt = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Create mailto link with form data
-    const mailtoLink = `mailto:kontakt@shirea-kosmetik.de?subject=Kontaktanfrage von ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATelefon: ${formData.phone}%0D%0A%0D%0ANachricht:%0D%0A${formData.message}`;
-    window.location.href = mailtoLink;
-    toast({
-      title: "E-Mail wird geöffnet",
-      description: "Ihr E-Mail-Programm wird geöffnet, um die Anfrage zu senden.",
-    });
-  };
+  const navigate = useNavigate();
 
   return (
     <MainLayout>
       {/* Hero */}
       <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
         <div className="container mx-auto px-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate(-1)}
+            className="mb-6 -ml-2 text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Zurück
+          </Button>
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-sm uppercase tracking-wider text-primary font-medium">
               Kontakt
@@ -50,14 +37,13 @@ const Kontakt = () => {
         </div>
       </section>
 
-      {/* Contact Info & Form */}
+      {/* Contact Info */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <h2 className="text-2xl font-serif font-bold mb-6">Kontaktdaten</h2>
-              
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-serif font-bold mb-6 text-center">Kontaktdaten</h2>
+            
+            <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-2 hover:border-primary transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
@@ -99,7 +85,7 @@ const Kontakt = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Adresse</h3>
                       <a 
-                        href="https://www.google.com/maps/search/?api=1&query=Sonnenstraße+4+München" 
+                        href="https://www.google.com/maps/search/?api=1&query=Sonnenstraße+4+80331+München" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -131,90 +117,29 @@ const Kontakt = () => {
                   </div>
                 </CardContent>
               </Card>
-              
-              <div className="flex flex-wrap gap-3 pt-4">
-                <Button 
-                  className="flex-1 bg-primary hover:bg-primary/90"
-                  asChild
-                >
-                  <a href="https://wa.me/4917620294745" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    WhatsApp
-                  </a>
-                </Button>
-                
-                <Button 
-                  variant="outline"
-                  className="flex-1 border-2"
-                  asChild
-                >
-                  <a href="https://www.instagram.com/shirea_cosmetics" target="_blank" rel="noopener noreferrer">
-                    <Instagram className="mr-2 h-5 w-5" />
-                    Instagram
-                  </a>
-                </Button>
-              </div>
             </div>
-
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-serif font-bold mb-6">Nachricht senden</h2>
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name *</Label>
-                      <Input 
-                        id="name" 
-                        placeholder="Ihr Name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="email">E-Mail *</Label>
-                      <Input 
-                        id="email" 
-                        type="email"
-                        placeholder="ihre@email.de"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Telefon</Label>
-                      <Input 
-                        id="phone" 
-                        type="tel"
-                        placeholder="+49 ..."
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Ihre Nachricht *</Label>
-                      <Textarea 
-                        id="message" 
-                        placeholder="Wie kann ich Ihnen helfen?"
-                        rows={5}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        required
-                      />
-                    </div>
-                    
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-                      <Send className="mr-2 h-5 w-5" />
-                      Nachricht senden
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+            
+            <div className="flex flex-wrap gap-3 pt-8 justify-center">
+              <Button 
+                className="bg-primary hover:bg-primary/90"
+                asChild
+              >
+                <a href="https://wa.me/4917620294745" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </a>
+              </Button>
+              
+              <Button 
+                variant="outline"
+                className="border-2"
+                asChild
+              >
+                <a href="https://www.instagram.com/shirea_cosmetics" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="mr-2 h-5 w-5" />
+                  Instagram
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -227,7 +152,7 @@ const Kontakt = () => {
             <h2 className="text-2xl font-serif font-bold mb-6 text-center">So finden Sie uns</h2>
             <div className="rounded-2xl overflow-hidden shadow-lg border-2">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.4!2d11.5!3d48.14!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSonnenstra%C3%9Fe+NCwgODAzMzEgTcO8bmNoZW4!5e0!3m2!1sde!2sde!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.5775!2d11.5525!3d48.1372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75f36e4c4c75%3A0x6f68f8c3c7b9d4c7!2sSonnenstra%C3%9Fe%204%2C%2080331%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1702000000000!5m2!1sde!2sde"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}

@@ -3,7 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import shahiraImage from "@/assets/shahira-portrait.jpg";
 import treatmentRoom from "@/assets/treatment-room.jpg";
-import { Award, Heart, Sparkles, Shield, Leaf, Calendar, Check } from "lucide-react";
+import { Award, Heart, Sparkles, Shield, Leaf, Calendar, Check, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const qualifications = [
   "Staatlich anerkannte Fachkosmetikerin",
@@ -37,18 +38,29 @@ const philosophy = [
 ];
 
 const UeberMich = () => {
+  const navigate = useNavigate();
+
   return (
     <MainLayout>
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
         <div className="container mx-auto px-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate(-1)}
+            className="mb-6 -ml-2 text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Zurück
+          </Button>
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
             <div className="order-2 md:order-1">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
                 <img 
                   src={shahiraImage} 
-                  alt="Shahira Sharar - Staatlich anerkannte Fachkosmetikerin"
+                  alt="Schahira Scharar - Staatlich anerkannte Fachkosmetikerin"
                   className="relative rounded-2xl shadow-2xl w-full object-cover"
                 />
               </div>
@@ -60,7 +72,7 @@ const UeberMich = () => {
                   Ihre Expertin
                 </span>
                 <h1 className="text-4xl md:text-5xl font-serif font-bold mt-2 mb-4">
-                  Shahira Sharar
+                  Schahira Scharar
                 </h1>
                 <p className="text-xl text-muted-foreground">
                   Staatlich anerkannte Fachkosmetikerin
@@ -69,7 +81,7 @@ const UeberMich = () => {
               
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Herzlich willkommen! Ich bin Shahira Sharar, Ihre Expertin für professionelle 
+                  Herzlich willkommen! Ich bin Schahira Scharar, Ihre Expertin für professionelle 
                   Hautpflege und Wohlbefinden im Herzen von München.
                 </p>
                 <p>

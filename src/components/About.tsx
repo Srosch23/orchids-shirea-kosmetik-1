@@ -10,7 +10,7 @@ export const About = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
               <img 
                 src={shahiraImage} 
-                alt="Shahira Sharar - Staatlich anerkannte Fachkosmetikerin"
+                alt="Schahira Scharar - Staatlich anerkannte Fachkosmetikerin"
                 className="relative rounded-2xl shadow-2xl w-full object-cover"
               />
             </div>
@@ -28,7 +28,7 @@ export const About = () => {
             
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Mein Name ist <span className="font-semibold text-foreground">Shahira Sharar</span>. 
+                Mein Name ist <span className="font-semibold text-foreground">Schahira Scharar</span>. 
                 Als staatlich anerkannte Fachkosmetikerin mit langjähriger Erfahrung habe ich es mir zur 
                 Aufgabe gemacht, die natürliche Schönheit meiner Kundinnen und Kunden zu unterstreichen 
                 und ihre Haut nachhaltig zu pflegen.

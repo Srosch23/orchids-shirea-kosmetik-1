@@ -4,20 +4,32 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-spa.jpg";
 import treatmentRoom from "@/assets/treatment-room.jpg";
 import shahiraImage from "@/assets/shahira-portrait.jpg";
-import { Calendar, Instagram } from "lucide-react";
+import { Calendar, Instagram, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const studioImages = [
   { src: treatmentRoom, alt: "Behandlungsraum", category: "Studio" },
   { src: heroImage, alt: "Entspannungsbereich", category: "Studio" },
-  { src: shahiraImage, alt: "Shahira Sharar", category: "Team" },
+  { src: shahiraImage, alt: "Schahira Scharar", category: "Team" },
 ];
 
 const Galerie = () => {
+  const navigate = useNavigate();
+
   return (
     <MainLayout>
       {/* Hero */}
       <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
         <div className="container mx-auto px-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate(-1)}
+            className="mb-6 -ml-2 text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Zurück
+          </Button>
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-sm uppercase tracking-wider text-primary font-medium">
               Einblicke
