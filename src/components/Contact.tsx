@@ -114,7 +114,7 @@ export const Contact = () => {
                 className="flex-1 border-2"
                 asChild
               >
-                <a href="https://www.instagram.com/shirea_cosmetics" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/shirea_kosmetik/" target="_blank" rel="noopener noreferrer">
                   <Instagram className="mr-2 h-5 w-5" />
                   Instagram
                 </a>

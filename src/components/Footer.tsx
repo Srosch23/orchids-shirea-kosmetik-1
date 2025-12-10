@@ -24,9 +24,9 @@ export const Footer = () => {
                 <Mail className="w-4 h-4" />
                 kontakt@shirea-kosmetik.de
               </a>
-              <a href="https://www.instagram.com/shirea_cosmetics" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-background transition-colors">
+              <a href="https://www.instagram.com/shirea_kosmetik/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-background transition-colors">
                 <Instagram className="w-4 h-4" />
-                @shirea_cosmetics
+                @shirea_kosmetik
               </a>
             </div>
           </div>

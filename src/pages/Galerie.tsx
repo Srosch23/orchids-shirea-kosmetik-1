@@ -88,12 +88,12 @@ const Galerie = () => {
             </p>
             <Button size="lg" variant="outline" className="border-2" asChild>
               <a 
-                href="https://www.instagram.com/shirea_cosmetics" 
+                href="https://www.instagram.com/shirea_kosmetik/" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
                 <Instagram className="mr-2 h-5 w-5" />
-                @shirea_cosmetics folgen
+                @shirea_kosmetik folgen
               </a>
             </Button>
           </div>
