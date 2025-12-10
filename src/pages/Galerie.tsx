@@ -1,16 +1,50 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-spa.jpg";
-import treatmentRoom from "@/assets/treatment-room.jpg";
-import shahiraImage from "@/assets/shahira-portrait.jpg";
 import { Calendar, Instagram, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const studioImages = [
-  { src: treatmentRoom, alt: "Behandlungsraum", category: "Studio" },
-  { src: heroImage, alt: "Entspannungsbereich", category: "Studio" },
-  { src: shahiraImage, alt: "Schahira Scharar", category: "Team" },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Behandlungsraum-1765401365914.jpeg", 
+    alt: "Behandlungsraum", 
+    category: "Studio" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Flyer-1765401365989.jpeg", 
+    alt: "SHIREA Flyer", 
+    category: "Studio" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Kosmetik-Produkte-1765401365824.jpeg", 
+    alt: "Byonik Kosmetik-Produkte", 
+    category: "Produkte" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Produkte-1765401365829.jpeg", 
+    alt: "Anti-Aging Produkte", 
+    category: "Produkte" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Produkte-1765401365894.jpeg", 
+    alt: "Slimyonik Produkte", 
+    category: "Produkte" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik1-1765401365827.jpeg", 
+    alt: "Slimyonik Gerät", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-1765401365827.jpeg", 
+    alt: "Slimyonik Anwendung", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Behandlung-1765401365929.jpeg", 
+    alt: "Slimyonik Behandlung", 
+    category: "Behandlungen" 
+  },
 ];
 
 const Galerie = () => {
