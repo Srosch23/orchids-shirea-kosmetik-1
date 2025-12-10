@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { 
   Sparkles, Eye, Droplets, Heart, Zap, ArrowRight, Calendar,
-  Check, ArrowLeft, Wand2
+  Check, ArrowLeft, Wand2, Activity
 } from "lucide-react";
 
 const categories = [
@@ -96,7 +96,17 @@ const categories = [
       { name: "Nacken & Rückenmassage", link: "/behandlungen/klassische-massage" },
       { name: "Aromaölmassage", link: "/behandlungen/aromaoelmassage" },
       { name: "Ganzkörpermassage", link: "/behandlungen/aromaoelmassage" },
-      { name: "Slimyonik Air Bodystyler + Sauerstoffinhalation", link: "/behandlungen/slimyonik" },
+    ],
+  },
+  {
+    id: "slimyonik",
+    icon: Activity,
+    title: "Slimyonik Air Bodystyler + Sauerstoffinhalation",
+    description: "Effektive Körperformung mit tiefenwirksamen Ergebnissen.",
+    treatments: [
+      { name: "Einzelbehandlung", link: "/behandlungen/slimyonik" },
+      { name: "Basic-Kur (10er Kur)", link: "/behandlungen/slimyonik" },
+      { name: "Professional-Kur (12er Kur)", link: "/behandlungen/slimyonik" },
     ],
   },
 ];
