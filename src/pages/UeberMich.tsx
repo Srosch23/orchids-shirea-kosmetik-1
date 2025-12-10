@@ -1,10 +1,10 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import shahiraImage from "@/assets/shahira-portrait.jpg";
 import { Award, Heart, Sparkles, Shield, Leaf, Calendar, Check, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+const shahiraImage = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Schahira2-1765402476052.jpeg";
 const treatmentRoomUrl = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Behandlungsraumlichkeiten-1765401998220.jpeg";
 
 const qualifications = [
