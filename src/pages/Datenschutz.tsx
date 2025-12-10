@@ -26,7 +26,7 @@ export default function Datenschutz() {
               Inhaberin: Schahira Scharar<br />
               Oslostraße 7<br />
               81829 München<br />
-              Telefon: +49 0176 20294745<br />
+              Telefon: +49 15565 510880<br />
               E-Mail: kontakt@shirea-kosmetik.de
             </p>
           </section>

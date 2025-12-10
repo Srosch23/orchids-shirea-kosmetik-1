@@ -35,9 +35,9 @@ export const FinalCTA = () => {
               className="border-2"
               asChild
             >
-              <a href="tel:+4917620294745">
+              <a href="tel:+4915565510880">
                 <Phone className="mr-2 h-5 w-5" />
-                +49 176 20294745
+                +49 15565 510880
               </a>
             </Button>
           </div>

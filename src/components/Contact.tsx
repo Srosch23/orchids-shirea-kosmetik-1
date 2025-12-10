@@ -32,8 +32,8 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Telefon</h3>
-                    <a href="tel:+4917620294745" className="text-muted-foreground hover:text-primary transition-colors">
-                      +49 176 20294745
+                    <a href="tel:+4915565510880" className="text-muted-foreground hover:text-primary transition-colors">
+                      +49 15565 510880
                     </a>
                   </div>
                 </div>

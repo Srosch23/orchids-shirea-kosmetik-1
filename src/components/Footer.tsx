@@ -16,9 +16,9 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Kontakt</h4>
             <div className="space-y-2 text-sm text-background/80">
-              <a href="tel:+4917620294745" className="flex items-center gap-2 hover:text-background transition-colors">
+              <a href="tel:+4915565510880" className="flex items-center gap-2 hover:text-background transition-colors">
                 <Phone className="w-4 h-4" />
-                +49 176 20294745
+                +49 15565 510880
               </a>
               <a href="mailto:kontakt@shirea-kosmetik.de" className="flex items-center gap-2 hover:text-background transition-colors">
                 <Mail className="w-4 h-4" />
