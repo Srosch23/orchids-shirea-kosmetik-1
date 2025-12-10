@@ -8,11 +8,42 @@ const shahiraImage = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object
 const treatmentRoomUrl = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Behandlungsraumlichkeiten-1765401998220.jpeg";
 
 const qualifications = [
-  "Staatlich anerkannte Fachkosmetikerin",
-  "BYONIK® Lasertherapie zertifiziert",
-  "Slimyonik Air Bodystyler Expertin",
-  "Permanente Weiterbildung in innovativen Behandlungsmethoden",
-  "DR. MED. CHRISTINE SCHRAMMEK Kosmetik Partner",
+  {
+    category: "Ausbildungen & Grundqualifikationen",
+    items: [
+      "Staatlich anerkannte Fachkosmetikerin",
+      "Zertifizierte Visagistin",
+    ],
+  },
+  {
+    category: "Spezialisierungen im Bereich Haut & Anti-Aging",
+    items: [
+      "Zertifizierte Expertin für Micro-Needling & Mikrodermabrasion",
+    ],
+  },
+  {
+    category: "Augenbrauen- & Wimpernstyling",
+    items: [
+      "Brow Lifting / Brow Lamination zertifiziert",
+      "Lash Lifting zertifiziert",
+      "Professionelle Techniken im Färben, Formen & Stylen von Augenbrauen",
+      "Präzisions-Haarentfernung (Waxing)",
+    ],
+  },
+  {
+    category: "Spezialbehandlungen",
+    items: [
+      "BYONIK®️ Lasertherapie zertifiziert",
+      "Slimyonik Air Bodystyler Expertin",
+    ],
+  },
+  {
+    category: "Professionelle Zusatzkompetenzen",
+    items: [
+      "Regelmäßige Weiterbildungen in modernen Behandlungsmethoden",
+      "Hygienemanagement nach aktuellen Richtlinien",
+    ],
+  },
 ];
 
 const philosophy = [
@@ -120,18 +151,25 @@ const UeberMich = () => {
                   <div className="bg-primary/10 p-3 rounded-lg shrink-0">
                     <Award className="w-8 h-8 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-serif font-semibold mb-4">
+                  <div className="w-full">
+                    <h3 className="text-xl font-serif font-semibold mb-6">
                       Ausbildung & Zertifizierungen
                     </h3>
-                    <ul className="space-y-3">
-                      {qualifications.map((qual, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{qual}</span>
-                        </li>
+                    <div className="space-y-6">
+                      {qualifications.map((category, catIndex) => (
+                        <div key={catIndex}>
+                          <h4 className="font-semibold text-foreground mb-3">{category.category}</h4>
+                          <ul className="space-y-2">
+                            {category.items.map((item, itemIndex) => (
+                              <li key={itemIndex} className="flex items-start gap-3">
+                                <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                <span className="text-muted-foreground">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </div>
               </CardContent>
