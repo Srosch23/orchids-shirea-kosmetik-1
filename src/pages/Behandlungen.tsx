@@ -3,8 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useParams, Link } from "react-router-dom";
 import { 
-  Check, AlertTriangle, Calendar, Clock, Euro, ArrowLeft,
-  Sparkles, Zap, Heart
+  Check, AlertTriangle, Calendar, ArrowLeft,
+  Sparkles
 } from "lucide-react";
 import {
   Accordion,
@@ -16,8 +16,6 @@ import {
 const treatmentData: Record<string, {
   title: string;
   subtitle?: string;
-  duration: string;
-  price: string;
   description: string;
   process: string[];
   benefits: string[];
@@ -27,8 +25,6 @@ const treatmentData: Record<string, {
 }> = {
   "klassische-gesichtsbehandlung": {
     title: "Klassische Gesichtsbehandlung",
-    duration: "ca. 60 Min.",
-    price: "ab 65 €",
     description: "Entdecken Sie die wahre Strahlkraft Ihrer Haut mit der klassischen Gesichtsbehandlung! Eine präzise Hautanalyse gewährleistet eine auf Ihre Bedürfnisse abgestimmte Pflege, die Ihren Teint zum Leuchten bringt.",
     process: [
       "Ausführliche Hautanalyse und Beratung",
@@ -52,8 +48,6 @@ const treatmentData: Record<string, {
   "byonik-anti-aging": {
     title: "BYONIK® Anti-Aging",
     subtitle: "Innovative Lasertherapie",
-    duration: "75 Min.",
-    price: "169 €",
     description: "Erleben Sie die einzigartige BYONIK® Methode – eine innovative pulsgesteuerte Laserbehandlung, die Ihre Haut in perfekter Harmonie mit Ihrem Herzschlag revitalisiert. Der Kaltlaser arbeitet synchron mit Ihrem natürlichen Rhythmus und transportiert hochkonzentrierte Wirkstoffe tief in die Haut.",
     process: [
       "Hautanalyse und Vorbereitung",
@@ -89,8 +83,6 @@ const treatmentData: Record<string, {
   "slimyonik": {
     title: "Slimyonik Air Bodystyler",
     subtitle: "Effektive Körperformung mit tiefenwirksamen Ergebnissen",
-    duration: "45 Min.",
-    price: "55 €",
     description: "Erleben Sie effektive Körperformung mit tiefenwirksamen Ergebnissen und wählen Sie aus acht individuell anpassbaren Programmen für Ihre persönlichen Ziele. Der Slimyonik Air Bodystyler ist medizinisch zugelassen, individuell anpassbar und sorgt für eine entspannende Behandlung. Die ganzheitliche Methode behandelt von innen und außen für nachhaltige Ergebnisse – vielseitig einsetzbar bei Cellulite, müden Beinen, zur Umfangsreduktion und Hautstraffung.",
     process: [
       "Ausführliche Beratung und Programmauswahl",
@@ -142,8 +134,6 @@ const treatmentData: Record<string, {
   "wimpernlifting": {
     title: "Wimpernlifting",
     subtitle: "Natürlich geschwungene Wimpern",
-    duration: "45 Min.",
-    price: "ab 59 €",
     description: "Verleihen Sie Ihren natürlichen Wimpern einen wunderschönen Schwung – ganz ohne künstliche Extensions. Das Wimpernlifting hebt und formt Ihre eigenen Wimpern sanft nach oben, sodass Ihr Blick sofort offener und wacher wirkt. Ein traumhafter Effekt, der bis zu 8 Wochen anhält.",
     process: [
       "Reinigung der Wimpern und Augenpartie",
@@ -170,8 +160,6 @@ const treatmentData: Record<string, {
   "augenbrauenlifting": {
     title: "Augenbrauenlifting",
     subtitle: "Perfekt geformte Brauen",
-    duration: "30 Min.",
-    price: "ab 39 €",
     description: "Definierte, gepflegte Augenbrauen verleihen Ihrem Gesicht Ausdruck und Struktur. Mit dem Augenbrauenlifting bringen wir Ihre Brauen in eine perfekte, natürlich wirkende Form. Die Härchen werden sanft angehoben und fixiert – für einen soften, fedrigen Look, der mehrere Wochen hält.",
     process: [
       "Beratung zur gewünschten Brauenform",
@@ -197,8 +185,6 @@ const treatmentData: Record<string, {
   "wimpern-brauen-kombi": {
     title: "Wimpern- & Brauenlifting Kombi",
     subtitle: "Komplett-Paket für den perfekten Blick",
-    duration: "60 Min.",
-    price: "ab 89 €",
     description: "Gönnen Sie sich das perfekte Verwöhn-Paket für Ihre Augenpartie. Mit der Kombination aus Wimpern- und Augenbrauenlifting erhalten Sie einen strahlenden, ausdrucksstarken Blick – alles in einer entspannten Behandlung. Ideal für alle, die einen natürlich-gepflegten Look ohne tägliches Styling wünschen.",
     process: [
       "Reinigung der gesamten Augenpartie",
@@ -224,8 +210,6 @@ const treatmentData: Record<string, {
   "waxing": {
     title: "Waxing",
     subtitle: "Glatte Haut mit Warmwachs",
-    duration: "variabel",
-    price: "ab 15 €",
     description: "Genießen Sie seidig glatte Haut mit unserer professionellen Waxing-Behandlung. Mit hochwertigem Warmwachs entfernen wir unerwünschte Haare sanft und gründlich. Das Ergebnis: wochenlang glatte, gepflegte Haut ohne tägliche Rasur. Ideal für verschiedene Körperzonen – von Beinen bis zum Gesicht.",
     process: [
       "Hautanalyse und Vorbereitung der Zone",
@@ -252,8 +236,6 @@ const treatmentData: Record<string, {
   "sugaring": {
     title: "Sugaring",
     subtitle: "Sanfte Haarentfernung mit Zuckerpaste",
-    duration: "variabel",
-    price: "ab 15 €",
     description: "Entdecken Sie die sanfteste Art der Haarentfernung: Sugaring. Diese traditionelle Methode nutzt eine rein natürliche Zuckerpaste, die besonders hautschonend arbeitet. Perfekt für empfindliche Haut und sensible Bereiche. Die Haare werden in Wuchsrichtung entfernt – für weniger Irritationen und ein samtweiches Ergebnis.",
     process: [
       "Hautanalyse und Beratung",
@@ -279,8 +261,6 @@ const treatmentData: Record<string, {
   "klassische-massage": {
     title: "Klassische Massage",
     subtitle: "Entspannung pur",
-    duration: "30–60 Min.",
-    price: "ab 45 €",
     description: "Lassen Sie den Alltag hinter sich und gönnen Sie sich eine wohltuende klassische Massage. Mit gezielten Grifftechniken lösen wir Verspannungen, fördern die Durchblutung und schenken Ihnen tiefe Entspannung. Ob Rücken, Nacken oder Ganzkörper – diese Massage ist Balsam für Körper und Seele.",
     process: [
       "Kurze Beratung zu Problemzonen",
@@ -306,8 +286,6 @@ const treatmentData: Record<string, {
   "aromaoelmassage": {
     title: "Aromaölmassage",
     subtitle: "Wellness für alle Sinne",
-    duration: "45 Min.",
-    price: "ab 55 €",
     description: "Tauchen Sie ein in eine Welt der Düfte und Entspannung. Unsere Aromaölmassage verbindet sanfte Massagegriffe mit der Kraft ätherischer Öle. Je nach Stimmung und Bedürfnis wählen wir das passende Aromaöl – ob beruhigend, energetisierend oder ausgleichend. Ein ganzheitliches Erlebnis für Körper und Geist.",
     process: [
       "Auswahl des passenden Aromaöls",
@@ -333,8 +311,6 @@ const treatmentData: Record<string, {
   "byonik-eye-revolution": {
     title: "BYONIK® Eye Revolution",
     subtitle: "Intensive Augenpflege mit Lasertechnologie",
-    duration: "25 Min.",
-    price: "79 €",
     description: "Schenken Sie Ihrer empfindlichen Augenpartie die Aufmerksamkeit, die sie verdient. Die BYONIK® Eye Revolution ist eine hochwirksame Laserbehandlung, die speziell für die zarte Haut rund um die Augen entwickelt wurde. Feine Linien, Schwellungen und dunkle Augenringe werden sichtbar reduziert – für einen wachen, strahlenden Blick.",
     process: [
       "Sanfte Reinigung der Augenpartie",
@@ -367,8 +343,6 @@ const treatmentData: Record<string, {
   "byonik-lift-fresh-up": {
     title: "BYONIK® Lift Fresh-Up | Gesicht",
     subtitle: "Schnelle Erfrischung mit Laser",
-    duration: "60 Min.",
-    price: "149 €",
     description: "Die perfekte Behandlung für zwischendurch: Das BYONIK® Lift Fresh-Up ist Ihre Express-Lösung für sofortige Frische und Strahlkraft. In 60 Minuten schenken wir Ihrer Haut einen sichtbaren Boost – ideal vor wichtigen Terminen, Events oder einfach, um sich selbst etwas Gutes zu tun.",
     process: [
       "Schnelle Hautreinigung",
@@ -394,8 +368,6 @@ const treatmentData: Record<string, {
   "byonik-gesicht-hals-dekollete": {
     title: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté",
     subtitle: "Ganzheitliche Anti-Aging Behandlung",
-    duration: "120 Min.",
-    price: "269 €",
     description: "Erleben Sie die umfassendste BYONIK® Behandlung für ein harmonisches Gesamtbild. Diese Premium-Behandlung vereint Gesicht, Hals und Dekolleté in einer luxuriösen Session. Die pulsgesteuerte Lasertechnologie revitalisiert alle Zonen gleichmäßig – für ein ebenmäßiges, jugendliches Erscheinungsbild ohne sichtbare Übergänge.",
     process: [
       "Ausführliche Hautanalyse aller Zonen",
@@ -429,8 +401,6 @@ const treatmentData: Record<string, {
   "detox-behandlung": {
     title: "Detox-Behandlung",
     subtitle: "Tiefenreinigung für reine Haut",
-    duration: "60 Min.",
-    price: "ab 75 €",
     description: "Befreien Sie Ihre Haut von Umweltgiften, Unreinheiten und Stress. Unsere Detox-Behandlung ist eine intensive Tiefenreinigung, die Ihre Haut von innen heraus erneuert. Durch spezielle Wirkstoffe und Techniken werden Schlacken ausgeleitet, Poren verfeinert und der natürliche Glow Ihrer Haut wiederhergestellt.",
     process: [
       "Hautanalyse und Beratung",
@@ -457,8 +427,6 @@ const treatmentData: Record<string, {
   "hyperpigmentierung": {
     title: "Hyperpigmentierung",
     subtitle: "Behandlung von Pigmentflecken",
-    duration: "60 Min.",
-    price: "ab 85 €",
     description: "Verabschieden Sie sich von ungleichmäßigem Teint und störenden Pigmentflecken. Unsere spezialisierte Behandlung zielt gezielt auf Hyperpigmentierung – sei es durch Sonne, Hormone oder Hautalterung. Mit hochwirksamen Aufhellungswirkstoffen und modernsten Techniken bringen wir Ihren Teint wieder ins Gleichgewicht.",
     process: [
       "Detaillierte Hautanalyse der Pigmentierung",
@@ -485,8 +453,6 @@ const treatmentData: Record<string, {
   "sensitive-balance": {
     title: "Sensitive Balance Behandlung",
     subtitle: "Beruhigende & stärkende Pflege für empfindliche Haut",
-    duration: "ca. 70 Min.",
-    price: "auf Anfrage",
     description: "Diese Behandlung ist besonders wohltuend für sehr empfindliche und gereizte Haut. Die innovative BioCell-Maske beruhigt, stärkt die Hautbarriere, verbessert den Feuchtigkeitshaushalt und bringt die Haut zurück in ihr natürliches Gleichgewicht. Fühlen Sie sich wieder wohl in Ihrer Haut!",
     process: [
       "Sanfte Hautreinigung mit beruhigenden Produkten",
@@ -515,8 +481,6 @@ const treatmentData: Record<string, {
   "microneedling": {
     title: "Microneedling",
     subtitle: "Hauterneuerung durch Kollagenstimulation",
-    duration: "60 Min.",
-    price: "ab 149 €",
     description: "Aktivieren Sie die natürliche Regenerationskraft Ihrer Haut mit Microneedling. Feine Mikronadeln erzeugen kontrollierte Mikroverletzungen, die die Kollagen- und Elastinproduktion anregen. Das Ergebnis: festere, glattere und jugendlicher wirkende Haut – ganz ohne invasive Eingriffe.",
     process: [
       "Gründliche Reinigung und Desinfektion",
@@ -550,8 +514,6 @@ const treatmentData: Record<string, {
   "mikrodermabrasion": {
     title: "Mikrodermabrasion",
     subtitle: "Mechanisches Peeling für strahlende Haut",
-    duration: "45 Min.",
-    price: "ab 69 €",
     description: "Enthüllen Sie die frische, strahlende Haut unter der Oberfläche. Die Mikrodermabrasion ist ein schonendes mechanisches Peeling, das abgestorbene Hautzellen sanft entfernt und die Zellerneuerung anregt. Ihre Haut wird glatter, ebenmäßiger und nimmt Pflegeprodukte deutlich besser auf.",
     process: [
       "Gründliche Hautreinigung",
@@ -577,8 +539,6 @@ const treatmentData: Record<string, {
   "bb-glow": {
     title: "BB-Glow",
     subtitle: "Semi-permanente Foundation für strahlende Haut",
-    duration: "60 Min.",
-    price: "ab 99 €",
     description: "BB-Glow ist eine innovative Behandlung, die Ihrer Haut einen natürlichen, makellosen Teint verleiht – ganz ohne tägliches Make-up. Mittels Microneedling werden spezielle BB-Seren mit hautpflegenden Wirkstoffen und Pigmenten in die Haut eingearbeitet. Das Ergebnis: Ein ebenmäßiger, strahlender Teint, der Unreinheiten, Rötungen und kleine Makel kaschiert.",
     process: [
       "Ausführliche Hautanalyse und Farbberatung",
@@ -620,8 +580,6 @@ const treatmentData: Record<string, {
   "anti-aging-behandlung": {
     title: "Anti-Aging Behandlung",
     subtitle: "Intensive Hautverjüngung",
-    duration: "75 Min.",
-    price: "ab 95 €",
     description: "Drehen Sie die Zeit zurück mit unserer umfassenden Anti-Aging Behandlung. Hochkonzentrierte Wirkstoffe, innovative Techniken und luxuriöse Pflege vereinen sich zu einem kraftvollen Verjüngungserlebnis. Ihre Haut wird sichtbar gestrafft, geglättet und erhält neue Vitalität und Ausstrahlung.",
     process: [
       "Ausführliche Anti-Aging Hautanalyse",
@@ -648,8 +606,6 @@ const treatmentData: Record<string, {
   "byonik-anti-aging-hals": {
     title: "BYONIK® Anti-Aging | Gesicht und Halskontur",
     subtitle: "Umfassende Laserbehandlung für Gesicht und Hals",
-    duration: "90 Min.",
-    price: "199 €",
     description: "Erweitern Sie die Wirkung der BYONIK® Anti-Aging Behandlung auf die empfindliche Halspartie. Diese Behandlung kombiniert die pulsgesteuerte Lasertechnologie mit speziellen Wirkstoffen, um Falten und Erschlaffung im Gesicht und am Hals gleichzeitig zu behandeln – für ein harmonisches, verjüngtes Erscheinungsbild.",
     process: [
       "Hautanalyse von Gesicht und Hals",
@@ -685,8 +641,6 @@ const treatmentData: Record<string, {
   "byonik-skin-lightening": {
     title: "BYONIK® Skin Lightening",
     subtitle: "Behandlung bei erhöhter Pigmentation",
-    duration: "75 Min.",
-    price: "179 €",
     description: "Verabschieden Sie sich von störenden Pigmentflecken und ungleichmäßigem Teint. Die BYONIK® Skin Lightening Behandlung kombiniert die pulsgesteuerte Lasertechnologie mit speziellen aufhellenden Wirkstoffen, um Pigmentierungen sanft und effektiv zu reduzieren.",
     process: [
       "Detaillierte Analyse der Pigmentierung",
@@ -721,8 +675,6 @@ const treatmentData: Record<string, {
   "byonik-ecto-repair": {
     title: "BYONIK® Ecto Repair",
     subtitle: "Für neurosensitive Haut & Akne",
-    duration: "60 Min.",
-    price: "139 €",
     description: "Die BYONIK® Ecto Repair Behandlung ist speziell für empfindliche, neurosensitive Haut und Akne-geplagte Haut entwickelt. Die beruhigenden Wirkstoffe in Kombination mit der sanften Lasertechnologie stärken die Hautbarriere, reduzieren Entzündungen und beruhigen gereizte Haut.",
     process: [
       "Sanfte Hautanalyse",
@@ -751,8 +703,6 @@ const treatmentData: Record<string, {
   "byonik-clean-beauty": {
     title: "BYONIK® Clean Beauty",
     subtitle: "Laserbehandlung ohne Duftstoffe",
-    duration: "60 Min.",
-    price: "129 €",
     description: "Die BYONIK® Clean Beauty Behandlung ist die perfekte Wahl für alle, die auf Duftstoffe empfindlich reagieren. Diese Behandlung verwendet ausschließlich duftstofffreie Produkte und bietet trotzdem die volle Wirkung der pulsgesteuerten Lasertechnologie.",
     process: [
       "Hautanalyse und Beratung",
@@ -781,8 +731,6 @@ const treatmentData: Record<string, {
   "byonik-pore-refining": {
     title: "BYONIK® Pore Refining Algae Massage",
     subtitle: "Detox-Spezial mit Algenmaske",
-    duration: "60 Min.",
-    price: "139 €",
     description: "Entgiften Sie Ihre Haut mit dieser einzigartigen Kombination aus BYONIK® Lasertechnologie und entschlackender Algenmaske. Die Pore Refining Behandlung reinigt die Poren tiefenwirksam, entfernt Giftstoffe und verleiht Ihrer Haut einen frischen, klaren Teint.",
     process: [
       "Gründliche Hautanalyse",
@@ -811,8 +759,6 @@ const treatmentData: Record<string, {
   "byonik-hand-kiss": {
     title: "BYONIK® Hand Kiss",
     subtitle: "Anti-Aging für gepflegte Hände",
-    duration: "45 Min.",
-    price: "129 €",
     description: "Ihre Hände verdienen genauso viel Aufmerksamkeit wie Ihr Gesicht! Die BYONIK® Hand Kiss Behandlung verjüngt und pflegt Ihre Hände mit der innovativen pulsgesteuerten Lasertechnologie. Altersflecken werden reduziert, die Haut wird gestrafft und Ihre Hände erstrahlen in neuem Glanz.",
     process: [
       "Sanfte Reinigung der Hände",
@@ -841,8 +787,6 @@ const treatmentData: Record<string, {
   "byonik-shapely-arms": {
     title: "BYONIK® Shapely Arms",
     subtitle: "Straffung für schöne Arme",
-    duration: "45 Min.",
-    price: "129 €",
     description: "Straffen und verjüngen Sie die Haut Ihrer Arme mit der BYONIK® Shapely Arms Behandlung. Diese spezielle Anwendung konzentriert sich auf die oft vernachlässigte Armpartie und bekämpft Erschlaffung, trockene Haut und erste Alterserscheinungen.",
     process: [
       "Hautanalyse der Armpartie",
@@ -871,8 +815,6 @@ const treatmentData: Record<string, {
   "byonik-show-your-legs": {
     title: "BYONIK® Show your Legs",
     subtitle: "Beinpflege für strahlend schöne Beine",
-    duration: "60 Min.",
-    price: "169 €",
     description: "Zeigen Sie Ihre Beine mit Stolz! Die BYONIK® Show your Legs Behandlung pflegt, strafft und verjüngt die Haut Ihrer Beine. Ob Cellulite, trockene Haut oder erste Alterserscheinungen – diese Behandlung bringt Ihre Beine zum Strahlen.",
     process: [
       "Hautanalyse der Beinpartie",
@@ -902,8 +844,6 @@ const treatmentData: Record<string, {
   "byonik-clean-smooth": {
     title: "BYONIK® Clean & Smooth",
     subtitle: "Express-Behandlung für reine Haut",
-    duration: "30 Min.",
-    price: "99 €",
     description: "Die BYONIK® Clean & Smooth Behandlung ist Ihre schnelle Lösung für reine, glatte Haut. In nur 30 Minuten reinigt und glättet diese Express-Behandlung Ihre Haut tiefenwirksam – perfekt für einen schnellen Beauty-Boost in der Mittagspause.",
     process: [
       "Schnelle Reinigung",
@@ -929,12 +869,9 @@ const treatmentData: Record<string, {
   },
 };
 
-// Default treatment for unknown slugs
 const defaultTreatment: {
   title: string;
   subtitle?: string;
-  duration: string;
-  price: string;
   description: string;
   process: string[];
   benefits: string[];
@@ -943,8 +880,6 @@ const defaultTreatment: {
   image?: string;
 } = {
   title: "Behandlung",
-  duration: "variabel",
-  price: "auf Anfrage",
   description: "Entdecken Sie unsere professionellen Behandlungen für Ihre Schönheit und Ihr Wohlbefinden.",
   process: [
     "Beratungsgespräch",
@@ -996,17 +931,6 @@ const Behandlungen = () => {
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center gap-2 bg-card border-2 rounded-lg px-4 py-2">
-                <Clock className="w-5 h-5 text-primary" />
-                <span className="font-medium">{treatment.duration}</span>
-              </div>
-              <div className="flex items-center gap-2 bg-card border-2 rounded-lg px-4 py-2">
-                <Euro className="w-5 h-5 text-primary" />
-                <span className="font-medium">{treatment.price}</span>
-              </div>
-            </div>
-
             {treatment.image && (
               <div className="mb-8 rounded-2xl overflow-hidden shadow-lg">
                 <img 
