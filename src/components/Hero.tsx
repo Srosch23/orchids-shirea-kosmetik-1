@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-spa.jpg";
-import { Sparkles, Calendar, ShoppingBag } from "lucide-react";
+import { Sparkles, Calendar } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -49,18 +49,6 @@ export const Hero = () => {
             >
               <a href="#services">
                 Leistungen entdecken
-              </a>
-            </Button>
-            
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 hover:bg-accent/10"
-              asChild
-            >
-              <a href="https://shop.schrammek.de/?coupon-code=CS-31273" target="_blank" rel="noopener noreferrer">
-                <ShoppingBag className="mr-2 h-5 w-5" />
-                Online-Shop
               </a>
             </Button>
           </div>

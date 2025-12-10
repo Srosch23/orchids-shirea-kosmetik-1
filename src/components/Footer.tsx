@@ -37,9 +37,6 @@ export const Footer = () => {
               <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
                 Online Buchen
               </a>
-              <a href="https://shop.schrammek.de/?coupon-code=CS-31273" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
-                Online-Shop
-              </a>
               <a href="https://www.google.com/search?q=Shirea+Kosmetik+München" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
                 Google Bewertung
               </a>
