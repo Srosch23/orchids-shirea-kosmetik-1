@@ -26,6 +26,24 @@ const priceCategories = [
     ],
   },
   {
+    title: "BYONIK® Laser Behandlungen",
+    treatments: [
+      { name: "BYONIK® Anti-Aging | Gesicht", duration: "75 Min.", price: "169 €" },
+      { name: "BYONIK® Anti-Aging | Gesicht und Halskontur", duration: "90 Min.", price: "199 €" },
+      { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", duration: "120 Min.", price: "269 €" },
+      { name: "BYONIK® Lift Fresh-Up | Gesicht", duration: "60 Min.", price: "149 €" },
+      { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", duration: "75 Min.", price: "179 €" },
+      { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", duration: "60 Min.", price: "139 €" },
+      { name: "BYONIK® Clean Beauty | ohne Duftstoffe", duration: "60 Min.", price: "129 €" },
+      { name: "BYONIK® Pore Refining Algae Massage | Detox-Spezial", duration: "60 Min.", price: "139 €" },
+      { name: "BYONIK® Eye Revolution", duration: "25 Min.", price: "79 €" },
+      { name: "BYONIK® Hand Kiss", duration: "45 Min.", price: "129 €" },
+      { name: "BYONIK® Shapely Arms", duration: "45 Min.", price: "129 €" },
+      { name: "BYONIK® Show your Legs", duration: "60 Min.", price: "169 €" },
+      { name: "BYONIK® Clean & Smooth", duration: "30 Min.", price: "99 €" },
+    ],
+  },
+  {
     title: "Wimpern & Brauen",
     treatments: [
       { name: "Wimpernlifting", duration: "", price: "69 €" },
@@ -46,6 +64,7 @@ const priceCategories = [
       { name: "Nacken & Rückenmassage", duration: "45 Min.", price: "65 €" },
       { name: "Aromaölmassage", duration: "60 Min.", price: "85 €" },
       { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
+      { name: "Slimyonik Air Bodystyler + Sauerstoffinhalation", duration: "45 Min.", price: "55 €" },
     ],
   },
   {
