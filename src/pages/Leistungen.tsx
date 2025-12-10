@@ -14,12 +14,12 @@ const categories = [
     title: "Gesichtsbehandlungen",
     description: "Von klassischen Anwendungen bis hin zu innovativen Methoden für strahlende Haut.",
     treatments: [
-      { name: "Basic", duration: "30 Min.", price: "45 €", link: "/behandlungen/klassische-gesichtsbehandlung" },
-      { name: "Klassisch", duration: "50 Min.", price: "69 €", link: "/behandlungen/klassische-gesichtsbehandlung" },
-      { name: "Luxus", duration: "90 Min.", price: "119 €", link: "/behandlungen/anti-aging-behandlung" },
-      { name: "Anti Aging", duration: "60 Min.", price: "79 €", link: "/behandlungen/anti-aging-behandlung" },
-      { name: "Unreine Haut", duration: "50 Min.", price: "69 €", link: "/behandlungen/hyperpigmentierung" },
-      { name: "Trockene Haut", duration: "50 Min.", price: "69 €", link: "/behandlungen/detox-behandlung" },
+      { name: "Basic", link: "/behandlungen/klassische-gesichtsbehandlung" },
+      { name: "Klassisch", link: "/behandlungen/klassische-gesichtsbehandlung" },
+      { name: "Luxus", link: "/behandlungen/anti-aging-behandlung" },
+      { name: "Anti Aging", link: "/behandlungen/anti-aging-behandlung" },
+      { name: "Unreine Haut", link: "/behandlungen/hyperpigmentierung" },
+      { name: "Trockene Haut", link: "/behandlungen/detox-behandlung" },
     ],
   },
   {
@@ -28,9 +28,9 @@ const categories = [
     title: "Innovative Hautbehandlungen",
     description: "Modernste Technologien für intensive Hauterneuerung und sichtbare Ergebnisse.",
     treatments: [
-      { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", link: "/behandlungen/mikrodermabrasion" },
-      { name: "Microneedling", duration: "60 Min.", price: "99 €", link: "/behandlungen/microneedling" },
-      { name: "BB-Glow", duration: "60 Min.", price: "99 €", link: "/behandlungen/bb-glow" },
+      { name: "Microdermabrasion", link: "/behandlungen/mikrodermabrasion" },
+      { name: "Microneedling", link: "/behandlungen/microneedling" },
+      { name: "BB-Glow", link: "/behandlungen/bb-glow" },
     ],
   },
   {
@@ -39,19 +39,19 @@ const categories = [
     title: "BYONIK® Laser",
     description: "Innovative pulsgesteuerte Laserbehandlung für tiefenwirksame Hautverjüngung.",
     treatments: [
-      { name: "BYONIK® Anti-Aging | Gesicht", duration: "75 Min.", price: "169 €", link: "/behandlungen/byonik-anti-aging" },
-      { name: "BYONIK® Anti-Aging | Gesicht und Halskontur", duration: "90 Min.", price: "199 €", link: "/behandlungen/byonik-anti-aging-hals" },
-      { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", duration: "120 Min.", price: "269 €", link: "/behandlungen/byonik-gesicht-hals-dekollete" },
-      { name: "BYONIK® Lift Fresh-Up | Gesicht", duration: "60 Min.", price: "149 €", link: "/behandlungen/byonik-lift-fresh-up" },
-      { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", duration: "75 Min.", price: "179 €", link: "/behandlungen/byonik-skin-lightening" },
-      { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", duration: "60 Min.", price: "139 €", link: "/behandlungen/byonik-ecto-repair" },
-      { name: "BYONIK® Clean Beauty | ohne Duftstoffe", duration: "60 Min.", price: "129 €", link: "/behandlungen/byonik-clean-beauty" },
-      { name: "BYONIK® Pore Refining Algae Massage | Detox-Spezial", duration: "60 Min.", price: "139 €", link: "/behandlungen/byonik-pore-refining" },
-      { name: "BYONIK® Eye Revolution", duration: "25 Min.", price: "79 €", link: "/behandlungen/byonik-eye-revolution" },
-      { name: "BYONIK® Hand Kiss", duration: "45 Min.", price: "129 €", link: "/behandlungen/byonik-hand-kiss" },
-      { name: "BYONIK® Shapely Arms", duration: "45 Min.", price: "129 €", link: "/behandlungen/byonik-shapely-arms" },
-      { name: "BYONIK® Show your Legs", duration: "60 Min.", price: "169 €", link: "/behandlungen/byonik-show-your-legs" },
-      { name: "BYONIK® Clean & Smooth", duration: "30 Min.", price: "99 €", link: "/behandlungen/byonik-clean-smooth" },
+      { name: "BYONIK® Anti-Aging | Gesicht", link: "/behandlungen/byonik-anti-aging" },
+      { name: "BYONIK® Anti-Aging | Gesicht und Halskontur", link: "/behandlungen/byonik-anti-aging-hals" },
+      { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", link: "/behandlungen/byonik-gesicht-hals-dekollete" },
+      { name: "BYONIK® Lift Fresh-Up | Gesicht", link: "/behandlungen/byonik-lift-fresh-up" },
+      { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", link: "/behandlungen/byonik-skin-lightening" },
+      { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", link: "/behandlungen/byonik-ecto-repair" },
+      { name: "BYONIK® Clean Beauty | ohne Duftstoffe", link: "/behandlungen/byonik-clean-beauty" },
+      { name: "BYONIK® Pore Refining Algae Massage | Detox-Spezial", link: "/behandlungen/byonik-pore-refining" },
+      { name: "BYONIK® Eye Revolution", link: "/behandlungen/byonik-eye-revolution" },
+      { name: "BYONIK® Hand Kiss", link: "/behandlungen/byonik-hand-kiss" },
+      { name: "BYONIK® Shapely Arms", link: "/behandlungen/byonik-shapely-arms" },
+      { name: "BYONIK® Show your Legs", link: "/behandlungen/byonik-show-your-legs" },
+      { name: "BYONIK® Clean & Smooth", link: "/behandlungen/byonik-clean-smooth" },
     ],
   },
   {
@@ -60,14 +60,14 @@ const categories = [
     title: "Wimpern & Brauen",
     description: "Für einen ausdrucksstarken Blick mit professionellem Lifting.",
     treatments: [
-      { name: "Wimpernlifting", duration: "", price: "69 €", link: "/behandlungen/wimpernlifting" },
-      { name: "Augenbrauenlifting", duration: "", price: "59 €", link: "/behandlungen/augenbrauenlifting" },
-      { name: "Wimpern färben", duration: "", price: "15 €", link: "/behandlungen/wimpern-brauen-kombi" },
-      { name: "Augenbrauen formen", duration: "", price: "12 €", link: "/behandlungen/wimpern-brauen-kombi" },
-      { name: "Augenbrauen färben", duration: "", price: "12 €", link: "/behandlungen/wimpern-brauen-kombi" },
-      { name: "Augenbrauen formen & färben", duration: "", price: "24 €", link: "/behandlungen/wimpern-brauen-kombi" },
-      { name: "Komplett Paket", duration: "", price: "36 €", link: "/behandlungen/wimpern-brauen-kombi" },
-      { name: "Henna Brow", duration: "", price: "38 €", link: "/behandlungen/wimpern-brauen-kombi" },
+      { name: "Wimpernlifting", link: "/behandlungen/wimpernlifting" },
+      { name: "Augenbrauenlifting", link: "/behandlungen/augenbrauenlifting" },
+      { name: "Wimpern färben", link: "/behandlungen/wimpern-brauen-kombi" },
+      { name: "Augenbrauen formen", link: "/behandlungen/wimpern-brauen-kombi" },
+      { name: "Augenbrauen färben", link: "/behandlungen/wimpern-brauen-kombi" },
+      { name: "Augenbrauen formen & färben", link: "/behandlungen/wimpern-brauen-kombi" },
+      { name: "Komplett Paket", link: "/behandlungen/wimpern-brauen-kombi" },
+      { name: "Henna Brow", link: "/behandlungen/wimpern-brauen-kombi" },
     ],
   },
   {
@@ -76,13 +76,13 @@ const categories = [
     title: "Haarentfernung",
     description: "Sanfte und effektive Methoden für langanhaltend glatte Haut.",
     treatments: [
-      { name: "Waxing Arme komplett", duration: "", price: "45 €", link: "/behandlungen/waxing" },
-      { name: "Waxing Beine komplett", duration: "", price: "55 €", link: "/behandlungen/waxing" },
-      { name: "Waxing Achseln", duration: "", price: "22 €", link: "/behandlungen/waxing" },
-      { name: "Waxing Intim Komplett", duration: "", price: "38 €", link: "/behandlungen/waxing" },
-      { name: "Sugaring Gesicht", duration: "", price: "35 €", link: "/behandlungen/sugaring" },
-      { name: "Sugaring Beine komplett", duration: "", price: "65 €", link: "/behandlungen/sugaring" },
-      { name: "Sugaring Bikini Komplett", duration: "", price: "42 €", link: "/behandlungen/sugaring" },
+      { name: "Waxing Arme komplett", link: "/behandlungen/waxing" },
+      { name: "Waxing Beine komplett", link: "/behandlungen/waxing" },
+      { name: "Waxing Achseln", link: "/behandlungen/waxing" },
+      { name: "Waxing Intim Komplett", link: "/behandlungen/waxing" },
+      { name: "Sugaring Gesicht", link: "/behandlungen/sugaring" },
+      { name: "Sugaring Beine komplett", link: "/behandlungen/sugaring" },
+      { name: "Sugaring Bikini Komplett", link: "/behandlungen/sugaring" },
     ],
   },
   {
@@ -91,12 +91,12 @@ const categories = [
     title: "Massagen",
     description: "Entspannung für Körper und Seele mit wohltuenden Behandlungen.",
     treatments: [
-      { name: "Gesichtsmassage", duration: "20 Min.", price: "30 €", link: "/behandlungen/klassische-massage" },
-      { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €", link: "/behandlungen/klassische-massage" },
-      { name: "Nacken & Rückenmassage", duration: "45 Min.", price: "65 €", link: "/behandlungen/klassische-massage" },
-      { name: "Aromaölmassage", duration: "60 Min.", price: "85 €", link: "/behandlungen/aromaoelmassage" },
-      { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €", link: "/behandlungen/aromaoelmassage" },
-      { name: "Slimyonik Air Bodystyler + Sauerstoffinhalation", duration: "45 Min.", price: "55 €", link: "/behandlungen/slimyonik" },
+      { name: "Gesichtsmassage", link: "/behandlungen/klassische-massage" },
+      { name: "Gesichts-, Nacken- & Dekolletémassage", link: "/behandlungen/klassische-massage" },
+      { name: "Nacken & Rückenmassage", link: "/behandlungen/klassische-massage" },
+      { name: "Aromaölmassage", link: "/behandlungen/aromaoelmassage" },
+      { name: "Ganzkörpermassage", link: "/behandlungen/aromaoelmassage" },
+      { name: "Slimyonik Air Bodystyler + Sauerstoffinhalation", link: "/behandlungen/slimyonik" },
     ],
   },
 ];
@@ -163,13 +163,9 @@ const Leistungen = () => {
                     className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg group"
                   >
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-serif font-semibold mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-lg font-serif font-semibold mb-4 group-hover:text-primary transition-colors">
                         {treatment.name}
                       </h3>
-                      <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                        <span>{treatment.duration}</span>
-                        <span className="font-semibold text-primary text-base">{treatment.price}</span>
-                      </div>
                       <Link 
                         to={treatment.link}
                         className="text-primary font-medium hover:underline inline-flex items-center gap-1 text-sm"
