@@ -29,6 +29,7 @@ const categories = [
     treatments: [
       { name: "Mikrodermabrasion", duration: "45 Min.", price: "ab 69 €", link: "/behandlungen/mikrodermabrasion" },
       { name: "Microneedling", duration: "60 Min.", price: "ab 149 €", link: "/behandlungen/microneedling" },
+      { name: "BB-Glow", duration: "60 Min.", price: "ab 99 €", link: "/behandlungen/bb-glow" },
     ],
   },
   {
