@@ -45,6 +45,12 @@ const studioImages = [
     alt: "Slimyonik Behandlung", 
     category: "Behandlungen" 
   },
+  { 
+    src: "", 
+    alt: "Laser Behandlung", 
+    category: "Behandlungen",
+    type: "video"
+  },
 ];
 
 const Galerie = () => {
@@ -90,17 +96,30 @@ const Galerie = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {studioImages.map((image, index) => (
                 <Card key={index} className="border-2 overflow-hidden group">
-                  <div className="aspect-square relative overflow-hidden">
-                    <img 
-                      src={image.src} 
-                      alt={image.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
-                      <p className="text-sm font-medium">{image.category}</p>
-                      <p className="text-lg font-serif">{image.alt}</p>
-                    </div>
+                  <div className="aspect-square relative overflow-hidden bg-black">
+                    {image.type === 'video' ? (
+                      <video 
+                        src={image.src} 
+                        className="w-full h-full object-cover"
+                        controls
+                        playsInline
+                      />
+                    ) : (
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    )}
+                    {image.type !== 'video' && (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
+                          <p className="text-sm font-medium">{image.category}</p>
+                          <p className="text-lg font-serif">{image.alt}</p>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </Card>
               ))}
