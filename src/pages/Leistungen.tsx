@@ -18,6 +18,7 @@ const categories = [
       { name: "Anti-Aging Behandlung", duration: "75 Min.", price: "ab 95 €", link: "/behandlungen/anti-aging-behandlung" },
       { name: "Hyperpigmentierung", duration: "60 Min.", price: "ab 85 €", link: "/behandlungen/hyperpigmentierung" },
       { name: "Detox-Behandlung", duration: "60 Min.", price: "ab 75 €", link: "/behandlungen/detox-behandlung" },
+      { name: "Sensitive Balance Behandlung", duration: "70 Min.", price: "auf Anfrage", link: "/behandlungen/sensitive-balance" },
     ],
   },
   {
