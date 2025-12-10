@@ -1,4 +1,4 @@
-import shahiraImage from "@/assets/shahira-portrait.jpg";
+const shahiraImage = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Schahira3-1765406512070.jpeg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Heart, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
