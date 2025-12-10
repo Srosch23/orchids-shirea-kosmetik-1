@@ -81,7 +81,7 @@ const categories = [
     treatments: [
       { name: "Klassische Massage", duration: "30-60 Min.", price: "ab 45 €", link: "/behandlungen/klassische-massage" },
       { name: "Aromaölmassage", duration: "45 Min.", price: "ab 55 €", link: "/behandlungen/aromaoelmassage" },
-      { name: "Slimyonik Air Bodystyler", duration: "45 Min.", price: "ab 55 €", link: "/behandlungen/slimyonik" },
+      { name: "Slimyonik Air Bodystyler", duration: "45 Min.", price: "55 €", link: "/behandlungen/slimyonik" },
     ],
   },
 ];
