@@ -23,6 +23,7 @@ const treatmentData: Record<string, {
   benefits: string[];
   contraindications?: string[];
   faq: { question: string; answer: string }[];
+  image?: string;
 }> = {
   "klassische-gesichtsbehandlung": {
     title: "Klassische Gesichtsbehandlung",
@@ -143,6 +144,7 @@ const treatmentData: Record<string, {
     subtitle: "Natürlich geschwungene Wimpern",
     duration: "45 Min.",
     price: "ab 59 €",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
     description: "Verleihen Sie Ihren natürlichen Wimpern einen wunderschönen Schwung – ganz ohne künstliche Extensions. Das Wimpernlifting hebt und formt Ihre eigenen Wimpern sanft nach oben, sodass Ihr Blick sofort offener und wacher wirkt. Ein traumhafter Effekt, der bis zu 8 Wochen anhält.",
     process: [
       "Reinigung der Wimpern und Augenpartie",
@@ -171,6 +173,7 @@ const treatmentData: Record<string, {
     subtitle: "Perfekt geformte Brauen",
     duration: "30 Min.",
     price: "ab 39 €",
+    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80",
     description: "Definierte, gepflegte Augenbrauen verleihen Ihrem Gesicht Ausdruck und Struktur. Mit dem Augenbrauenlifting bringen wir Ihre Brauen in eine perfekte, natürlich wirkende Form. Die Härchen werden sanft angehoben und fixiert – für einen soften, fedrigen Look, der mehrere Wochen hält.",
     process: [
       "Beratung zur gewünschten Brauenform",
@@ -896,6 +899,7 @@ const defaultTreatment: {
   benefits: string[];
   contraindications?: string[];
   faq: { question: string; answer: string }[];
+  image?: string;
 } = {
   title: "Behandlung",
   duration: "variabel",
@@ -961,6 +965,16 @@ const Behandlungen = () => {
                 <span className="font-medium">{treatment.price}</span>
               </div>
             </div>
+
+            {treatment.image && (
+              <div className="mb-8 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={treatment.image} 
+                  alt={treatment.title}
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+              </div>
+            )}
             
             <p className="text-muted-foreground text-lg leading-relaxed">
               {treatment.description}
