@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Instagram, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const studioImages = [
   { 
@@ -70,10 +71,22 @@ const studioImages = [
     alt: "Slimyonik Behandlung", 
     category: "Behandlungen" 
   },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Gerat-1765406968546.jpeg", 
+    alt: "Slimyonik Air Bodystyler", 
+    category: "Behandlungen" 
+  },
 ];
+
+const categories = ["Alle", "Studio", "Behandlungen", "Produkte"];
 
 const Galerie = () => {
   const navigate = useNavigate();
+  const [activeCategory, setActiveCategory] = useState("Alle");
+
+  const filteredImages = activeCategory === "Alle" 
+    ? studioImages 
+    : studioImages.filter(img => img.category === activeCategory);
 
   return (
     <MainLayout>
@@ -112,8 +125,23 @@ const Galerie = () => {
               Studio-Atmosphäre
             </h2>
             
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-3 mb-10">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={activeCategory === category ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setActiveCategory(category)}
+                  className="border-2"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {studioImages.map((image, index) => (
+              {filteredImages.map((image, index) => (
                 <Card key={index} className="border-2 overflow-hidden group">
                   <div className="aspect-square relative overflow-hidden bg-black">
                     <img 
