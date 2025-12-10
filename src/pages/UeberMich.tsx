@@ -2,9 +2,10 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import shahiraImage from "@/assets/shahira-portrait.jpg";
-import treatmentRoom from "@/assets/treatment-room.jpg";
 import { Award, Heart, Sparkles, Shield, Leaf, Calendar, Check, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const treatmentRoomUrl = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Behandlungsraumlichkeiten-1765401998220.jpeg";
 
 const qualifications = [
   "Staatlich anerkannte Fachkosmetikerin",
@@ -218,7 +219,7 @@ const UeberMich = () => {
             
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src={treatmentRoom} 
+                src={treatmentRoomUrl} 
                 alt="SHIREÁ Beauty Space - Behandlungsraum"
                 className="w-full h-full object-cover"
               />

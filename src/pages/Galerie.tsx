@@ -16,6 +16,16 @@ const studioImages = [
     category: "Studio" 
   },
   { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Behandlungsraumlichkeiten-1765401998220.jpeg", 
+    alt: "Behandlungsräumlichkeiten", 
+    category: "Studio" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Fettverbrennung-1765402000716.jpeg", 
+    alt: "Slimyonik Fettverbrennung", 
+    category: "Behandlungen" 
+  },
+  { 
     src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Kosmetik-Produkte-1765401365824.jpeg", 
     alt: "Byonik Kosmetik-Produkte", 
     category: "Produkte" 
@@ -44,12 +54,6 @@ const studioImages = [
     src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Behandlung-1765401365929.jpeg", 
     alt: "Slimyonik Behandlung", 
     category: "Behandlungen" 
-  },
-  { 
-    src: "", 
-    alt: "Laser Behandlung", 
-    category: "Behandlungen",
-    type: "video"
   },
 ];
 
@@ -97,29 +101,16 @@ const Galerie = () => {
               {studioImages.map((image, index) => (
                 <Card key={index} className="border-2 overflow-hidden group">
                   <div className="aspect-square relative overflow-hidden bg-black">
-                    {image.type === 'video' ? (
-                      <video 
-                        src={image.src} 
-                        className="w-full h-full object-cover"
-                        controls
-                        playsInline
-                      />
-                    ) : (
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    )}
-                    {image.type !== 'video' && (
-                      <>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
-                          <p className="text-sm font-medium">{image.category}</p>
-                          <p className="text-lg font-serif">{image.alt}</p>
-                        </div>
-                      </>
-                    )}
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
+                      <p className="text-sm font-medium">{image.category}</p>
+                      <p className="text-lg font-serif">{image.alt}</p>
+                    </div>
                   </div>
                 </Card>
               ))}
