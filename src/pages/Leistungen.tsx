@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { 
   Sparkles, Eye, Droplets, Heart, Zap, ArrowRight, Calendar,
-  Check, ArrowLeft
+  Check, ArrowLeft, Wand2
 } from "lucide-react";
 
 const categories = [
@@ -16,10 +16,18 @@ const categories = [
     treatments: [
       { name: "Klassische Gesichtsbehandlung", duration: "60 Min.", price: "ab 65 €", link: "/behandlungen/klassische-gesichtsbehandlung" },
       { name: "Anti-Aging Behandlung", duration: "75 Min.", price: "ab 95 €", link: "/behandlungen/anti-aging-behandlung" },
-      { name: "Mikrodermabrasion", duration: "45 Min.", price: "ab 69 €", link: "/behandlungen/mikrodermabrasion" },
-      { name: "Microneedling", duration: "60 Min.", price: "ab 149 €", link: "/behandlungen/microneedling" },
       { name: "Hyperpigmentierung", duration: "60 Min.", price: "ab 85 €", link: "/behandlungen/hyperpigmentierung" },
       { name: "Detox-Behandlung", duration: "60 Min.", price: "ab 75 €", link: "/behandlungen/detox-behandlung" },
+    ],
+  },
+  {
+    id: "innovative",
+    icon: Wand2,
+    title: "Innovative Hautbehandlungen",
+    description: "Modernste Technologien für intensive Hauterneuerung und sichtbare Ergebnisse.",
+    treatments: [
+      { name: "Mikrodermabrasion", duration: "45 Min.", price: "ab 69 €", link: "/behandlungen/mikrodermabrasion" },
+      { name: "Microneedling", duration: "60 Min.", price: "ab 149 €", link: "/behandlungen/microneedling" },
     ],
   },
   {
