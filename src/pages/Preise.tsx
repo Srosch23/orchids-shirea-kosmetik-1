@@ -8,73 +8,69 @@ import { Link, useNavigate } from "react-router-dom";
 const priceCategories = [
   {
     title: "Gesichtsbehandlungen",
-    popular: "Anti-Aging Behandlung",
     treatments: [
-      { name: "Klassische Gesichtsbehandlung", duration: "60 Min.", price: "65 €" },
-      { name: "Spezialbehandlung Hyperpigmentierung", duration: "70 Min.", price: "89 €" },
-      { name: "Sensitive Balance Behandlung", duration: "70 Min.", price: "85 €" },
-      { name: "Detox-Behandlung", duration: "70 Min.", price: "79 €" },
-      { name: "Anti-Aging-Behandlung", duration: "70 Min.", price: "85 €", featured: true },
+      { name: "Basic", duration: "30 Min.", price: "45 €", description: "Reinigung, Hautdiagnose, Peeling, Maske, Pflege" },
+      { name: "Klassisch", duration: "50 Min.", price: "69 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, Individuell abgestimmte Maske, Abschließende Pflege" },
+      { name: "Luxus", duration: "90 Min.", price: "119 €", featured: true, description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
+      { name: "Anti Aging", duration: "60 Min.", price: "79 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
+      { name: "Unreine Haut", duration: "50 Min.", price: "69 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, Regenerationsmaske, Abschließende Pflege" },
+      { name: "Trockene Haut", duration: "50 Min.", price: "69 €", description: "Reinigung, Hautdiagnose, Peeling, tiefenwirksame Wirkstoffmaske, Feuchtigkeitsampulle, Abschließende Pflege" },
     ],
   },
   {
     title: "Innovative Hautbehandlungen",
     treatments: [
-      { name: "Mikrodermabrasion", duration: "45 Min.", price: "99 €" },
-      { name: "Microneedling Gesicht", duration: "60 Min.", price: "129 €" },
-      { name: "Microneedling Gesicht & Hals", duration: "75 Min.", price: "159 €" },
+      { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
+      { name: "Microneedling", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
+      { name: "BB-Glow", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
     ],
   },
   {
-    title: "BYONIK® Laser",
-    popular: "BYONIK® Anti-Aging",
+    title: "Wimpern & Brauen",
     treatments: [
-      { name: "BYONIK® Anti-Aging | Gesicht", duration: "75 Min.", price: "169 €", featured: true },
-      { name: "BYONIK® Anti-Aging | Gesicht & Hals", duration: "90 Min.", price: "199 €" },
-      { name: "BYONIK® Anti-Aging | Gesicht, Hals & Dekolleté", duration: "120 Min.", price: "269 €" },
-      { name: "BYONIK® Lift Fresh-Up", duration: "60 Min.", price: "149 €" },
-      { name: "BYONIK® Skin Lightening", duration: "75 Min.", price: "179 €" },
-      { name: "BYONIK® Ecto Repair", duration: "60 Min.", price: "139 €" },
-      { name: "BYONIK® Eye Revolution", duration: "25 Min.", price: "79 €" },
-      { name: "BYONIK® Hand Kiss", duration: "45 Min.", price: "129 €" },
+      { name: "Wimpernlifting", duration: "", price: "69 €" },
+      { name: "Augenbrauenlifting", duration: "", price: "59 €" },
+      { name: "Wimpern färben", duration: "", price: "15 €" },
+      { name: "Augenbrauen formen", duration: "", price: "12 €" },
+      { name: "Augenbrauen färben", duration: "", price: "12 €" },
+      { name: "Augenbrauen formen & färben", duration: "", price: "24 €" },
+      { name: "Komplett Paket (Brauen formen & färben, Wimpern färben)", duration: "", price: "36 €" },
+      { name: "Henna Brow", duration: "", price: "38 €" },
     ],
   },
   {
-    title: "Wimpern & Augenbrauen",
+    title: "Massagen",
     treatments: [
-      { name: "Wimpernlifting inkl. Färben", duration: "60 Min.", price: "69 €" },
-      { name: "Augenbrauenlifting inkl. Färben", duration: "45 Min.", price: "49 €" },
-      { name: "Wimpern- & Brauenlifting Kombi", duration: "75 Min.", price: "99 €" },
-      { name: "Wimpern färben", duration: "15 Min.", price: "15 €" },
-      { name: "Augenbrauen färben", duration: "15 Min.", price: "12 €" },
-      { name: "Augenbrauen zupfen", duration: "15 Min.", price: "12 €" },
+      { name: "Gesichtsmassage", duration: "20 Min.", price: "30 €" },
+      { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €" },
+      { name: "Nacken & Rückenmassage", duration: "45 Min.", price: "65 €" },
+      { name: "Aromaölmassage", duration: "60 Min.", price: "85 €" },
+      { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
     ],
   },
   {
-    title: "Haarentfernung",
+    title: "Waxing",
     treatments: [
-      { name: "Waxing Gesicht", duration: "15 Min.", price: "ab 15 €" },
-      { name: "Waxing Achseln", duration: "15 Min.", price: "18 €" },
-      { name: "Waxing Bikinizone", duration: "20 Min.", price: "ab 25 €" },
-      { name: "Waxing Beine komplett", duration: "45 Min.", price: "45 €" },
-      { name: "Sugaring (verschiedene Zonen)", duration: "variabel", price: "ab 15 €" },
+      { name: "Arme komplett", duration: "", price: "45 €" },
+      { name: "Beine komplett", duration: "", price: "55 €" },
+      { name: "Achseln", duration: "", price: "22 €" },
+      { name: "Intim Komplett", duration: "", price: "38 €" },
     ],
   },
   {
-    title: "Wellness & Massage",
+    title: "Sugaring",
     treatments: [
-      { name: "Klassische Massage 30 Min.", duration: "30 Min.", price: "45 €" },
-      { name: "Klassische Massage 60 Min.", duration: "60 Min.", price: "75 €" },
-      { name: "Aromaölmassage", duration: "45 Min.", price: "65 €" },
-    ],
-  },
-  {
-    title: "Slimyonik Air Bodystyler",
-    popular: "Professional-Kur",
-    treatments: [
-      { name: "Einzelbehandlung", duration: "45 Min.", price: "55 €" },
-      { name: "Basic-Kur (10 Behandlungen)", duration: "je 45 Min.", price: "499 €", note: "statt 550 €" },
-      { name: "Professional-Kur (12 Behandlungen)", duration: "je 45 Min.", price: "599 €", note: "statt 660 €", featured: true },
+      { name: "Gesicht", duration: "", price: "35 €" },
+      { name: "Augenbrauen", duration: "", price: "15 €" },
+      { name: "Oberlippe", duration: "", price: "12 €" },
+      { name: "Kinn", duration: "", price: "12 €" },
+      { name: "Achseln", duration: "", price: "24 €" },
+      { name: "Arme komplett", duration: "", price: "45 €" },
+      { name: "Oberschenkel", duration: "", price: "35 €" },
+      { name: "Unterschenkel", duration: "", price: "35 €" },
+      { name: "Beine komplett", duration: "", price: "65 €" },
+      { name: "Bikinilinie", duration: "", price: "18 €" },
+      { name: "Bikini Komplett", duration: "", price: "42 €" },
     ],
   },
 ];
@@ -122,12 +118,6 @@ const Preise = () => {
                     <CardTitle className="text-2xl font-serif">
                       {category.title}
                     </CardTitle>
-                    {category.popular && (
-                      <Badge variant="secondary" className="bg-primary/10 text-primary">
-                        <Star className="w-3 h-3 mr-1 fill-primary" />
-                        Beliebt: {category.popular}
-                      </Badge>
-                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="p-0">
