@@ -21,6 +21,21 @@ const studioImages = [
     category: "Studio" 
   },
   { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Dr.-Schrammek-Produkte-1765406912278.jpeg", 
+    alt: "Dr. Schrammek Produkte", 
+    category: "Produkte" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/BYONIK-1765406912303.jpeg", 
+    alt: "BYONIK Gerät", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Raumlichkeiten-1765406912332.jpeg", 
+    alt: "Räumlichkeiten", 
+    category: "Studio" 
+  },
+  { 
     src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Fettverbrennung-1765402000716.jpeg", 
     alt: "Slimyonik Fettverbrennung", 
     category: "Behandlungen" 
