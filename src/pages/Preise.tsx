@@ -44,6 +44,14 @@ const priceCategories = [
     ],
   },
   {
+    title: "Slimyonik Air Bodystyler + Sauerstoffinhalation",
+    treatments: [
+      { name: "Einzelbehandlung", duration: "45 Min.", price: "55 €", description: "Perfekt zum Kennenlernen" },
+      { name: "Basic-Kur (10er Kur)", duration: "", price: "499 €", note: "statt 550 €", featured: true, description: "Inkl. Behandlungsgutschein für Familie und Freunde. Ideal für sichtbare Ergebnisse." },
+      { name: "Professional-Kur (12er Kur)", duration: "", price: "599 €", note: "statt 660 €", featured: true, description: "Inkl. Behandlungsgutschein und kostenlosem Produkt. Maximale Wirkung für langfristige Erfolge." },
+    ],
+  },
+  {
     title: "Wimpern & Brauen",
     treatments: [
       { name: "Wimpernlifting", duration: "", price: "69 €" },
@@ -64,14 +72,6 @@ const priceCategories = [
       { name: "Nacken & Rückenmassage", duration: "45 Min.", price: "65 €" },
       { name: "Aromaölmassage", duration: "60 Min.", price: "85 €" },
       { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
-    ],
-  },
-  {
-    title: "Slimyonik Air Bodystyler + Sauerstoffinhalation",
-    treatments: [
-      { name: "Einzelbehandlung", duration: "45 Min.", price: "55 €", description: "Perfekt zum Kennenlernen" },
-      { name: "Basic-Kur (10er Kur)", duration: "", price: "499 €", note: "statt 550 €", featured: true, description: "Inkl. Behandlungsgutschein für Familie und Freunde. Ideal für sichtbare Ergebnisse." },
-      { name: "Professional-Kur (12er Kur)", duration: "", price: "599 €", note: "statt 660 €", featured: true, description: "Inkl. Behandlungsgutschein und kostenlosem Produkt. Maximale Wirkung für langfristige Erfolge." },
     ],
   },
   {

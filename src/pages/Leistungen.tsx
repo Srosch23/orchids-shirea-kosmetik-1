@@ -55,6 +55,15 @@ const categories = [
     ],
   },
   {
+    id: "slimyonik",
+    icon: Activity,
+    title: "Slimyonik Air Bodystyler + Sauerstoffinhalation",
+    description: "Effektive Körperformung mit tiefenwirksamen Ergebnissen.",
+    treatments: [
+      { name: "Einzelbehandlung", link: "/behandlungen/slimyonik" },
+    ],
+  },
+  {
     id: "augen",
     icon: Eye,
     title: "Wimpern & Brauen",
@@ -96,17 +105,6 @@ const categories = [
       { name: "Nacken & Rückenmassage", link: "/behandlungen/klassische-massage" },
       { name: "Aromaölmassage", link: "/behandlungen/aromaoelmassage" },
       { name: "Ganzkörpermassage", link: "/behandlungen/aromaoelmassage" },
-    ],
-  },
-  {
-    id: "slimyonik",
-    icon: Activity,
-    title: "Slimyonik Air Bodystyler + Sauerstoffinhalation",
-    description: "Effektive Körperformung mit tiefenwirksamen Ergebnissen.",
-    treatments: [
-      { name: "Einzelbehandlung", link: "/behandlungen/slimyonik" },
-      { name: "Basic-Kur (10er Kur)", link: "/behandlungen/slimyonik" },
-      { name: "Professional-Kur (12er Kur)", link: "/behandlungen/slimyonik" },
     ],
   },
 ];
