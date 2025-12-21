@@ -63,16 +63,15 @@ const priceCategories = [
         { name: "Henna Brow", duration: "", price: "38 €" },
       ],
     },
-    {
-      title: "Massagen",
-      treatments: [
-        { name: "Gesichtsmassage", duration: "15 Min.", price: "30 €" },
-        { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €" },
-        { name: "Nacken & Rückenmassage", duration: "45 Min.", price: "65 €" },
-        { name: "Aromaölmassage", duration: "60 Min.", price: "85 €" },
-        { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
-      ],
-    },
+      {
+        title: "Massagen",
+        treatments: [
+          { name: "Gesichtsmassage", duration: "15 Min.", price: "30 €" },
+          { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €" },
+          { name: "Klassische Massage", duration: "45 Min.", price: "65 €" },
+          { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
+        ],
+      },
   {
     title: "Waxing",
     treatments: [
