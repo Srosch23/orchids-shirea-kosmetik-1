@@ -2,7 +2,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
-  Phone, Mail, MapPin, Instagram, MessageCircle, Clock, Calendar, ArrowLeft
+  Phone, Mail, MapPin, Instagram, MessageCircle, Clock, Calendar, ArrowLeft, Facebook
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -119,28 +119,39 @@ const Kontakt = () => {
               </Card>
             </div>
             
-            <div className="flex flex-wrap gap-3 pt-8 justify-center">
-              <Button 
-                className="bg-primary hover:bg-primary/90"
-                asChild
-              >
-                  <a href="https://wa.me/4915565510880" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  WhatsApp
-                </a>
-              </Button>
-              
-              <Button 
-                variant="outline"
-                className="border-2"
-                asChild
-              >
-                <a href="https://www.instagram.com/shirea_kosmetik/" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="mr-2 h-5 w-5" />
-                  Instagram
-                </a>
-              </Button>
-            </div>
+              <div className="flex flex-wrap gap-3 pt-8 justify-center">
+                <Button 
+                  className="bg-primary hover:bg-primary/90"
+                  asChild
+                >
+                    <a href="https://wa.me/4915565510880" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    WhatsApp
+                  </a>
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  className="border-2"
+                  asChild
+                >
+                  <a href="https://www.facebook.com/share/17YSECAhz3/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                    <Facebook className="mr-2 h-5 w-5" />
+                    Facebook
+                  </a>
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  className="border-2"
+                  asChild
+                >
+                  <a href="https://www.instagram.com/shirea_kosmetik/" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="mr-2 h-5 w-5" />
+                    Instagram
+                  </a>
+                </Button>
+              </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Instagram, MessageCircle, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, MessageCircle, Clock, Facebook } from "lucide-react";
 import treatmentRoom from "@/assets/treatment-room.jpg";
 
 export const Contact = () => {
@@ -98,28 +98,39 @@ export const Contact = () => {
               </CardContent>
             </Card>
             
-            <div className="flex flex-wrap gap-3 pt-4">
-              <Button 
-                className="flex-1 bg-primary hover:bg-primary/90"
-                asChild
-              >
-                  <a href="https://wa.me/4915565510880" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  WhatsApp
-                </a>
-              </Button>
-              
-              <Button 
-                variant="outline"
-                className="flex-1 border-2"
-                asChild
-              >
-                <a href="https://www.instagram.com/shirea_kosmetik/" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="mr-2 h-5 w-5" />
-                  Instagram
-                </a>
-              </Button>
-            </div>
+              <div className="flex flex-wrap gap-3 pt-4">
+                <Button 
+                  className="flex-1 bg-primary hover:bg-primary/90"
+                  asChild
+                >
+                    <a href="https://wa.me/4915565510880" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    WhatsApp
+                  </a>
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  className="flex-1 border-2"
+                  asChild
+                >
+                  <a href="https://www.facebook.com/share/17YSECAhz3/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                    <Facebook className="mr-2 h-5 w-5" />
+                    Facebook
+                  </a>
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  className="flex-1 border-2"
+                  asChild
+                >
+                  <a href="https://www.instagram.com/shirea_kosmetik/" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="mr-2 h-5 w-5" />
+                    Instagram
+                  </a>
+                </Button>
+              </div>
           </div>
           
           <div>
