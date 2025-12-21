@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "Home", href: "/" },
+  { label: "SHIREÁ", href: "/" },
+  { label: "Facial & Beauty Space by Schahira", href: "/beauty-space" },
   { label: "Über mich", href: "/ueber-mich" },
   { label: "Leistungen", href: "/leistungen" },
   { label: "Galerie", href: "/galerie" },
