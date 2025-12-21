@@ -21,15 +21,14 @@ const qualifications = [
       "Zertifizierte Expertin für Micro-Needling & Mikrodermabrasion",
     ],
   },
-  {
-    category: "Augenbrauen- & Wimpernstyling",
-    items: [
-      "Brow Lifting / Brow Lamination zertifiziert",
-      "Lash Lifting zertifiziert",
-      "Professionelle Techniken im Färben, Formen & Stylen von Augenbrauen",
-      "Präzisions-Haarentfernung (Waxing)",
-    ],
-  },
+    {
+      category: "Augenbrauen- & Wimpernstyling",
+      items: [
+        "Brow Lifting / Lash Lifting zertifiziert",
+        "Professionelle Techniken im Färben, Formen & Stylen von Augenbrauen",
+        "Präzisions-Haarentfernung (Waxing)",
+      ],
+    },
   {
     category: "Spezialbehandlungen",
     items: [
@@ -243,16 +242,7 @@ const UeberMich = () => {
                 im Mittelpunkt.
               </p>
               
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90"
-                asChild
-              >
-                <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Termin vereinbaren
-                </a>
-              </Button>
+
             </div>
             
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
