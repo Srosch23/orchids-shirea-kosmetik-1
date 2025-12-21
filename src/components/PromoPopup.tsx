@@ -19,13 +19,13 @@ export function PromoPopup() {
     localStorage.setItem(STORAGE_KEY, 'true');
   };
 
-  const handleWhatsApp = () => {
-    const phoneNumber = '<DEINE_NUMMER_IM_INTERNATIONALEN_FORMAT>';
-    const message = encodeURIComponent(
-      'Hi, ich interessiere mich für das BYONIK® Laser Angebot für 139 €. Ist noch ein Termin frei?'
-    );
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-  };
+    const handleWhatsApp = () => {
+      const phoneNumber = '<DEINE_NUMMER_IM_INTERNATIONALEN_FORMAT>';
+      const message = encodeURIComponent(
+        'Hi, ich interessiere mich für das BYONIK® Laser Angebot für 139 € plus 10% Warengutschein. Ist noch ein Termin frei?'
+      );
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    };
 
   if (!isOpen) return null;
 
@@ -55,14 +55,17 @@ export function PromoPopup() {
             </p>
           </div>
 
-          <div className="mb-8 py-6 px-4 bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl">
-            <div className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-rose-600">
-              139 €
+            <div className="mb-8 py-6 px-4 bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl">
+              <div className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-rose-600">
+                139 €
+              </div>
+              <div className="mt-2 text-gray-600 text-sm">
+                BYONIK® LIFT PTL FACIAL • 75 Minuten
+              </div>
+              <div className="mt-3 text-rose-600 font-semibold text-sm">
+                + 10% Warengutschein
+              </div>
             </div>
-            <div className="mt-2 text-gray-600 text-sm">
-              BYONIK® LIFT PTL FACIAL • 75 Minuten
-            </div>
-          </div>
 
           <button
             onClick={handleWhatsApp}
