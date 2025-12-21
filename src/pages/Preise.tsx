@@ -53,7 +53,7 @@ const priceCategories = [
     {
       title: "Wimpern & Brauen",
       treatments: [
-        { name: "Wimpernlifting", duration: "", price: "69 €" },
+        { name: "Wimpernlifting", duration: "", price: "79 €" },
         { name: "Augenbrauenlifting", duration: "", price: "59 €" },
         { name: "Wimpern färben", duration: "", price: "15 €" },
         { name: "Augenbrauen formen", duration: "", price: "15 €" },
