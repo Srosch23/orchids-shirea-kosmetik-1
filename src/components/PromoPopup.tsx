@@ -19,13 +19,13 @@ export function PromoPopup() {
     localStorage.setItem(STORAGE_KEY, 'true');
   };
 
-    const handleWhatsApp = () => {
-      const phoneNumber = '<DEINE_NUMMER_IM_INTERNATIONALEN_FORMAT>';
-      const message = encodeURIComponent(
-        'Hi, ich interessiere mich für das BYONIK® Laser Angebot für 139 € plus 10% Warengutschein. Ist noch ein Termin frei?'
-      );
-      window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-    };
+      const handleWhatsApp = () => {
+        const phoneNumber = '4915565510880';
+        const message = encodeURIComponent(
+          'Hi, ich interessiere mich für das BYONIK® Laser Angebot für 139 € plus 10% Warengutschein. Ist noch ein Termin frei?'
+        );
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+      };
 
   if (!isOpen) return null;
 
