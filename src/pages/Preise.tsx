@@ -2,7 +2,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FileDown, Calendar, Star, ArrowLeft } from "lucide-react";
+import { Calendar, ArrowLeft } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const priceCategories = [
@@ -165,38 +165,31 @@ const Preise = () => {
         </div>
       </section>
 
-      {/* Download & CTA */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-serif font-bold mb-4">
-              Detaillierte Preisliste
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Laden Sie unsere vollständige Preisliste als PDF herunter oder buchen Sie 
-              direkt Ihren Wunschtermin.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" variant="outline" className="border-2" asChild>
-                <a href="/Preisliste_Shirea.pdf" download="Preisliste_Shirea.pdf">
-                  <FileDown className="mr-2 h-5 w-5" />
-                  Preisliste herunterladen
-                </a>
-              </Button>
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90"
-                asChild
-              >
-                <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Jetzt Termin buchen
-                </a>
-              </Button>
+        {/* CTA */}
+        <section className="py-20 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-serif font-bold mb-4">
+                Bereit für Ihre Behandlung?
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                Buchen Sie jetzt Ihren Wunschtermin online.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90"
+                  asChild
+                >
+                  <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Jetzt Termin buchen
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     </MainLayout>
   );
 };
