@@ -22,21 +22,21 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ueber-mich" element={<UeberMich />} />
-          <Route path="/leistungen" element={<Leistungen />} />
-          <Route path="/behandlungen/:slug" element={<Behandlungen />} />
-          <Route path="/galerie" element={<Galerie />} />
-          <Route path="/preise" element={<Preise />} />
-          <Route path="/kontakt" element={<Kontakt />} />
-          <Route path="/agb" element={<AGB />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/ueber-mich" element={<UeberMich />} />
+              <Route path="/leistungen" element={<Leistungen />} />
+              <Route path="/behandlungen/:slug" element={<Behandlungen />} />
+              <Route path="/galerie" element={<Galerie />} />
+              <Route path="/preise" element={<Preise />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/agb" element={<AGB />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+        </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
