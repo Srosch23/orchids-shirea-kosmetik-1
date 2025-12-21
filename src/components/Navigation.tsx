@@ -63,15 +63,11 @@ export const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button size="sm" className="ml-4" asChild>
-              <a
-                href="https://buchung.treatwell.de/ort/496665/menue/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Jetzt buchen
-              </a>
-            </Button>
+              <Button size="sm" className="ml-4" asChild>
+                <Link to="/kontakt">
+                  Jetzt buchen
+                </Link>
+              </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -101,17 +97,13 @@ export const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
-              <div className="px-4 pt-4">
-                <Button className="w-full" asChild>
-                  <a
-                    href="https://buchung.treatwell.de/ort/496665/menue/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Jetzt buchen
-                  </a>
-                </Button>
-              </div>
+                <div className="px-4 pt-4">
+                  <Button className="w-full" asChild>
+                    <Link to="/kontakt">
+                      Jetzt buchen
+                    </Link>
+                  </Button>
+                </div>
             </div>
           </div>
         )}
