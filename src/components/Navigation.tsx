@@ -39,12 +39,32 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link
-            to="/"
-            className="text-2xl md:text-3xl font-serif font-bold text-primary"
-          >
-            SHIREÁ
-          </Link>
+            <Link
+              to="/"
+              className="flex flex-col items-start"
+            >
+              <div className="flex items-center gap-2 mb-1">
+                <svg 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-primary"
+                >
+                  <path 
+                    d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" 
+                    fill="currentColor"
+                  />
+                </svg>
+                <span className="text-xs md:text-sm text-muted-foreground tracking-wide">
+                  FACIAL & BEAUTY SPACE BY SCHAHIRA
+                </span>
+              </div>
+              <span className="text-2xl md:text-3xl font-serif font-bold text-primary">
+                SHIREÁ
+              </span>
+            </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
