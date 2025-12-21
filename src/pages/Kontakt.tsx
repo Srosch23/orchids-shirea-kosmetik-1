@@ -178,29 +178,29 @@ const Kontakt = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-serif font-bold mb-4">
-              Schnell einen Termin buchen?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Über Treatwell können Sie rund um die Uhr bequem online Ihren Wunschtermin buchen.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90"
-              asChild
-            >
-              <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 h-5 w-5" />
-                Jetzt online buchen
-              </a>
-            </Button>
+        {/* Final CTA */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-serif font-bold mb-4">
+                Schnell einen Termin buchen?
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                Kontaktieren Sie mich über WhatsApp für eine schnelle Terminvereinbarung.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90"
+                asChild
+              >
+                <a href="https://wa.me/4915565510880" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </a>
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
     </MainLayout>
   );
 };

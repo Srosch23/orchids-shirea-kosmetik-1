@@ -31,23 +31,20 @@ export const Footer = () => {
             </div>
           </div>
           
-          <div>
-            <h4 className="font-semibold mb-4">Links</h4>
-            <div className="space-y-2 text-sm text-background/80">
-              <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
-                Online Buchen
-              </a>
-              <a href="https://www.google.com/search?q=Shirea+Kosmetik+München" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
-                Google Bewertung
-              </a>
-              <a href="/datenschutz" className="block hover:text-background transition-colors">
-                Datenschutzerklärung
-              </a>
-              <a href="/agb" className="block hover:text-background transition-colors">
-                AGB
-              </a>
+            <div>
+              <h4 className="font-semibold mb-4">Links</h4>
+              <div className="space-y-2 text-sm text-background/80">
+                <a href="https://www.google.com/search?q=Shirea+Kosmetik+München" target="_blank" rel="noopener noreferrer" className="block hover:text-background transition-colors">
+                  Google Bewertung
+                </a>
+                <a href="/datenschutz" className="block hover:text-background transition-colors">
+                  Datenschutzerklärung
+                </a>
+                <a href="/agb" className="block hover:text-background transition-colors">
+                  AGB
+                </a>
+              </div>
             </div>
-          </div>
         </div>
         
         <div className="border-t border-background/20 pt-8 text-center text-sm text-background/60">

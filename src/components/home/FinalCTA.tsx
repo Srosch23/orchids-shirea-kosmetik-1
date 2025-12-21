@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Phone } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
 
 export const FinalCTA = () => {
   return (
@@ -17,30 +17,30 @@ export const FinalCTA = () => {
             professionelle Hautpflege in entspannter Atmosphäre.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
-              asChild
-            >
-              <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 h-5 w-5" />
-                Jetzt online buchen
-              </a>
-            </Button>
-            
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2"
-              asChild
-            >
-              <a href="tel:+4915565510880">
-                <Phone className="mr-2 h-5 w-5" />
-                +49 15565 510880
-              </a>
-            </Button>
-          </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
+                asChild
+              >
+                <a href="https://wa.me/4915565510880" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </a>
+              </Button>
+              
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-2"
+                asChild
+              >
+                <a href="tel:+4915565510880">
+                  <Phone className="mr-2 h-5 w-5" />
+                  +49 15565 510880
+                </a>
+              </Button>
+            </div>
         </div>
       </div>
     </section>
