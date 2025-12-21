@@ -13,14 +13,13 @@ const categories = [
     icon: Sparkles,
     title: "Gesichtsbehandlungen",
     description: "Von klassischen Anwendungen bis hin zu innovativen Methoden für strahlende Haut.",
-    treatments: [
-      { name: "Basic", link: "/behandlungen/klassische-gesichtsbehandlung" },
-      { name: "Klassisch", link: "/behandlungen/klassische-gesichtsbehandlung" },
-      { name: "Luxus", link: "/behandlungen/anti-aging-behandlung" },
-      { name: "Anti Aging", link: "/behandlungen/anti-aging-behandlung" },
-      { name: "Unreine Haut", link: "/behandlungen/hyperpigmentierung" },
-      { name: "Trockene Haut", link: "/behandlungen/detox-behandlung" },
-    ],
+      treatments: [
+        { name: "Klassisch", link: "/behandlungen/klassische-gesichtsbehandlung" },
+        { name: "Luxus", link: "/behandlungen/anti-aging-behandlung" },
+        { name: "Anti Aging", link: "/behandlungen/anti-aging-behandlung" },
+        { name: "Unreine Haut", link: "/behandlungen/hyperpigmentierung" },
+        { name: "Trockene Haut", link: "/behandlungen/detox-behandlung" },
+      ],
   },
   {
     id: "innovative",
@@ -84,28 +83,24 @@ const categories = [
     icon: Droplets,
     title: "Haarentfernung",
     description: "Sanfte und effektive Methoden für langanhaltend glatte Haut.",
-    treatments: [
-      { name: "Waxing Arme komplett", link: "/behandlungen/waxing" },
-      { name: "Waxing Beine komplett", link: "/behandlungen/waxing" },
-      { name: "Waxing Achseln", link: "/behandlungen/waxing" },
-      { name: "Waxing Intim Komplett", link: "/behandlungen/waxing" },
-      { name: "Sugaring Gesicht", link: "/behandlungen/sugaring" },
-      { name: "Sugaring Beine komplett", link: "/behandlungen/sugaring" },
-      { name: "Sugaring Bikini Komplett", link: "/behandlungen/sugaring" },
-    ],
+      treatments: [
+        { name: "Waxing Arme komplett", link: "/behandlungen/waxing" },
+        { name: "Waxing Beine komplett", link: "/behandlungen/waxing" },
+        { name: "Waxing Achseln", link: "/behandlungen/waxing" },
+        { name: "Waxing Intim Komplett", link: "/behandlungen/waxing" },
+      ],
   },
   {
     id: "wellness",
     icon: Heart,
     title: "Massagen",
     description: "Entspannung für Körper und Seele mit wohltuenden Behandlungen.",
-    treatments: [
-      { name: "Gesichtsmassage", link: "/behandlungen/klassische-massage" },
-      { name: "Gesichts-, Nacken- & Dekolletémassage", link: "/behandlungen/klassische-massage" },
-      { name: "Nacken & Rückenmassage", link: "/behandlungen/klassische-massage" },
-      { name: "Aromaölmassage", link: "/behandlungen/aromaoelmassage" },
-      { name: "Ganzkörpermassage", link: "/behandlungen/aromaoelmassage" },
-    ],
+      treatments: [
+        { name: "Gesichtsmassage", link: "/behandlungen/klassische-massage" },
+        { name: "Gesichts-, Nacken- & Dekolletémassage", link: "/behandlungen/klassische-massage" },
+        { name: "Aromaölmassage", link: "/behandlungen/aromaoelmassage" },
+        { name: "Ganzkörpermassage", link: "/behandlungen/aromaoelmassage" },
+      ],
   },
 ];
 
@@ -201,23 +196,23 @@ const Leistungen = () => {
               Vereinbaren Sie ein kostenloses Beratungsgespräch und wir finden gemeinsam 
               die perfekte Behandlung für Ihre Bedürfnisse.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90"
-                asChild
-              >
-                <a href="https://buchung.treatwell.de/ort/496665/menue/" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Jetzt Termin buchen
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-2" asChild>
-                <Link to="/preise">
-                  Zur Preisübersicht
-                </Link>
-              </Button>
-            </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90"
+                  asChild
+                >
+                  <Link to="/kontakt">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Jetzt Termin buchen
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="border-2" asChild>
+                  <Link to="/preise">
+                    Zur Preisübersicht
+                  </Link>
+                </Button>
+              </div>
           </div>
         </div>
       </section>
