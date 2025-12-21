@@ -68,8 +68,8 @@ const priceCategories = [
         treatments: [
           { name: "Gesichtsmassage", duration: "15 Min.", price: "30 €" },
           { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €" },
-          { name: "Klassische Massage", duration: "45 Min.", price: "65 €" },
-          { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
+          { name: "Klassische Massage", duration: "60 Min.", price: "79 €" },
+          { name: "Ganzkörpermassage", duration: "90 Min.", price: "119 €" },
         ],
       },
   {
