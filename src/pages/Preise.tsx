@@ -24,9 +24,10 @@ const priceCategories = [
         { name: "BB-Glow", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
       ],
     },
-    {
-      title: "BYONIK® Laser Behandlungen",
-      treatments: [
+      {
+        title: "BYONIK® Laser Behandlungen",
+        promoNote: "Die unten genannten Preise sind BYONIK® Promo Preise",
+        treatments: [
         { name: "BYONIK® Anti-Aging | Gesicht", duration: "75 Min.", price: "139 €", featured: true },
         { name: "BYONIK® Anti-Aging | Gesicht und Halskontur", duration: "90 Min.", price: "159 €" },
         { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", duration: "90 Min.", price: "169 €", featured: true },
@@ -121,15 +122,20 @@ const Preise = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-12">
             {priceCategories.map((category, index) => (
-              <Card key={index} className="border-2 overflow-hidden">
-                <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
-                  <div className="flex items-center justify-between flex-wrap gap-2">
-                    <CardTitle className="text-2xl font-serif">
-                      {category.title}
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-0">
+                <Card key={index} className="border-2 overflow-hidden">
+                  <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <CardTitle className="text-2xl font-serif">
+                        {category.title}
+                      </CardTitle>
+                    </div>
+                    {category.promoNote && (
+                      <p className="text-sm text-primary font-medium mt-3 italic">
+                        {category.promoNote}
+                      </p>
+                    )}
+                  </CardHeader>
+                  <CardContent className="p-0">
                   <div className="divide-y">
                     {category.treatments.map((treatment, i) => (
                       <div 
