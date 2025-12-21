@@ -124,7 +124,7 @@ const Kontakt = () => {
                 className="bg-primary hover:bg-primary/90"
                 asChild
               >
-                <a href="https://wa.me/4917620294745" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/4915565510880" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   WhatsApp
                 </a>
