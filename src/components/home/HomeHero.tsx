@@ -18,12 +18,12 @@ export const HomeHero = () => {
             <div className="flex items-center gap-2 mb-6">
               <Sparkles className="w-6 h-6 text-primary" />
               <span className="text-sm uppercase tracking-wider text-muted-foreground font-medium">
-                SHIREÁ
+                FACIAL & BEAUTY SPACE BY SCHAHIRA
               </span>
             </div>
             
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-foreground leading-tight">
-              FACIAL & BEAUTY SPACE BY SCHAHIRA
+              SHIREÁ
             </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed">
