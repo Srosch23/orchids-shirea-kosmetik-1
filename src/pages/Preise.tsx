@@ -29,7 +29,7 @@ const priceCategories = [
       treatments: [
         { name: "BYONIK® Anti-Aging | Gesicht", duration: "75 Min.", price: "139 €", featured: true },
         { name: "BYONIK® Anti-Aging | Gesicht und Halskontur", duration: "90 Min.", price: "159 €" },
-        { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", duration: "120 Min.", price: "199 €", featured: true },
+        { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", duration: "90 Min.", price: "169 €", featured: true },
         { name: "BYONIK® Lift Fresh-Up | Gesicht", duration: "60 Min.", price: "129 €" },
         { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", duration: "75 Min.", price: "169 €" },
         { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", duration: "60 Min.", price: "139 €" },
