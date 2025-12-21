@@ -21,14 +21,14 @@ export default function Datenschutz() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-serif font-semibold mb-4">1. Verantwortliche Stelle</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              <strong>Shireá – Kosmetikstudio</strong><br />
-              Inhaberin: Schahira Scharar<br />
-              Oslostraße 7<br />
-              81829 München<br />
-              Telefon: +49 15565 510880<br />
-              E-Mail: kontakt@shirea-kosmetik.de
-            </p>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Shireá – Kosmetikstudio</strong><br />
+                Inhaberin: Schahira Scharar<br />
+                Sonnenstraße 4<br />
+                80331 München<br />
+                Telefon: +49 15565 510880<br />
+                E-Mail: kontakt@shirea-kosmetik.de
+              </p>
           </section>
 
           <section className="mb-8">

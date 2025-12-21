@@ -20,11 +20,11 @@ export default function AGB() {
           </h1>
           
           <div className="mb-6">
-            <p className="text-muted-foreground">
-              <strong>Shireá – Kosmetikstudio</strong><br />
-              Inhaberin: Schahira Scharar<br />
-              Adresse: Oslostraße 7, 81829 München
-            </p>
+              <p className="text-muted-foreground">
+                <strong>Shireá – Kosmetikstudio</strong><br />
+                Inhaberin: Schahira Scharar<br />
+                Adresse: Sonnenstraße 4, 80331 München
+              </p>
           </div>
 
           <section className="mb-8">
