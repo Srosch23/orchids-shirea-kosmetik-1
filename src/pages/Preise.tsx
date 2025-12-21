@@ -6,25 +6,24 @@ import { FileDown, Calendar, Star, ArrowLeft } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const priceCategories = [
-  {
-    title: "Gesichtsbehandlungen",
-    treatments: [
-      { name: "Basic", duration: "30 Min.", price: "45 €", description: "Reinigung, Hautdiagnose, Peeling, Maske, Pflege" },
-      { name: "Klassisch", duration: "50 Min.", price: "69 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, Individuell abgestimmte Maske, Abschließende Pflege" },
-      { name: "Luxus", duration: "90 Min.", price: "119 €", featured: true, description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
-      { name: "Anti Aging", duration: "60 Min.", price: "79 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
-      { name: "Unreine Haut", duration: "50 Min.", price: "69 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, Regenerationsmaske, Abschließende Pflege" },
-      { name: "Trockene Haut", duration: "50 Min.", price: "69 €", description: "Reinigung, Hautdiagnose, Peeling, tiefenwirksame Wirkstoffmaske, Feuchtigkeitsampulle, Abschließende Pflege" },
-    ],
-  },
-  {
-    title: "Innovative Hautbehandlungen",
-    treatments: [
-      { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
-      { name: "Microneedling", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
-      { name: "BB-Glow", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
-    ],
-  },
+    {
+      title: "Gesichtsbehandlungen",
+      treatments: [
+        { name: "Klassisch", duration: "60 Min.", price: "79 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, Individuell abgestimmte Maske, Abschließende Pflege" },
+        { name: "Luxus", duration: "90 Min.", price: "119 €", featured: true, description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
+        { name: "Anti Aging", duration: "60 Min.", price: "79 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
+        { name: "Unreine Haut", duration: "60 Min.", price: "79 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, Regenerationsmaske, Abschließende Pflege" },
+        { name: "Trockene Haut", duration: "60 Min.", price: "79 €", description: "Reinigung, Hautdiagnose, Peeling, tiefenwirksame Wirkstoffmaske, Feuchtigkeitsampulle, Abschließende Pflege" },
+      ],
+    },
+    {
+      title: "Innovative Hautbehandlungen",
+      treatments: [
+        { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
+        { name: "Microneedling", duration: "60 Min.", price: "ab 119 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
+        { name: "BB-Glow", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
+      ],
+    },
   {
     title: "BYONIK® Laser Behandlungen",
     treatments: [
