@@ -24,24 +24,24 @@ const priceCategories = [
         { name: "BB-Glow", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
       ],
     },
-  {
-    title: "BYONIK® Laser Behandlungen",
-    treatments: [
-      { name: "BYONIK® Anti-Aging | Gesicht", duration: "75 Min.", price: "169 €", featured: true },
-      { name: "BYONIK® Anti-Aging | Gesicht und Halskontur", duration: "90 Min.", price: "199 €" },
-      { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", duration: "120 Min.", price: "269 €", featured: true },
-      { name: "BYONIK® Lift Fresh-Up | Gesicht", duration: "60 Min.", price: "149 €" },
-      { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", duration: "75 Min.", price: "179 €" },
-      { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", duration: "60 Min.", price: "139 €" },
-      { name: "BYONIK® Clean Beauty | ohne Duftstoffe", duration: "60 Min.", price: "129 €" },
-      { name: "BYONIK® Pore Refining Algae Massage | Detox-Spezial", duration: "60 Min.", price: "139 €" },
-      { name: "BYONIK® Eye Revolution", duration: "25 Min.", price: "79 €" },
-      { name: "BYONIK® Hand Kiss", duration: "45 Min.", price: "129 €" },
-      { name: "BYONIK® Shapely Arms", duration: "45 Min.", price: "129 €" },
-      { name: "BYONIK® Show your Legs", duration: "60 Min.", price: "169 €" },
-      { name: "BYONIK® Clean & Smooth", duration: "30 Min.", price: "99 €" },
-    ],
-  },
+    {
+      title: "BYONIK® Laser Behandlungen",
+      treatments: [
+        { name: "BYONIK® Anti-Aging | Gesicht", duration: "75 Min.", price: "139 €", featured: true },
+        { name: "BYONIK® Anti-Aging | Gesicht und Halskontur", duration: "90 Min.", price: "159 €" },
+        { name: "BYONIK® Anti-Aging | Gesicht, Hals und Dekolleté", duration: "120 Min.", price: "199 €", featured: true },
+        { name: "BYONIK® Lift Fresh-Up | Gesicht", duration: "60 Min.", price: "129 €" },
+        { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", duration: "75 Min.", price: "169 €" },
+        { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", duration: "60 Min.", price: "139 €" },
+        { name: "BYONIK® Clean Beauty | ohne Duftstoffe", duration: "60 Min.", price: "129 €" },
+        { name: "BYONIK® Pore Refining Algae Massage | Detox-Spezial", duration: "60 Min.", price: "139 €" },
+        { name: "BYONIK® Eye Revolution", duration: "40 Min.", price: "79 €" },
+        { name: "BYONIK® Hand Kiss", duration: "45 Min.", price: "129 €" },
+        { name: "BYONIK® Shapely Arms", duration: "45 Min.", price: "129 €" },
+        { name: "BYONIK® Show your Legs", duration: "60 Min.", price: "169 €" },
+        { name: "BYONIK® Clean & Smooth", duration: "45 Min.", price: "99 €" },
+      ],
+    },
   {
     title: "Slimyonik Air Bodystyler + Sauerstoffinhalation",
     treatments: [
@@ -50,29 +50,29 @@ const priceCategories = [
       { name: "Professional-Kur (12er Kur)", duration: "", price: "599 €", note: "statt 660 €", featured: true, description: "Inkl. Behandlungsgutschein und kostenlosem Produkt. Maximale Wirkung für langfristige Erfolge." },
     ],
   },
-  {
-    title: "Wimpern & Brauen",
-    treatments: [
-      { name: "Wimpernlifting", duration: "", price: "69 €" },
-      { name: "Augenbrauenlifting", duration: "", price: "59 €" },
-      { name: "Wimpern färben", duration: "", price: "15 €" },
-      { name: "Augenbrauen formen", duration: "", price: "12 €" },
-      { name: "Augenbrauen färben", duration: "", price: "12 €" },
-      { name: "Augenbrauen formen & färben", duration: "", price: "24 €" },
-      { name: "Komplett Paket (Brauen formen & färben, Wimpern färben)", duration: "", price: "36 €" },
-      { name: "Henna Brow", duration: "", price: "38 €" },
-    ],
-  },
-  {
-    title: "Massagen",
-    treatments: [
-      { name: "Gesichtsmassage", duration: "20 Min.", price: "30 €" },
-      { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €" },
-      { name: "Nacken & Rückenmassage", duration: "45 Min.", price: "65 €" },
-      { name: "Aromaölmassage", duration: "60 Min.", price: "85 €" },
-      { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
-    ],
-  },
+    {
+      title: "Wimpern & Brauen",
+      treatments: [
+        { name: "Wimpernlifting", duration: "", price: "69 €" },
+        { name: "Augenbrauenlifting", duration: "", price: "59 €" },
+        { name: "Wimpern färben", duration: "", price: "15 €" },
+        { name: "Augenbrauen formen", duration: "", price: "15 €" },
+        { name: "Augenbrauen färben", duration: "", price: "15 €" },
+        { name: "Augenbrauen formen & färben", duration: "", price: "25 €" },
+        { name: "Komplett Paket (Brauen formen & färben, Wimpern färben)", duration: "", price: "38 €" },
+        { name: "Henna Brow", duration: "", price: "38 €" },
+      ],
+    },
+    {
+      title: "Massagen",
+      treatments: [
+        { name: "Gesichtsmassage", duration: "15 Min.", price: "30 €" },
+        { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €" },
+        { name: "Nacken & Rückenmassage", duration: "45 Min.", price: "65 €" },
+        { name: "Aromaölmassage", duration: "60 Min.", price: "85 €" },
+        { name: "Ganzkörpermassage", duration: "80 Min.", price: "119 €" },
+      ],
+    },
   {
     title: "Waxing",
     treatments: [
@@ -82,22 +82,7 @@ const priceCategories = [
       { name: "Intim Komplett", duration: "", price: "38 €" },
     ],
   },
-  {
-    title: "Sugaring",
-    treatments: [
-      { name: "Gesicht", duration: "", price: "35 €" },
-      { name: "Augenbrauen", duration: "", price: "15 €" },
-      { name: "Oberlippe", duration: "", price: "12 €" },
-      { name: "Kinn", duration: "", price: "12 €" },
-      { name: "Achseln", duration: "", price: "24 €" },
-      { name: "Arme komplett", duration: "", price: "45 €" },
-      { name: "Oberschenkel", duration: "", price: "35 €" },
-      { name: "Unterschenkel", duration: "", price: "35 €" },
-      { name: "Beine komplett", duration: "", price: "65 €" },
-      { name: "Bikinilinie", duration: "", price: "18 €" },
-      { name: "Bikini Komplett", duration: "", price: "42 €" },
-    ],
-  },
+
 ];
 
 const Preise = () => {
