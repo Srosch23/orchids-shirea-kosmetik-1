@@ -55,17 +55,20 @@ export function PromoPopup() {
             </p>
           </div>
 
-            <div className="mb-8 py-6 px-4 bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl">
-              <div className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-rose-600">
-                139 €
+              <div className="mb-8 py-6 px-4 bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl">
+                <div className="text-xs text-gray-400 line-through mb-1">
+                  statt 199 €
+                </div>
+                <div className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-rose-600">
+                  139 €
+                </div>
+                <div className="mt-2 text-gray-600 text-sm">
+                  BYONIK® LIFT PTL FACIAL • 75 Minuten
+                </div>
+                <div className="mt-3 text-rose-600 font-semibold text-sm">
+                  + 10% Warengutschein
+                </div>
               </div>
-              <div className="mt-2 text-gray-600 text-sm">
-                BYONIK® LIFT PTL FACIAL • 75 Minuten
-              </div>
-              <div className="mt-3 text-rose-600 font-semibold text-sm">
-                + 10% Warengutschein
-              </div>
-            </div>
 
           <button
             onClick={handleWhatsApp}
