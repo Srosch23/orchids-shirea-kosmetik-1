@@ -104,16 +104,19 @@ const Kontakt = () => {
                     <div className="bg-primary/10 p-3 rounded-lg">
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">Öffnungszeiten</h3>
-                      <div className="space-y-1 text-muted-foreground text-sm">
-                        <p>Dienstag & Donnerstag: 14:00 – 19:00 Uhr</p>
-                        <p>Freitag & Samstag: 10:00 – 19:00 Uhr</p>
+                      <div>
+                        <h3 className="font-semibold mb-2">Öffnungszeiten</h3>
+                        <div className="space-y-1 text-muted-foreground text-sm">
+                          <p>Dienstag & Donnerstag: 14:00 – 19:00 Uhr</p>
+                          <p>Freitag & Samstag: 10:00 – 19:00 Uhr</p>
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-3 italic">
+                          Individuelle Terminvereinbarungen außerhalb der Öffnungszeiten sind nach Absprache möglich.
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-2 italic">
+                          Bitte Termine mindestens 48 Stunden im Voraus absagen.
+                        </p>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-3 italic">
-                        Bitte Termine mindestens 48 Stunden im Voraus absagen.
-                      </p>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
