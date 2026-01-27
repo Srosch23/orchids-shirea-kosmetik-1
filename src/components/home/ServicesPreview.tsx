@@ -16,12 +16,12 @@ const services = [
     description: "Für einen ausdrucksstarken Blick mit Wimpernlifting und Augenbrauenlifting.",
     link: "/leistungen#augen",
   },
-  {
-    icon: Droplets,
-    title: "Haarentfernung",
-    description: "Sanft und effektiv mit professionellem Waxing und Sugaring.",
-    link: "/leistungen#haarentfernung",
-  },
+    {
+      icon: Droplets,
+      title: "Haarentfernung",
+      description: "Sanft und effektiv mit professionellem Waxing.",
+      link: "/leistungen#haarentfernung",
+    },
   {
     icon: Heart,
     title: "Wellness & Massage",
