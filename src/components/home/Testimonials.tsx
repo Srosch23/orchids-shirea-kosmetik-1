@@ -55,12 +55,13 @@ export const Testimonials = () => {
         
           <div 
             ref={scrollContainerRef}
-            className="grid md:grid-cols-3 gap-8"
+            className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-4 -mx-4"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {testimonials.slice(0, 3).map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}
-                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden min-w-[280px] md:min-w-[320px] snap-start flex-shrink-0"
               >
                 <div className="absolute top-4 right-4 text-primary/10">
                   <Quote className="w-12 h-12" />
@@ -80,6 +81,10 @@ export const Testimonials = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-8 text-sm text-muted-foreground">
+            ← Wischen für mehr Bewertungen →
           </div>
         
 
