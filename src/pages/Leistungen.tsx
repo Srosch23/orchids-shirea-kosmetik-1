@@ -90,18 +90,17 @@ const categories = [
         { name: "Waxing Intim Komplett", link: "/behandlungen/waxing" },
       ],
   },
-    {
-      id: "wellness",
-      icon: Heart,
-      title: "Massagen",
-      description: "Entspannung für Körper und Seele mit wohltuenden Behandlungen.",
-        treatments: [
-          { name: "Gesichtsmassage", link: "/behandlungen/klassische-massage" },
-          { name: "Gesichts-, Nacken- & Dekolletémassage", link: "/behandlungen/klassische-massage" },
-          { name: "Klassische Massage", link: "/behandlungen/klassische-massage" },
-          { name: "Ganzkörpermassage", link: "/behandlungen/klassische-massage" },
-        ],
-    },
+      {
+        id: "wellness",
+        icon: Heart,
+        title: "Massagen",
+        description: "Entspannung für Körper und Seele mit wohltuenden Behandlungen.",
+          treatments: [
+            { name: "Kopf-, Schulter-, Nackenmassage", link: "/behandlungen/klassische-massage" },
+            { name: "Klassische Massage", link: "/behandlungen/klassische-massage" },
+            { name: "Ganzkörpermassage", link: "/behandlungen/klassische-massage" },
+          ],
+      },
 ];
 
 const Leistungen = () => {
