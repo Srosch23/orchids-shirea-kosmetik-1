@@ -103,7 +103,7 @@ const categories = [
             treatments: [
               { name: "Kopf-, Schulter-, Nackenmassage", link: "/behandlungen/kopf-schulter-nackenmassage" },
               { name: "Klassische Massage", link: "/behandlungen/klassische-massage" },
-              { name: "Ganzkörpermassage", link: "/behandlungen/klassische-massage" },
+              { name: "Ganzkörpermassage", link: "/behandlungen/ganzkörpermassage" },
             ],
       },
 ];
