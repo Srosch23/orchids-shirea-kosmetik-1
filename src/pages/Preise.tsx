@@ -19,15 +19,22 @@ const priceCategories = [
             { name: "Anti-Redness-Behandlung: (für Haut mit Couperose & Rosazea)", duration: "60 Min.", price: "120 €", description: "Sanfte, beruhigende Behandlung zur Milderung von Rötungen und zur Stärkung empfindlicher Haut." },
         ],
       },
-      {
-        title: "Innovative Hautbehandlungen",
-        treatments: [
-          { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
-          { name: "Microneedling", duration: "60 Min.", price: "ab 119 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
-            { name: "BB-Glow", duration: "60 Min.", price: "129 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
-          { name: "Aqua Facial", duration: "60 Min.", price: "99 €", description: "Moderne Tiefenreinigung zur Porenklärung, intensiven Hydration und sichtbaren Hautverfeinerung." },
-        ],
-      },
+        {
+          title: "Innovative Hautbehandlungen",
+          treatments: [
+            { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
+            { name: "Microneedling", duration: "60 Min.", price: "ab 119 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
+              { name: "BB-Glow", duration: "60 Min.", price: "129 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
+          ],
+        },
+        {
+          title: "Aqua Facial",
+          treatments: [
+            { name: "Aquafacial Gesicht", duration: "60 Min.", price: "99 €" },
+            { name: "Aquafacial Gesicht, Hals & Dekolleté", duration: "75 Min.", price: "140 €" },
+            { name: "Aquafacial & Microneedling", duration: "90 Min.", price: "160 €" },
+          ],
+        },
           {
             title: "BYONIK® Laser Behandlungen",
             promoNote: "Die unten genannten Preise sind BYONIK® Promo Preise",
