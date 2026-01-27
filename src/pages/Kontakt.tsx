@@ -82,18 +82,21 @@ const Kontakt = () => {
                     <div className="bg-primary/10 p-3 rounded-lg">
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
-                        <div>
-                          <h3 className="font-semibold mb-1">Adresse</h3>
-                          <a 
-                            href="https://www.google.com/maps/search/?api=1&query=Sonnenstraße+4+80331+München" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            Sonnenstraße 4<br />
-                            80331 München
-                          </a>
-                        </div>
+                      <div>
+                        <h3 className="font-semibold mb-1">Adresse</h3>
+                        <a 
+                          href="https://www.google.com/maps/search/?api=1&query=Sonnenstraße+4+80331+München" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          Sonnenstraße 4<br />
+                          80331 München
+                        </a>
+                        <p className="text-xs text-muted-foreground mt-2 italic">
+                          Sie finden mein Studio in der Rosalia Beauty Studio.
+                        </p>
+                      </div>
                   </div>
                 </CardContent>
               </Card>
