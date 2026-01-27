@@ -24,17 +24,18 @@ const categories = [
           { name: "Anti-Redness-Behandlung: (für Haut mit Couperose & Rosazea)", link: "/behandlungen/hyperpigmentierung" },
         ],
   },
-  {
-    id: "innovative",
-    icon: Wand2,
-    title: "Innovative Hautbehandlungen",
-    description: "Modernste Technologien für intensive Hauterneuerung und sichtbare Ergebnisse.",
-    treatments: [
-      { name: "Microdermabrasion", link: "/behandlungen/mikrodermabrasion" },
-      { name: "Microneedling", link: "/behandlungen/microneedling" },
-      { name: "BB-Glow", link: "/behandlungen/bb-glow" },
-    ],
-  },
+    {
+      id: "innovative",
+      icon: Wand2,
+      title: "Innovative Hautbehandlungen",
+      description: "Modernste Technologien für intensive Hauterneuerung und sichtbare Ergebnisse.",
+      treatments: [
+        { name: "Microdermabrasion", link: "/behandlungen/mikrodermabrasion" },
+        { name: "Microneedling", link: "/behandlungen/microneedling" },
+        { name: "BB-Glow", link: "/behandlungen/bb-glow" },
+        { name: "Aqua Facial", link: "/behandlungen/aqua-facial" },
+      ],
+    },
   {
     id: "byonik",
     icon: Zap,
