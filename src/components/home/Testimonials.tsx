@@ -53,39 +53,36 @@ export const Testimonials = () => {
           </p>
         </div>
         
-        <div 
-          ref={scrollContainerRef}
-          className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-4 -mx-4"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index}
-              className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden min-w-[320px] md:min-w-[380px] snap-center flex-shrink-0"
-            >
-              <div className="absolute top-4 right-4 text-primary/10">
-                <Quote className="w-16 h-16" />
-              </div>
-              <CardContent className="p-8 relative">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
+          <div 
+            ref={scrollContainerRef}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {testimonials.slice(0, 3).map((testimonial, index) => (
+              <Card 
+                key={index}
+                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+              >
+                <div className="absolute top-4 right-4 text-primary/10">
+                  <Quote className="w-12 h-12" />
                 </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 italic">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                <CardContent className="p-6 relative">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed mb-4 italic text-sm">
+                    "{testimonial.text}"
+                  </p>
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         
-        <div className="text-center mt-8 text-sm text-muted-foreground">
-          ← Wischen Sie nach links für mehr Bewertungen →
-        </div>
+
       </div>
     </section>
   );
