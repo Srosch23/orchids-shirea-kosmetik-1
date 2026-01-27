@@ -132,25 +132,25 @@ const studioImages = [
     category: "Produkte" 
   },
   { 
-    src: "#", 
-    alt: "Video 1", 
+    src: "/galerie/video-behandlung-rotlicht.mp4", 
+    alt: "BYONIK Laser Behandlung", 
     category: "Videos",
     type: "video"
   },
   { 
-    src: "#", 
-    alt: "Video 2", 
+    src: "/galerie/video-byonik-image.mp4", 
+    alt: "BYONIK Image Film", 
     category: "Videos",
     type: "video"
   },
   { 
-    src: "#", 
-    alt: "Video 3", 
+    src: "/galerie/video-slimyonik-erklaerung.mp4", 
+    alt: "Slimyonik Air Funktionsweise", 
     category: "Videos",
     type: "video"
   },
   { 
-    src: "#", 
+    src: "/galerie/video-4.mp4", 
     alt: "Video 4", 
     category: "Videos",
     type: "video"
