@@ -15,12 +15,13 @@ const qualifications = [
       "Zertifizierte Visagistin",
     ],
   },
-  {
-    category: "Spezialisierungen im Bereich Haut & Anti-Aging",
-    items: [
-      "Zertifizierte Expertin für Micro-Needling & Mikrodermabrasion",
-    ],
-  },
+    {
+      category: "Spezialisierungen im Bereich Haut & Anti-Aging",
+      items: [
+        "Zertifizierte Expertin für Micro-Needling, Mikrodermabrasion & Chemical Peelings",
+        "Spezialisierung auf Problemhaut (Akne, Couperose, Rosacea)",
+      ],
+    },
     {
       category: "Augenbrauen- & Wimpernstyling",
       items: [
