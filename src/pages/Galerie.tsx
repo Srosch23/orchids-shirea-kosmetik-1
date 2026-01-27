@@ -29,32 +29,77 @@ const studioImages = [
   { 
     src: "/galerie/byonik.jpg", 
     alt: "BYONIK Gerät", 
-    category: "Behandlungen" 
+    category: "BYONIK" 
+  },
+  { 
+    src: "/galerie/gesichtsbehandlung-nahaufnahme.jpg", 
+    alt: "Professionelle Gesichtsbehandlung", 
+    category: "BYONIK" 
+  },
+  { 
+    src: "/galerie/byonik-be-young.jpg", 
+    alt: "BYONIK Be Young Behandlung", 
+    category: "BYONIK" 
+  },
+  { 
+    src: "/galerie/byonik-laser-wirkung.jpg", 
+    alt: "BYONIK Laser - Studienbelegte Wirkung", 
+    category: "BYONIK" 
+  },
+  { 
+    src: "/galerie/byonik-intensiv-wirksam.jpg", 
+    alt: "BYONIK - Intensiv wirksam in allen Hautschichten", 
+    category: "BYONIK" 
   },
   { 
     src: "/galerie/slimyonik-fett.jpg", 
     alt: "Slimyonik Fettverbrennung", 
-    category: "Behandlungen" 
+    category: "Slimyonik" 
   },
   { 
     src: "/galerie/slimyonik-gerat.jpg", 
     alt: "Slimyonik Gerät", 
-    category: "Behandlungen" 
+    category: "Slimyonik" 
   },
   { 
     src: "/galerie/slimyonik-anwendung.jpg", 
     alt: "Slimyonik Anwendung", 
-    category: "Behandlungen" 
+    category: "Slimyonik" 
   },
   { 
     src: "/galerie/slimyonik-behandlung.jpg", 
     alt: "Slimyonik Behandlung", 
-    category: "Behandlungen" 
+    category: "Slimyonik" 
   },
   { 
     src: "/galerie/slimyonik-air.jpg", 
     alt: "Slimyonik Air Bodystyler", 
-    category: "Behandlungen" 
+    category: "Slimyonik" 
+  },
+  { 
+    src: "/galerie/slimyonik-bodyforming.jpg", 
+    alt: "Bequemes Bodyforming - Ganz entspannt und ohne Stress", 
+    category: "Slimyonik" 
+  },
+  { 
+    src: "/galerie/slimyonik-anwendungen.jpg", 
+    alt: "Slimyonik - Zahlreiche Anwendungen", 
+    category: "Slimyonik" 
+  },
+  { 
+    src: "/galerie/slimyonik-body-contouring.jpg", 
+    alt: "Body Contouring & Wellbeing - Wissenschaftlich fundiert", 
+    category: "Slimyonik" 
+  },
+  { 
+    src: "/galerie/vorher-nachher-gesicht.jpg", 
+    alt: "Vorher-Nachher: Hautstraffung", 
+    category: "Vorher-Nachher" 
+  },
+  { 
+    src: "/galerie/vorher-nachher-augen.jpg", 
+    alt: "Vorher-Nachher: Augenbereich", 
+    category: "Vorher-Nachher" 
   },
   { 
     src: "/galerie/dr-schrammek.jpg", 
@@ -82,51 +127,6 @@ const studioImages = [
     category: "Produkte" 
   },
   { 
-    src: "/galerie/gesichtsbehandlung-nahaufnahme.jpg", 
-    alt: "Professionelle Gesichtsbehandlung", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/byonik-be-young.jpg", 
-    alt: "BYONIK Be Young Behandlung", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/vorher-nachher-gesicht.jpg", 
-    alt: "Vorher-Nachher: Hautstraffung", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/vorher-nachher-augen.jpg", 
-    alt: "Vorher-Nachher: Augenbereich", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/byonik-laser-wirkung.jpg", 
-    alt: "BYONIK Laser - Studienbelegte Wirkung", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/byonik-intensiv-wirksam.jpg", 
-    alt: "BYONIK - Intensiv wirksam in allen Hautschichten", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/slimyonik-bodyforming.jpg", 
-    alt: "Bequemes Bodyforming - Ganz entspannt und ohne Stress", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/slimyonik-anwendungen.jpg", 
-    alt: "Slimyonik - Zahlreiche Anwendungen", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "/galerie/slimyonik-body-contouring.jpg", 
-    alt: "Body Contouring & Wellbeing - Wissenschaftlich fundiert", 
-    category: "Behandlungen" 
-  },
-  { 
     src: "/galerie/body-contour-gel.jpg", 
     alt: "Body Contour Gel - Verbesserte Rezeptur", 
     category: "Produkte" 
@@ -134,24 +134,27 @@ const studioImages = [
   { 
     src: "/galerie/video-behandlung-rotlicht.mp4", 
     alt: "BYONIK Laser Behandlung", 
+    title: "BYONIK Laser Behandlung",
     category: "Videos",
     type: "video"
   },
   { 
     src: "/galerie/video-byonik-image.mp4", 
     alt: "BYONIK Image Film", 
+    title: "BYONIK Image Film",
     category: "Videos",
     type: "video"
   },
-    { 
-      src: "/galerie/video-slimyonik-erklaerung.mp4", 
-      alt: "Slimyonik Air Funktionsweise", 
-      category: "Videos",
-      type: "video"
-    },
-  ];
+  { 
+    src: "/galerie/video-slimyonik-erklaerung.mp4", 
+    alt: "Slimyonik Air Funktionsweise", 
+    title: "Slimyonik Air Funktionsweise",
+    category: "Videos",
+    type: "video"
+  },
+];
 
-const categories = ["Alle", "Studio", "Behandlungen", "Produkte", "Videos"];
+const categories = ["Alle", "Studio", "BYONIK", "Slimyonik", "Vorher-Nachher", "Produkte", "Videos"];
 
 const Galerie = () => {
   const navigate = useNavigate();
@@ -213,45 +216,50 @@ const Galerie = () => {
               ))}
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredImages.map((image, index) => (
-                  <Card key={index} className="border-2 overflow-hidden group">
-                    <div className="aspect-square relative overflow-hidden bg-black">
-                      {image.type === 'video' ? (
-                        <div className="w-full h-full flex items-center justify-center bg-gray-900">
-                           {image.src !== '#' ? (
-                              <video 
-                                src={image.src} 
-                                controls
-                                className="w-full h-full object-cover"
-                              />
-                           ) : (
-                              <div className="text-white text-center p-4">
-                                <p>Video folgt</p>
-                                <p className="text-xs text-gray-400 mt-2">{image.alt}</p>
-                              </div>
-                           )}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredImages.map((image, index) => (
+                    <Card key={index} className="border-2 overflow-hidden group">
+                      {image.type === 'video' && image.title && (
+                        <div className="p-4 border-b bg-secondary/30">
+                          <h3 className="font-serif font-semibold text-lg">{image.title}</h3>
                         </div>
-                      ) : (
-                        <img 
-                          src={image.src} 
-                          alt={image.alt}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
                       )}
-                      {image.type !== 'video' && (
-                        <>
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
-                            <p className="text-sm font-medium">{image.category}</p>
-                            <p className="text-lg font-serif">{image.alt}</p>
+                      <div className="aspect-square relative overflow-hidden bg-black">
+                        {image.type === 'video' ? (
+                          <div className="w-full h-full flex items-center justify-center bg-gray-900">
+                             {image.src !== '#' ? (
+                                <video 
+                                  src={image.src} 
+                                  controls
+                                  className="w-full h-full object-cover"
+                                />
+                             ) : (
+                                <div className="text-white text-center p-4">
+                                  <p>Video folgt</p>
+                                  <p className="text-xs text-gray-400 mt-2">{image.alt}</p>
+                                </div>
+                             )}
                           </div>
-                        </>
-                      )}
-                    </div>
-                  </Card>
-              ))}
-            </div>
+                        ) : (
+                          <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        )}
+                        {image.type !== 'video' && (
+                          <>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
+                              <p className="text-sm font-medium">{image.category}</p>
+                              <p className="text-lg font-serif">{image.alt}</p>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </Card>
+                ))}
+              </div>
           </div>
         </div>
       </section>
