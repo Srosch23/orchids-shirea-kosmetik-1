@@ -143,19 +143,13 @@ const studioImages = [
     category: "Videos",
     type: "video"
   },
-  { 
-    src: "/galerie/video-slimyonik-erklaerung.mp4", 
-    alt: "Slimyonik Air Funktionsweise", 
-    category: "Videos",
-    type: "video"
-  },
-  { 
-    src: "/galerie/video-4.mp4", 
-    alt: "Video 4", 
-    category: "Videos",
-    type: "video"
-  },
-];
+    { 
+      src: "/galerie/video-slimyonik-erklaerung.mp4", 
+      alt: "Slimyonik Air Funktionsweise", 
+      category: "Videos",
+      type: "video"
+    },
+  ];
 
 const categories = ["Alle", "Studio", "Behandlungen", "Produkte", "Videos"];
 
