@@ -24,7 +24,7 @@ const priceCategories = [
       treatments: [
         { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
         { name: "Microneedling", duration: "60 Min.", price: "ab 119 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
-        { name: "BB-Glow", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
+          { name: "BB-Glow", duration: "60 Min.", price: "129 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
       ],
     },
           {
@@ -60,22 +60,21 @@ const priceCategories = [
         { name: "Wimpernlifting", duration: "", price: "79 €" },
         { name: "Augenbrauenlifting", duration: "", price: "59 €" },
         { name: "Wimpern färben", duration: "", price: "15 €" },
-        { name: "Augenbrauen formen", duration: "", price: "15 €" },
-        { name: "Augenbrauen färben", duration: "", price: "15 €" },
-        { name: "Augenbrauen formen & färben", duration: "", price: "25 €" },
+          { name: "Augenbrauen formen", duration: "", price: "12 €" },
+          { name: "Augenbrauen färben", duration: "", price: "12 €" },
+          { name: "Augenbrauen formen & färben", duration: "", price: "22 €" },
         { name: "Komplett Paket (Brauen formen & färben, Wimpern färben)", duration: "", price: "38 €" },
         { name: "Henna Brow", duration: "", price: "38 €" },
       ],
     },
-      {
-        title: "Massagen",
-        treatments: [
-          { name: "Gesichtsmassage", duration: "15 Min.", price: "30 €" },
-          { name: "Gesichts-, Nacken- & Dekolletémassage", duration: "30 Min.", price: "45 €" },
-          { name: "Klassische Massage", duration: "60 Min.", price: "79 €" },
-          { name: "Ganzkörpermassage", duration: "90 Min.", price: "119 €" },
-        ],
-      },
+        {
+          title: "Massagen",
+          treatments: [
+            { name: "Kopf-, Schulter-, Nackenmassage", duration: "30 Min.", price: "39 €" },
+            { name: "Klassische Massage", duration: "60 Min.", price: "89 €" },
+            { name: "Ganzkörpermassage", duration: "90 Min.", price: "129 €" },
+          ],
+        },
   {
     title: "Waxing",
     treatments: [
