@@ -55,31 +55,35 @@ export const Testimonials = () => {
         
           <div 
             ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-4 -mx-4"
+            className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {testimonials.map((testimonial, index) => (
-              <Card 
-                key={index}
-                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden min-w-[280px] md:min-w-[320px] snap-start flex-shrink-0"
-              >
-                <div className="absolute top-4 right-4 text-primary/10">
-                  <Quote className="w-12 h-12" />
-                </div>
-                <CardContent className="p-6 relative">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed mb-4 italic text-sm">
-                    "{testimonial.text}"
-                  </p>
-                  <div>
-                    <p className="font-semibold">{testimonial.name}</p>
-                  </div>
-                </CardContent>
-              </Card>
+            {[0, 3].map((startIndex) => (
+              <div key={startIndex} className="grid md:grid-cols-3 gap-6 min-w-full snap-start flex-shrink-0">
+                {testimonials.slice(startIndex, startIndex + 3).map((testimonial, index) => (
+                  <Card 
+                    key={index}
+                    className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+                  >
+                    <div className="absolute top-4 right-4 text-primary/10">
+                      <Quote className="w-12 h-12" />
+                    </div>
+                    <CardContent className="p-6 relative">
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                        ))}
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed mb-4 italic text-sm">
+                        "{testimonial.text}"
+                      </p>
+                      <div>
+                        <p className="font-semibold">{testimonial.name}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             ))}
           </div>
           
