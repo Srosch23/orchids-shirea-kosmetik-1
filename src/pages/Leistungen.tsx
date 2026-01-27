@@ -2,6 +2,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { 
   Sparkles, Eye, Droplets, Heart, Zap, ArrowRight, Calendar,
   Check, ArrowLeft, Wand2, Activity
@@ -110,6 +111,20 @@ const categories = [
 const Leistungen = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem("leistungen-scroll");
+    if (savedScrollPosition) {
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedScrollPosition));
+        sessionStorage.removeItem("leistungen-scroll");
+      }, 100);
+    }
+  }, []);
+
+  const handleTreatmentClick = () => {
+    sessionStorage.setItem("leistungen-scroll", window.scrollY.toString());
+  };
+
   return (
     <MainLayout>
       {/* Hero */}
@@ -172,13 +187,14 @@ const Leistungen = () => {
                       <h3 className="text-lg font-serif font-semibold mb-4 group-hover:text-primary transition-colors">
                         {treatment.name}
                       </h3>
-                      <Link 
-                        to={treatment.link}
-                        className="text-primary font-medium hover:underline inline-flex items-center gap-1 text-sm"
-                      >
-                        Details ansehen
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                        <Link 
+                          to={treatment.link}
+                          onClick={handleTreatmentClick}
+                          className="text-primary font-medium hover:underline inline-flex items-center gap-1 text-sm"
+                        >
+                          Details ansehen
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
                     </CardContent>
                   </Card>
                 ))}
