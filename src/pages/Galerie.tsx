@@ -106,6 +106,31 @@ const studioImages = [
     alt: "BYONIK Laser - Studienbelegte Wirkung", 
     category: "Behandlungen" 
   },
+  { 
+    src: "/galerie/byonik-intensiv-wirksam.jpg", 
+    alt: "BYONIK - Intensiv wirksam in allen Hautschichten", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/slimyonik-bodyforming.jpg", 
+    alt: "Bequemes Bodyforming - Ganz entspannt und ohne Stress", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/slimyonik-anwendungen.jpg", 
+    alt: "Slimyonik - Zahlreiche Anwendungen", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/slimyonik-body-contouring.jpg", 
+    alt: "Body Contouring & Wellbeing - Wissenschaftlich fundiert", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/body-contour-gel.jpg", 
+    alt: "Body Contour Gel - Verbesserte Rezeptur", 
+    category: "Produkte" 
+  },
 ];
 
 const categories = ["Alle", "Studio", "Behandlungen", "Produkte"];
