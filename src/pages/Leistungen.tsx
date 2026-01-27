@@ -100,11 +100,11 @@ const categories = [
         icon: Heart,
         title: "Massagen",
         description: "Entspannung für Körper und Seele mit wohltuenden Behandlungen.",
-          treatments: [
-            { name: "Kopf-, Schulter-, Nackenmassage", link: "/behandlungen/klassische-massage" },
-            { name: "Klassische Massage", link: "/behandlungen/klassische-massage" },
-            { name: "Ganzkörpermassage", link: "/behandlungen/klassische-massage" },
-          ],
+            treatments: [
+              { name: "Kopf-, Schulter-, Nackenmassage", link: "/behandlungen/kopf-schulter-nackenmassage" },
+              { name: "Klassische Massage", link: "/behandlungen/klassische-massage" },
+              { name: "Ganzkörpermassage", link: "/behandlungen/klassische-massage" },
+            ],
       },
 ];
 
