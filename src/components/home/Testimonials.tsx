@@ -3,21 +3,21 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria K.",
-    treatment: "BYONIK® Anti-Aging",
-    text: "Die Behandlung war unglaublich entspannend und die Ergebnisse haben mich begeistert. Meine Haut sieht so viel frischer und straffer aus!",
+    name: "Oliver",
+    treatment: "Augenbrauen zupfen",
+    text: "Ich hatte einen sehr angenehmen Termin bei Shirea. Sie ist äußerst höflich, hat mich zu allem gut beraten und mir immer kurz erklärt was als nächstes passiert. Die Atmosphäre war ruhig und die Musik entspannend. Mir hat es an nichts gefehlt und ich bin sehr froh die Behandlung gebucht zu haben.",
     rating: 5,
   },
   {
-    name: "Sandra L.",
-    treatment: "Klassische Gesichtsbehandlung",
-    text: "Schahira nimmt sich wirklich Zeit für jeden Kunden. Die individuelle Beratung und die professionelle Behandlung sind einfach top!",
+    name: "Anastasiia",
+    treatment: "Wimpernwelle",
+    text: "Ich habe Wimpernlifting bei Shahira gemacht und bin äußert zufrieden! Die tolle Beratung und fürsorgliche Begleitung haben mich überzeugt, werde gerne weitere Behandlungen in Anspruch nehmen! Danke liebe Shahira!",
     rating: 5,
   },
   {
-    name: "Julia M.",
-    treatment: "Slimyonik",
-    text: "Nach der Slimyonik-Kur fühle ich mich wie neu geboren. Die Atmosphäre im Studio ist so entspannend und einladend.",
+    name: "Hannah",
+    treatment: "Augenbrauen zupfen",
+    text: "Wunderschön gemacht, meine Augenbrauen sind genau so geworden, wie ich es mir gewünscht habe. Ich bin sehr zufrieden und freue mich schon auf den nächsten Besuch.",
     rating: 5,
   },
 ];
