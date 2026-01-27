@@ -13,12 +13,12 @@ const categories = [
     icon: Sparkles,
     title: "Gesichtsbehandlungen",
     description: "Von klassischen Anwendungen bis hin zu innovativen Methoden für strahlende Haut.",
-        treatments: [
-          { name: "Klassisch", link: "/behandlungen/klassische-gesichtsbehandlung" },
-          { name: "Luxus", link: "/behandlungen/anti-aging-behandlung" },
-          { name: "Anti Aging", link: "/behandlungen/anti-aging-behandlung" },
-          { name: "Akne manuelle Reinigung und Seboregulation", link: "/behandlungen/hyperpigmentierung" },
-            { name: "Trockene Haut", link: "/behandlungen/detox-behandlung" },
+          treatments: [
+            { name: "Klassisch", link: "/behandlungen/klassische-gesichtsbehandlung" },
+            { name: "Luxus", link: "/behandlungen/luxus-behandlung" },
+            { name: "Anti Aging", link: "/behandlungen/anti-aging-behandlung" },
+            { name: "Akne manuelle Reinigung und Seboregulation", link: "/behandlungen/akne-behandlung" },
+              { name: "Trockene Haut", link: "/behandlungen/trockene-haut-behandlung" },
             { name: "Sensitive Balance", link: "/behandlungen/sensitive-balance" },
             { name: "Hyaluron Plus – Intensive Feuchtigkeitsbehandlung", link: "/behandlungen/hyaluron-plus-behandlung" },
             { name: "Anti-Redness-Behandlung: (für Haut mit Couperose & Rosazea)", link: "/behandlungen/anti-redness-behandlung" },
