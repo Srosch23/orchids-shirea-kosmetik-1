@@ -25,11 +25,6 @@ const priceCategories = [
             { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
             { name: "Microneedling", duration: "60 Min.", price: "ab 119 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
               { name: "BB-Glow", duration: "60 Min.", price: "129 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
-          ],
-        },
-        {
-          title: "Aqua Facial",
-          treatments: [
             { name: "Aquafacial Gesicht", duration: "60 Min.", price: "99 €" },
             { name: "Aquafacial Gesicht, Hals & Dekolleté", duration: "75 Min.", price: "140 €" },
             { name: "Aquafacial & Microneedling", duration: "90 Min.", price: "160 €" },
