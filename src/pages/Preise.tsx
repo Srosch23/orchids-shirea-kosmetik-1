@@ -15,8 +15,8 @@ const priceCategories = [
           { name: "Akne manuelle Reinigung und Seboregulation", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, Regenerationsmaske, Abschließende Pflege" },
           { name: "Trockene Haut", duration: "60 Min.", price: "89 €", description: "Reinigung, Hautdiagnose, Peeling, tiefenwirksame Wirkstoffmaske, Feuchtigkeitsampulle, Abschließende Pflege" },
           { name: "Sensitive Balance", duration: "60 Min.", price: "110 €", description: "Reinigung, Hautdiagnose, beruhigende Pflege, Abschließende Pflege" },
-          { name: "Hyaluron Plus", duration: "90 Min.", price: "140 €", description: "Hyaluron Plus für intensive Feuchtigkeitsbehandlung" },
-          { name: "Anti-Redness-Behandlung", duration: "60 Min.", price: "120 €", description: "Anti-Redness Behandlung für Haut mit Couperose und Rosacea" },
+            { name: "Hyaluron Plus – Intensive Feuchtigkeitsbehandlung", duration: "90 Min.", price: "140 €", description: "Intensive Durchfeuchtung mit Hyaluron für glatte, pralle und sichtbar erholte Haut." },
+            { name: "Anti-Redness-Behandlung: (für Haut mit Couperose & Rosazea)", duration: "60 Min.", price: "120 €", description: "Sanfte, beruhigende Behandlung zur Milderung von Rötungen und zur Stärkung empfindlicher Haut." },
         ],
       },
     {
