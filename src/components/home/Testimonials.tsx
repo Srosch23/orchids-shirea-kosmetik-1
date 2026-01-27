@@ -1,28 +1,43 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import { useRef } from "react";
 
 const testimonials = [
   {
     name: "Oliver",
-    treatment: "Augenbrauen zupfen",
     text: "Ich hatte einen sehr angenehmen Termin bei Shirea. Sie ist äußerst höflich, hat mich zu allem gut beraten und mir immer kurz erklärt was als nächstes passiert. Die Atmosphäre war ruhig und die Musik entspannend. Mir hat es an nichts gefehlt und ich bin sehr froh die Behandlung gebucht zu haben.",
     rating: 5,
   },
   {
     name: "Anastasiia",
-    treatment: "Wimpernwelle",
     text: "Ich habe Wimpernlifting bei Shahira gemacht und bin äußert zufrieden! Die tolle Beratung und fürsorgliche Begleitung haben mich überzeugt, werde gerne weitere Behandlungen in Anspruch nehmen! Danke liebe Shahira!",
     rating: 5,
   },
   {
     name: "Hannah",
-    treatment: "Augenbrauen zupfen",
     text: "Wunderschön gemacht, meine Augenbrauen sind genau so geworden, wie ich es mir gewünscht habe. Ich bin sehr zufrieden und freue mich schon auf den nächsten Besuch.",
+    rating: 5,
+  },
+  {
+    name: "Marina",
+    text: "Sehr professionelle Beratung und Behandlung. Ich fühlte mich von Anfang an sehr gut aufgehoben. Das Ergebnis ist fantastisch!",
+    rating: 5,
+  },
+  {
+    name: "Lisa",
+    text: "Absolute Empfehlung! Shirea nimmt sich viel Zeit und geht auf alle Wünsche ein. Die Behandlung war super angenehm.",
+    rating: 5,
+  },
+  {
+    name: "Sarah",
+    text: "Sehr zufrieden mit dem Service und der Qualität. Ich komme definitiv wieder!",
     rating: 5,
   },
 ];
 
 export const Testimonials = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   return (
     <section className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -38,11 +53,15 @@ export const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div 
+          ref={scrollContainerRef}
+          className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-4 -mx-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+              className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden min-w-[320px] md:min-w-[380px] snap-center flex-shrink-0"
             >
               <div className="absolute top-4 right-4 text-primary/10">
                 <Quote className="w-16 h-16" />
@@ -58,11 +77,14 @@ export const Testimonials = () => {
                 </p>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.treatment}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-8 text-sm text-muted-foreground">
+          ← Wischen Sie nach links für mehr Bewertungen →
         </div>
       </div>
     </section>
