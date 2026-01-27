@@ -61,10 +61,10 @@ export const Testimonials = () => {
             {[0, 3].map((startIndex) => (
               <div key={startIndex} className="grid md:grid-cols-3 gap-6 min-w-full snap-start flex-shrink-0">
                 {testimonials.slice(startIndex, startIndex + 3).map((testimonial, index) => (
-                  <Card 
-                    key={index}
-                    className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden"
-                  >
+                    <Card 
+                      key={index}
+                      className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden max-w-[400px]"
+                    >
                     <div className="absolute top-4 right-4 text-primary/10">
                       <Quote className="w-12 h-12" />
                     </div>
