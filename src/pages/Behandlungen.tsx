@@ -896,10 +896,72 @@ const treatmentData: Record<string, {
         { question: "Wie oft sollte ich die Behandlung wiederholen?", answer: "Für optimale Ergebnisse empfehlen wir eine Behandlung alle 4-6 Wochen als regelmäßige Tiefenreinigung und Hydratation." },
         { question: "Gibt es eine Ausfallzeit?", answer: "Nein, es gibt keine Ausfallzeit. Sie können direkt nach der Behandlung Ihren normalen Aktivitäten nachgehen." },
       ],
+      },
+    "anti-redness-behandlung": {
+      title: "Anti-Redness-Behandlung",
+      subtitle: "Beruhigende Pflege für Haut mit Couperose & Rosazea",
+      description: "Diese spezialisierte Behandlung wurde entwickelt für Haut mit Couperose und Rosazea. Mit gezielten beruhigenden Wirkstoffen und sanften Techniken reduzieren wir Rötungen, stärken die empfindlichen Gefäße und bringen Ihre Haut zurück ins Gleichgewicht. Erleben Sie spürbare Linderung und ein ausgeglichenes Hautbild.",
+      process: [
+        "Sanfte Reinigung mit beruhigenden Produkten",
+        "Hautanalyse zur Bestimmung der Rötungsintensität",
+        "Auftragen eines speziellen Anti-Redness-Serums",
+        "Beruhigende Massage zur Stärkung der Gefäße",
+        "Kühlende Maske mit entzündungshemmenden Wirkstoffen",
+        "Abschlusspflege mit gefäßstärkenden Inhaltsstoffen",
+      ],
+      benefits: [
+        "Deutliche Reduktion von Rötungen",
+        "Stärkung der empfindlichen Blutgefäße",
+        "Beruhigung gereizter Haut",
+        "Verbesserung des Hautbildes bei Couperose & Rosazea",
+        "Linderung von Brennen und Spannungsgefühlen",
+        "Langfristige Stabilisierung der Hautbarriere",
+        "Sofortiges Wohlgefühl und sichtbare Verbesserung",
+      ],
+      contraindications: [
+        "Akute Hautinfektionen",
+        "Offene Wunden im Behandlungsbereich",
+        "Stark entzündete Rosacea im akuten Schub",
+      ],
+      faq: [
+        { question: "Ist diese Behandlung für Rosazea geeignet?", answer: "Ja, die Behandlung wurde speziell für Haut mit Rosazea und Couperose entwickelt und kann Rötungen deutlich lindern." },
+        { question: "Wie oft sollte ich die Behandlung durchführen?", answer: "Für optimale Ergebnisse empfehlen wir eine regelmäßige Behandlung alle 4-6 Wochen. Bei akuten Rötungen kann auch häufiger behandelt werden." },
+        { question: "Kann die Behandlung Couperose heilen?", answer: "Die Behandlung kann die sichtbaren Rötungen reduzieren und die Gefäße stärken, aber Couperose ist eine chronische Erkrankung, die kontinuierliche Pflege erfordert." },
+        { question: "Welche Pflege sollte ich zu Hause verwenden?", answer: "Wir beraten Sie gerne zu einer passenden Heimpflege mit beruhigenden, gefäßstärkenden Wirkstoffen und einem hohen Lichtschutzfaktor." },
+      ],
     },
-};
-
-const defaultTreatment: {
+    "hyaluron-plus-behandlung": {
+      title: "Hyaluron Plus – Intensive Feuchtigkeitsbehandlung",
+      subtitle: "Tiefenwirksame Hydration für pralle, strahlende Haut",
+      description: "Erleben Sie die ultimative Feuchtigkeitsexplosion für Ihre Haut. Die Hyaluron Plus Behandlung versorgt Ihre Haut intensiv mit hochkonzentriertem Hyaluron in verschiedenen Molekülgrößen – für sofortige Aufpolsterung, Glättung und ein strahlendes Hautbild. Perfekt für trockene, dehydrierte oder müde Haut.",
+      process: [
+        "Gründliche Reinigung und sanftes Peeling",
+        "Hautanalyse zur Bestimmung des Feuchtigkeitsbedarfs",
+        "Auftragen eines hochkonzentrierten Hyaluron-Serums",
+        "Sanfte Einarbeitungsmassage für tiefe Penetration",
+        "Intensive Hyaluron-Vliesmaske",
+        "Abschlusspflege mit feuchtigkeitsbindenden Wirkstoffen",
+      ],
+      benefits: [
+        "Intensive Feuchtigkeitsversorgung auf allen Hautebenen",
+        "Sofortige Aufpolsterung von feinen Linien und Fältchen",
+        "Verbesserung der Hautelastizität",
+        "Strahlender, frischer Teint",
+        "Glattere, prallere Haut",
+        "Langanhaltende Hydration",
+        "Stärkung der Hautbarriere",
+        "Sofort sichtbare Ergebnisse",
+      ],
+      faq: [
+        { question: "Für welchen Hauttyp ist diese Behandlung geeignet?", answer: "Die Hyaluron Plus Behandlung ist ideal für trockene, dehydrierte oder müde Haut sowie für reife Haut mit Feuchtigkeitsmangel." },
+        { question: "Wie oft sollte ich die Behandlung durchführen?", answer: "Für optimale Ergebnisse empfehlen wir eine Behandlung alle 4-6 Wochen. Bei sehr trockener Haut kann auch häufiger behandelt werden." },
+        { question: "Wie lange halten die Ergebnisse an?", answer: "Die sofortige Aufpolsterung ist direkt sichtbar. Für langanhaltende Ergebnisse empfehlen wir regelmäßige Behandlungen." },
+        { question: "Was ist der Unterschied zu einer normalen Feuchtigkeitsbehandlung?", answer: "Die Hyaluron Plus Behandlung verwendet hochkonzentrierte Hyaluron-Wirkstoffe in verschiedenen Molekülgrößen für eine intensivere und tiefenwirksamere Hydration." },
+      ],
+    },
+  };
+  
+  const defaultTreatment: {
   title: string;
   subtitle?: string;
   description: string;
