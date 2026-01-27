@@ -76,6 +76,36 @@ const studioImages = [
     alt: "Slimyonik Produkte", 
     category: "Produkte" 
   },
+  { 
+    src: "/galerie/norel-produkte-sortiment.jpg", 
+    alt: "NOREL Produktsortiment", 
+    category: "Produkte" 
+  },
+  { 
+    src: "/galerie/gesichtsbehandlung-nahaufnahme.jpg", 
+    alt: "Professionelle Gesichtsbehandlung", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/byonik-be-young.jpg", 
+    alt: "BYONIK Be Young Behandlung", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/vorher-nachher-gesicht.jpg", 
+    alt: "Vorher-Nachher: Hautstraffung", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/vorher-nachher-augen.jpg", 
+    alt: "Vorher-Nachher: Augenbereich", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/byonik-laser-wirkung.jpg", 
+    alt: "BYONIK Laser - Studienbelegte Wirkung", 
+    category: "Behandlungen" 
+  },
 ];
 
 const categories = ["Alle", "Studio", "Behandlungen", "Produkte"];
