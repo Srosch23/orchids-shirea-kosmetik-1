@@ -18,7 +18,7 @@ const qualifications = [
     {
       category: "Spezialisierungen im Bereich Haut & Anti-Aging",
       items: [
-        "Zertifizierte Expertin für Micro-Needling, Mikrodermabrasion & Chemical Peelings",
+          "Zertifizierte Expertin für Microneedling, Mikrodermabrasion & Chemical Peelings",
         "Spezialisierung auf Problemhaut (Akne, Couperose, Rosacea)",
       ],
     },
