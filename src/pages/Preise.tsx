@@ -11,7 +11,7 @@ const priceCategories = [
         treatments: [
           { name: "Klassisch", duration: "60 Min.", price: "89 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, Individuell abgestimmte Maske, Abschließende Pflege" },
           { name: "Luxus", duration: "90 Min.", price: "119 €", featured: true, description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
-          { name: "Anti Aging", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
+            { name: "Anti Aging", duration: "70 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
           { name: "Akne manuelle Reinigung und Seboregulation", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, Regenerationsmaske, Abschließende Pflege" },
           { name: "Trockene Haut", duration: "60 Min.", price: "89 €", description: "Reinigung, Hautdiagnose, Peeling, tiefenwirksame Wirkstoffmaske, Feuchtigkeitsampulle, Abschließende Pflege" },
           { name: "Sensitive Balance", duration: "60 Min.", price: "110 €", description: "Reinigung, Hautdiagnose, beruhigende Pflege, Abschließende Pflege" },
