@@ -7,74 +7,74 @@ import { useState } from "react";
 
 const studioImages = [
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Behandlungsraum-1765401365914.jpeg", 
+    src: "/galerie/behandlungsraum.jpg", 
     alt: "Behandlungsraum", 
     category: "Studio" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Flyer-1765401365989.jpeg", 
+    src: "/galerie/flyer.jpg", 
     alt: "SHIREA Flyer", 
     category: "Studio" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Behandlungsraumlichkeiten-1765401998220.jpeg", 
+    src: "/galerie/studio-raum.jpg", 
     alt: "Behandlungsräumlichkeiten", 
     category: "Studio" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Dr.-Schrammek-Produkte-1765406912278.jpeg", 
-    alt: "Dr. Schrammek Produkte", 
-    category: "Produkte" 
-  },
-  { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/BYONIK-1765406912303.jpeg", 
-    alt: "BYONIK Gerät", 
-    category: "Behandlungen" 
-  },
-  { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Raumlichkeiten-1765406912332.jpeg", 
+    src: "/galerie/raumlichkeiten.jpg", 
     alt: "Räumlichkeiten", 
     category: "Studio" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Fettverbrennung-1765402000716.jpeg", 
+    src: "/galerie/byonik.jpg", 
+    alt: "BYONIK Gerät", 
+    category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/slimyonik-fett.jpg", 
     alt: "Slimyonik Fettverbrennung", 
     category: "Behandlungen" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Kosmetik-Produkte-1765401365824.jpeg", 
-    alt: "Byonik Kosmetik-Produkte", 
-    category: "Produkte" 
-  },
-  { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Produkte-1765401365829.jpeg", 
-    alt: "Anti-Aging Produkte", 
-    category: "Produkte" 
-  },
-  { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Produkte-1765401365894.jpeg", 
-    alt: "Slimyonik Produkte", 
-    category: "Produkte" 
-  },
-  { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik1-1765401365827.jpeg", 
+    src: "/galerie/slimyonik-gerat.jpg", 
     alt: "Slimyonik Gerät", 
     category: "Behandlungen" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-1765401365827.jpeg", 
+    src: "/galerie/slimyonik-anwendung.jpg", 
     alt: "Slimyonik Anwendung", 
     category: "Behandlungen" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Behandlung-1765401365929.jpeg", 
+    src: "/galerie/slimyonik-behandlung.jpg", 
     alt: "Slimyonik Behandlung", 
     category: "Behandlungen" 
   },
   { 
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Slimyonik-Gerat-1765406968546.jpeg", 
+    src: "/galerie/slimyonik-air.jpg", 
     alt: "Slimyonik Air Bodystyler", 
     category: "Behandlungen" 
+  },
+  { 
+    src: "/galerie/dr-schrammek.jpg", 
+    alt: "Dr. Schrammek Produkte", 
+    category: "Produkte" 
+  },
+  { 
+    src: "/galerie/kosmetik-produkte.jpg", 
+    alt: "Byonik Kosmetik-Produkte", 
+    category: "Produkte" 
+  },
+  { 
+    src: "/galerie/anti-aging.jpg", 
+    alt: "Anti-Aging Produkte", 
+    category: "Produkte" 
+  },
+  { 
+    src: "/galerie/slimyonik-produkte.jpg", 
+    alt: "Slimyonik Produkte", 
+    category: "Produkte" 
   },
 ];
 
