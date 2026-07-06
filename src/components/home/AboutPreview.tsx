@@ -1,4 +1,3 @@
-const shahiraImage = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Schahira3-1765406512070.jpeg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Heart, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -7,19 +6,8 @@ export const AboutPreview = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
-          <div className="order-2 md:order-1">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
-              <img 
-                src={shahiraImage} 
-                alt="Schahira Scharar - Staatlich anerkannte Fachkosmetikerin"
-                className="relative rounded-2xl shadow-2xl w-full object-cover"
-              />
-            </div>
-          </div>
-          
-          <div className="order-1 md:order-2 space-y-6">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="space-y-6">
             <div>
               <span className="text-sm uppercase tracking-wider text-primary font-medium">
                 Ihre Expertin

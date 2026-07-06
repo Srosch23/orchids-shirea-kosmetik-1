@@ -10,10 +10,9 @@ const priceCategories = [
         title: "Gesichtsbehandlungen",
         treatments: [
           { name: "Klassisch", duration: "60 Min.", price: "89 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, Individuell abgestimmte Maske, Abschließende Pflege" },
-          { name: "Luxus", duration: "90 Min.", price: "119 €", featured: true, description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
+          { name: "Luxus", duration: "90 Min.", price: "129 €", featured: true, description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
             { name: "Anti Aging", duration: "70 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
           { name: "Akne manuelle Reinigung und Seboregulation", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, Regenerationsmaske, Abschließende Pflege" },
-          { name: "Trockene Haut", duration: "60 Min.", price: "89 €", description: "Reinigung, Hautdiagnose, Peeling, tiefenwirksame Wirkstoffmaske, Feuchtigkeitsampulle, Abschließende Pflege" },
           { name: "Sensitive Balance", duration: "60 Min.", price: "110 €", description: "Reinigung, Hautdiagnose, beruhigende Pflege, Abschließende Pflege" },
             { name: "Hyaluron Plus – Intensive Feuchtigkeitsbehandlung", duration: "90 Min.", price: "140 €", description: "Intensive Durchfeuchtung mit Hyaluron für glatte, pralle und sichtbar erholte Haut." },
             { name: "Anti-Redness-Behandlung: (für Haut mit Couperose & Rosazea)", duration: "60 Min.", price: "120 €", description: "Sanfte, beruhigende Behandlung zur Milderung von Rötungen und zur Stärkung empfindlicher Haut." },
@@ -23,7 +22,7 @@ const priceCategories = [
           title: "Innovative Hautbehandlungen",
           treatments: [
             { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
-            { name: "Microneedling", duration: "60 Min.", price: "ab 119 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
+            { name: "Microneedling", duration: "60 Min.", price: "125 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
               { name: "BB-Glow", duration: "60 Min.", price: "129 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
             { name: "Aquafacial Gesicht", duration: "60 Min.", price: "99 €" },
             { name: "Aquafacial Gesicht, Hals & Dekolleté", duration: "75 Min.", price: "140 €" },
@@ -34,12 +33,12 @@ const priceCategories = [
             title: "BYONIK® Laser Behandlungen",
             promoNote: "Die unten genannten Preise sind BYONIK® Promo Preise",
             treatments: [
-            { name: "BYONIK® Lift PTL Facial | Gesicht", duration: "60 Min.", price: "149 €", featured: true },
-            { name: "BYONIK® Lift PTL Facial - DELUXE | Gesicht und Halskontur", duration: "75 Min.", price: "169 €" },
-            { name: "BYONIK® Lift PTL Facial - SUPERIOR | Gesicht, Hals und Dekolleté", duration: "90 Min.", price: "199 €", featured: true },
+            { name: "BYONIK® Lift PTL Facial | Gesicht", duration: "60 Min.", price: "179 €", featured: true },
+            { name: "BYONIK® Lift PTL Facial - DELUXE | Gesicht und Halskontur", duration: "75 Min.", price: "199 €" },
+            { name: "BYONIK® Lift PTL Facial - SUPERIOR | Gesicht, Hals und Dekolleté", duration: "90 Min.", price: "269 €", featured: true },
             { name: "BYONIK® Lift Fresh-Up | Gesicht", duration: "40 Min.", price: "149 €" },
-            { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", duration: "60 Min.", price: "160 €" },
-            { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", duration: "45 Min.", price: "139 €" },
+            { name: "BYONIK® Skin Lightening | bei erhöhter Pigmentation", duration: "60 Min.", price: "189 €" },
+            { name: "BYONIK® Ecto Repair | Neurosensitive Haut & Akne", duration: "45 Min.", price: "149 €" },
             { name: "BYONIK® Clean Beauty | ohne Duftstoffe", duration: "45 Min.", price: "129 €" },
             { name: "BYONIK® Pore Refining Algae Massage | Detox-Spezial", duration: "45 Min.", price: "139 €" },
             { name: "BYONIK® Eye Revolution", duration: "25 Min.", price: "79 €" },
@@ -52,9 +51,9 @@ const priceCategories = [
   {
     title: "Slimyonik Air Bodystyler + Sauerstoffinhalation",
     treatments: [
-      { name: "Einzelbehandlung", duration: "45 Min.", price: "55 €", description: "Perfekt zum Kennenlernen" },
-      { name: "Basic-Kur (10er Kur)", duration: "", price: "499 €", note: "statt 550 €", featured: true, description: "Inkl. Behandlungsgutschein für Familie und Freunde. Ideal für sichtbare Ergebnisse." },
-      { name: "Professional-Kur (12er Kur)", duration: "", price: "599 €", note: "statt 660 €", featured: true, description: "Inkl. Behandlungsgutschein und kostenlosem Produkt. Maximale Wirkung für langfristige Erfolge." },
+      { name: "Einzelbehandlung", duration: "45 Min.", price: "59 €", description: "Perfekt zum Kennenlernen" },
+      { name: "Basic-Kur (10er Kur)", duration: "", price: "499 €", note: "statt 590 €", featured: true, description: "Inkl. Behandlungsgutschein für Familie und Freunde. Ideal für sichtbare Ergebnisse." },
+      { name: "Professional-Kur (12er Kur)", duration: "", price: "599 €", note: "statt 708 €", featured: true, description: "Inkl. Behandlungsgutschein und kostenlosem Produkt. Maximale Wirkung für langfristige Erfolge." },
     ],
   },
     {
@@ -73,9 +72,9 @@ const priceCategories = [
         {
           title: "Massagen",
           treatments: [
-            { name: "Kopf-, Schulter-, Nackenmassage", duration: "30 Min.", price: "39 €" },
-            { name: "Klassische Massage", duration: "60 Min.", price: "89 €" },
-            { name: "Ganzkörpermassage", duration: "90 Min.", price: "129 €" },
+            { name: "Kopf-, Schulter-, Nackenmassage", duration: "30 Min.", price: "49 €" },
+            { name: "Klassische Massage", duration: "60 Min.", price: "110 €" },
+            { name: "Ganzkörpermassage", duration: "90 Min.", price: "139 €" },
           ],
         },
   {
