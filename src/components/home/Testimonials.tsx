@@ -19,19 +19,39 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Marina",
-    text: "Sehr professionelle Beratung und Behandlung. Ich fühlte mich von Anfang an sehr gut aufgehoben. Das Ergebnis ist fantastisch!",
+    name: "Tamara",
+    text: "Absolut zu empfehlen! Ich habe eine eingehende Beratung erhalten, die einzelnen Schritte wurden mit mir besprochen und meiner Meinung nach wurde sehr ordentlich und hygienisch gearbeitet.",
     rating: 5,
   },
   {
-    name: "Lisa",
-    text: "Absolute Empfehlung! Shirea nimmt sich viel Zeit und geht auf alle Wünsche ein. Die Behandlung war super angenehm.",
+    name: "Alina",
+    text: "Ich habe mir bereits zum dritten Mal bei Shirea Kosmetik die Augenbrauen machen lassen. Ich bevorzuge natürliche Augenbrauen. Schahira setzt meine Vorstellungen perfekt um.",
     rating: 5,
   },
   {
-    name: "Sarah",
-    text: "Sehr zufrieden mit dem Service und der Qualität. Ich komme definitiv wieder!",
+    name: "Klara",
+    text: "Es war wirklich eine tolle Behandlung und ich komme gerne wieder, sehr zu empfehlen.",
     rating: 5,
+  },
+];
+
+const testimonialPages = Array.from(
+  { length: Math.ceil(testimonials.length / 3) },
+  (_, page) => testimonials.slice(page * 3, page * 3 + 3),
+);
+
+const ratingSources = [
+  {
+    label: "Google",
+    rating: "5,0",
+    count: 56,
+    url: "https://maps.google.com/?q=Shirea-Kosmetik,+Sonnenstra%C3%9Fe+4,+M%C3%BCnchen",
+  },
+  {
+    label: "Treatwell",
+    rating: "4,9",
+    count: 39,
+    url: "https://www.treatwell.de/ort/shirea-kosmetik/",
   },
 ];
 
@@ -51,6 +71,27 @@ export const Testimonials = () => {
           <p className="text-muted-foreground text-lg">
             Echte Erfahrungen von zufriedenen Kundinnen
           </p>
+          <div className="mt-5 flex flex-wrap justify-center gap-3">
+            {ratingSources.map((source) => (
+              <a
+                key={source.label}
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium hover:border-primary transition-colors"
+              >
+                <span className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
+                </span>
+                <span>
+                  {source.rating} / 5 bei {source.label}
+                  <span className="text-muted-foreground"> · {source.count} Bewertungen</span>
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
         
           <div 
@@ -58,9 +99,9 @@ export const Testimonials = () => {
             className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {[0, 3].map((startIndex) => (
-              <div key={startIndex} className="grid md:grid-cols-3 gap-6 min-w-full snap-start flex-shrink-0">
-                {testimonials.slice(startIndex, startIndex + 3).map((testimonial, index) => (
+            {testimonialPages.map((page, pageIndex) => (
+              <div key={pageIndex} className="grid md:grid-cols-3 gap-6 min-w-full snap-start flex-shrink-0">
+                {page.map((testimonial, index) => (
                     <Card 
                       key={index}
                       className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg relative overflow-hidden max-w-[400px]"

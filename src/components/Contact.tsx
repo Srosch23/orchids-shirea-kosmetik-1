@@ -87,8 +87,9 @@ export const Contact = () => {
                       <div>
                         <h3 className="font-semibold mb-2">Öffnungszeiten</h3>
                         <div className="space-y-1 text-muted-foreground text-sm">
-                          <p>Dienstag & Donnerstag: 14:00 – 19:00 Uhr</p>
-                          <p>Freitag & Samstag: 10:00 – 19:00 Uhr</p>
+                          <p>Montag, Dienstag & Donnerstag: 15:00 – 20:00 Uhr</p>
+                          <p>Freitag & Samstag: 10:00 – 20:00 Uhr</p>
+                          <p>Mittwoch & Sonntag: geschlossen</p>
                         </div>
                         <p className="text-xs text-muted-foreground mt-3 italic">
                           Individuelle Terminvereinbarungen außerhalb der Öffnungszeiten sind nach Absprache möglich.
