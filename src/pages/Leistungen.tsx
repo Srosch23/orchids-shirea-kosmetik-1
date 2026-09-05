@@ -1,11 +1,17 @@
 import { MainLayout } from "@/components/layout/MainLayout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { 
+import {
   Sparkles, Eye, Droplets, Heart, Zap, ArrowRight, Calendar,
-  Check, ArrowLeft, Wand2, Activity
+  ArrowLeft, Activity
 } from "lucide-react";
 
 const categories = [
@@ -15,28 +21,17 @@ const categories = [
     title: "Gesichtsbehandlungen",
     description: "Von klassischen Anwendungen bis hin zu innovativen Methoden für strahlende Haut.",
           treatments: [
-            { name: "Klassisch", link: "/behandlungen/klassische-gesichtsbehandlung" },
-            { name: "Luxus", link: "/behandlungen/luxus-behandlung" },
+            { name: "Microneedling", link: "/behandlungen/microneedling" },
+            { name: "Microdermabrasion", link: "/behandlungen/mikrodermabrasion" },
+            { name: "Aquafacial", link: "/behandlungen/aqua-facial" },
+            { name: "Microdermabrasion + Microneedling oder Aquafacial + Microneedling", link: "/behandlungen/microneedling" },
+            { name: "Klassische Gesichtsbehandlung", link: "/behandlungen/klassische-gesichtsbehandlung" },
+            { name: "Luxus Gesichtsbehandlung", link: "/behandlungen/luxus-behandlung" },
             { name: "Anti Aging", link: "/behandlungen/anti-aging-behandlung" },
-            { name: "Akne manuelle Reinigung und Seboregulation", link: "/behandlungen/akne-behandlung" },
-              { name: "Trockene Haut", link: "/behandlungen/trockene-haut-behandlung" },
-            { name: "Sensitive Balance", link: "/behandlungen/sensitive-balance" },
-            { name: "Hyaluron Plus – Intensive Feuchtigkeitsbehandlung", link: "/behandlungen/hyaluron-plus-behandlung" },
-            { name: "Anti-Redness-Behandlung: (für Haut mit Couperose & Rosazea)", link: "/behandlungen/anti-redness-behandlung" },
+            { name: "Gesichtsbehandlung für unreine Haut (Akne)", link: "/behandlungen/akne-behandlung" },
+            { name: "Express Gesichtsbehandlung", link: "/behandlungen/klassische-gesichtsbehandlung" },
         ],
   },
-    {
-      id: "innovative",
-      icon: Wand2,
-      title: "Innovative Hautbehandlungen",
-      description: "Modernste Technologien für intensive Hauterneuerung und sichtbare Ergebnisse.",
-      treatments: [
-        { name: "Microdermabrasion", link: "/behandlungen/mikrodermabrasion" },
-        { name: "Microneedling", link: "/behandlungen/microneedling" },
-        { name: "BB-Glow", link: "/behandlungen/bb-glow" },
-        { name: "Aqua Facial", link: "/behandlungen/aqua-facial" },
-      ],
-    },
   {
     id: "byonik",
     icon: Zap,
@@ -65,6 +60,8 @@ const categories = [
     description: "Effektive Körperformung mit tiefenwirksamen Ergebnissen.",
     treatments: [
       { name: "Einzelbehandlung", link: "/behandlungen/slimyonik" },
+      { name: "Basic-Kur (10er Kur)", link: "/behandlungen/slimyonik" },
+      { name: "Professional-Kur (12er Kur)", link: "/behandlungen/slimyonik" },
     ],
   },
   {
@@ -79,7 +76,7 @@ const categories = [
         { name: "Augenbrauen formen", link: "/behandlungen/augenbrauen-formen" },
         { name: "Augenbrauen färben", link: "/behandlungen/augenbrauen-farben" },
         { name: "Augenbrauen formen & färben", link: "/behandlungen/augenbrauen-formen-farben" },
-        { name: "Komplett Paket", link: "/behandlungen/wimpern-brauen-kombi" },
+        { name: "Komplett Paket (Brauen formen & färben, Wimpern färben)", link: "/behandlungen/wimpern-brauen-kombi" },
         { name: "Henna Brow", link: "/behandlungen/henna-brow" },
       ],
   },
@@ -107,6 +104,72 @@ const categories = [
             ],
       },
 ];
+
+const gesichtsbehandlungen = categories.filter((c) => c.id === "gesicht");
+const zusaetzlicheLeistungen = categories.filter((c) => c.id !== "gesicht");
+
+type Treatment = { name: string; link: string };
+
+const TreatmentCard = ({
+  treatment,
+  onClick,
+}: {
+  treatment: Treatment;
+  onClick: () => void;
+}) => (
+  <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg group">
+    <CardContent className="p-6">
+      <h3 className="text-lg font-serif font-semibold mb-4 group-hover:text-primary transition-colors">
+        {treatment.name}
+      </h3>
+      <Link
+        to={treatment.link}
+        onClick={onClick}
+        className="text-primary font-medium hover:underline inline-flex items-center gap-1 text-sm"
+      >
+        Details ansehen
+        <ArrowRight className="w-4 h-4" />
+      </Link>
+    </CardContent>
+  </Card>
+);
+
+const CategorySection = ({
+  category,
+  index,
+  onTreatmentClick,
+}: {
+  category: (typeof categories)[number];
+  index: number;
+  onTreatmentClick: () => void;
+}) => (
+  <section
+    id={category.id}
+    className={`py-20 ${index % 2 === 0 ? "bg-background" : "bg-secondary/30"}`}
+  >
+    <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="bg-primary/10 p-4 rounded-xl">
+            <category.icon className="w-8 h-8 text-primary" />
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold">
+              {category.title}
+            </h2>
+            <p className="text-muted-foreground mt-1">{category.description}</p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {category.treatments.map((treatment, i) => (
+            <TreatmentCard key={i} treatment={treatment} onClick={onTreatmentClick} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 const Leistungen = () => {
   const navigate = useNavigate();
@@ -154,55 +217,72 @@ const Leistungen = () => {
         </div>
       </section>
 
-      {/* Categories */}
-      {categories.map((category, index) => (
-        <section 
+      {/* Gesichtsbehandlungen */}
+      {gesichtsbehandlungen.map((category, index) => (
+        <CategorySection
           key={category.id}
-          id={category.id}
-          className={`py-20 ${index % 2 === 0 ? 'bg-background' : 'bg-secondary/30'}`}
-        >
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="bg-primary/10 p-4 rounded-xl">
-                  <category.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold">
-                    {category.title}
-                  </h2>
-                  <p className="text-muted-foreground mt-1">
-                    {category.description}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.treatments.map((treatment, i) => (
-                  <Card 
-                    key={i}
-                    className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg group"
-                  >
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-serif font-semibold mb-4 group-hover:text-primary transition-colors">
-                        {treatment.name}
-                      </h3>
-                        <Link 
-                          to={treatment.link}
-                          onClick={handleTreatmentClick}
-                          className="text-primary font-medium hover:underline inline-flex items-center gap-1 text-sm"
-                        >
-                          Details ansehen
-                          <ArrowRight className="w-4 h-4" />
-                        </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+          category={category}
+          index={index}
+          onTreatmentClick={handleTreatmentClick}
+        />
       ))}
+
+      {/* Zusätzliche Leistungen */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-sm uppercase tracking-wider text-primary font-medium">
+                Weitere Angebote
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2">
+                Zusätzliche Leistungen
+              </h2>
+              <p className="text-muted-foreground mt-3">
+                Tippen Sie auf eine Kategorie, um die Behandlungen anzuzeigen.
+              </p>
+            </div>
+
+            <Accordion type="multiple" className="space-y-4">
+              {zusaetzlicheLeistungen.map((category) => (
+                <AccordionItem
+                  key={category.id}
+                  value={category.id}
+                  id={category.id}
+                  className="border-2 rounded-xl overflow-hidden bg-card"
+                >
+                  <AccordionTrigger className="px-6 py-5 hover:no-underline text-left [&[data-state=open]]:bg-secondary/40">
+                    <div className="flex items-center gap-4">
+                      <div className="bg-primary/10 p-3 rounded-xl shrink-0">
+                        <category.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <span className="block text-xl md:text-2xl font-serif font-bold">
+                          {category.title}
+                        </span>
+                        <span className="block text-sm text-muted-foreground font-normal mt-1">
+                          {category.description}
+                        </span>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+                      {category.treatments.map((treatment, i) => (
+                        <TreatmentCard
+                          key={i}
+                          treatment={treatment}
+                          onClick={handleTreatmentClick}
+                        />
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-24 bg-gradient-to-b from-background to-secondary/30">

@@ -2,6 +2,12 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Calendar, ArrowLeft } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,26 +15,19 @@ const priceCategories = [
       {
         title: "Gesichtsbehandlungen",
         treatments: [
-          { name: "Klassisch", duration: "60 Min.", price: "89 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, Individuell abgestimmte Maske, Abschließende Pflege" },
-          { name: "Luxus", duration: "90 Min.", price: "129 €", featured: true, description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
-            { name: "Anti Aging", duration: "70 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
-          { name: "Akne manuelle Reinigung und Seboregulation", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, Regenerationsmaske, Abschließende Pflege" },
-          { name: "Sensitive Balance", duration: "60 Min.", price: "110 €", description: "Reinigung, Hautdiagnose, beruhigende Pflege, Abschließende Pflege" },
-            { name: "Hyaluron Plus – Intensive Feuchtigkeitsbehandlung", duration: "90 Min.", price: "140 €", description: "Intensive Durchfeuchtung mit Hyaluron für glatte, pralle und sichtbar erholte Haut." },
-            { name: "Anti-Redness-Behandlung: (für Haut mit Couperose & Rosazea)", duration: "60 Min.", price: "120 €", description: "Sanfte, beruhigende Behandlung zur Milderung von Rötungen und zur Stärkung empfindlicher Haut." },
+          { name: "Microneedling | Gesicht", duration: "60 Min.", price: "150 €", featured: true, description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
+          { name: "Microneedling | Gesicht & Hals", duration: "", price: "170 €" },
+          { name: "Microneedling | Gesicht, Hals & Dekolleté", duration: "", price: "190 €" },
+          { name: "Microdermabrasion", duration: "60 Min.", price: "100 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
+          { name: "Aquafacial", duration: "60 Min.", price: "100 €", description: "Tiefenreinigung, Peeling, Ausreinigung und intensive Wirkstoffversorgung mit dem Aquafacial-Gerät" },
+          { name: "Microdermabrasion + Microneedling oder Aquafacial + Microneedling", duration: "", price: "180 €", featured: true },
+          { name: "Klassische Gesichtsbehandlung", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, Individuell abgestimmte Maske, Abschließende Pflege" },
+          { name: "Luxus Gesichtsbehandlung", duration: "90 Min.", price: "140 €", description: "Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, Individuell abgestimmte Maske, Abschließende Pflege" },
+          { name: "Anti Aging", duration: "70 Min.", price: "120 €", description: "Reinigung, Hautdiagnose, Peeling, Hyaluron + Vitamin Ampulle, tiefenwirksame Wirkstoffmaske, reichhaltige Abschlusspflege" },
+          { name: "Gesichtsbehandlung für unreine Haut (Akne)", duration: "60 Min.", price: "120 €", description: "Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, klärende Maske, Abschließende Pflege" },
+          { name: "Express Gesichtsbehandlung", duration: "30 Min.", price: "60 €", description: "Schnelle Auffrischung für zwischendurch: Reinigung, Peeling, Maske, Abschlusspflege" },
         ],
       },
-        {
-          title: "Innovative Hautbehandlungen",
-          treatments: [
-            { name: "Microdermabrasion", duration: "60 Min.", price: "99 €", description: "Reinigung, Hautdiagnose, Peeling, Microdermabrasion, Intensivmaske, Abschlusspflege" },
-            { name: "Microneedling", duration: "60 Min.", price: "125 €", description: "Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske, Abschlusspflege" },
-              { name: "BB-Glow", duration: "60 Min.", price: "129 €", description: "Reinigung, Hautdiagnose, Peeling, Ausreinigung, BB Glow, Intensivmaske, Abschlusspflege" },
-            { name: "Aquafacial Gesicht", duration: "60 Min.", price: "99 €" },
-            { name: "Aquafacial Gesicht, Hals & Dekolleté", duration: "75 Min.", price: "140 €" },
-            { name: "Aquafacial & Microneedling", duration: "90 Min.", price: "160 €" },
-          ],
-        },
           {
             title: "BYONIK® Laser Behandlungen",
             promoNote: "Die unten genannten Preise sind BYONIK® Promo Preise",
@@ -89,8 +88,46 @@ const priceCategories = [
 
 ];
 
+const TreatmentRows = ({ treatments }: { treatments: any[] }) => (
+  <div className="divide-y">
+    {treatments.map((treatment, i) => (
+      <div
+        key={i}
+        className={`flex items-center justify-between p-4 hover:bg-secondary/30 transition-colors ${treatment.featured ? "bg-primary/5" : ""}`}
+      >
+        <div className="flex-1">
+          <div className="flex items-center gap-2 flex-wrap">
+            <p className="font-medium">{treatment.name}</p>
+            {treatment.featured && (
+              <Badge className="bg-primary text-primary-foreground text-xs">
+                Empfohlen
+              </Badge>
+            )}
+          </div>
+          {(treatment.duration || treatment.note) && (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
+              <span>{treatment.duration}</span>
+              {treatment.note && (
+                <span className="text-primary font-medium">({treatment.note})</span>
+              )}
+            </div>
+          )}
+        </div>
+        <p className="font-semibold text-primary text-lg whitespace-nowrap">
+          {treatment.price}
+        </p>
+      </div>
+    ))}
+  </div>
+);
+
+const COLLAPSIBLE_FROM_INDEX = 1; // ab BYONIK® Laser Behandlungen
+
 const Preise = () => {
   const navigate = useNavigate();
+
+  const openCategories = priceCategories.slice(0, COLLAPSIBLE_FROM_INDEX);
+  const collapsibleCategories = priceCategories.slice(COLLAPSIBLE_FROM_INDEX);
 
   return (
     <MainLayout>
@@ -125,52 +162,66 @@ const Preise = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-12">
-            {priceCategories.map((category, index) => (
-                <Card key={index} className="border-2 overflow-hidden">
-                  <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
-                    <div className="flex items-center justify-between flex-wrap gap-2">
-                      <CardTitle className="text-2xl font-serif">
-                        {category.title}
-                      </CardTitle>
-                    </div>
-                    {category.promoNote && (
-                      <p className="text-sm text-primary font-medium mt-3 italic">
-                        {category.promoNote}
-                      </p>
-                    )}
-                  </CardHeader>
-                  <CardContent className="p-0">
-                  <div className="divide-y">
-                    {category.treatments.map((treatment, i) => (
-                      <div 
-                        key={i} 
-                        className={`flex items-center justify-between p-4 hover:bg-secondary/30 transition-colors ${treatment.featured ? 'bg-primary/5' : ''}`}
-                      >
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <p className="font-medium">{treatment.name}</p>
-                            {treatment.featured && (
-                              <Badge className="bg-primary text-primary-foreground text-xs">
-                                Empfohlen
-                              </Badge>
-                            )}
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
-                            <span>{treatment.duration}</span>
-                            {treatment.note && (
-                              <span className="text-primary font-medium">({treatment.note})</span>
-                            )}
-                          </div>
-                        </div>
-                        <p className="font-semibold text-primary text-lg whitespace-nowrap">
-                          {treatment.price}
-                        </p>
-                      </div>
-                    ))}
+            {openCategories.map((category, index) => (
+              <Card key={index} className="border-2 overflow-hidden">
+                <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <CardTitle className="text-2xl font-serif">
+                      {category.title}
+                    </CardTitle>
                   </div>
+                  {category.promoNote && (
+                    <p className="text-sm text-primary font-medium mt-3 italic">
+                      {category.promoNote}
+                    </p>
+                  )}
+                </CardHeader>
+                <CardContent className="p-0">
+                  <TreatmentRows treatments={category.treatments} />
                 </CardContent>
               </Card>
             ))}
+
+            {collapsibleCategories.length > 0 && (
+              <div className="space-y-4 pt-4">
+                <div className="text-center max-w-2xl mx-auto">
+                  <span className="text-sm uppercase tracking-wider text-primary font-medium">
+                    Weitere Angebote
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-3">
+                    Zusätzliche Behandlungen
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    Tippen Sie auf eine Kategorie, um die Preise anzuzeigen.
+                  </p>
+                </div>
+                <Accordion type="multiple" className="space-y-4">
+                  {collapsibleCategories.map((category, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`category-${index}`}
+                      className="border-2 rounded-lg overflow-hidden bg-card"
+                    >
+                      <AccordionTrigger className="px-6 py-5 bg-gradient-to-r from-primary/5 to-accent/5 hover:no-underline text-left">
+                        <div>
+                          <span className="text-2xl font-serif font-semibold">
+                            {category.title}
+                          </span>
+                          {category.promoNote && (
+                            <span className="block text-sm text-primary font-medium mt-2 italic">
+                              {category.promoNote}
+                            </span>
+                          )}
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="p-0">
+                        <TreatmentRows treatments={category.treatments} />
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            )}
           </div>
         </div>
       </section>
