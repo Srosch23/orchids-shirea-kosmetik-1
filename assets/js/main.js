@@ -92,6 +92,15 @@
       });
     });
     document.querySelectorAll('[data-tab]').forEach(function (a) { a.addEventListener('click', function () { activate(a.getAttribute('data-tab')); }); });
+    /* Anker wie #byonik oder #slimyonik öffnen den passenden Tab */
+    var fromHash = function () {
+      var h = location.hash.slice(1);
+      if (!h || !document.getElementById('tab-' + h)) return;
+      activate(h);
+      requestAnimationFrame(function () { tabs.scrollIntoView({ block: 'start' }); });
+    };
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
     tabs.classList.add('no-ink'); moveInk(tabs.querySelector('.tab.is-active'));
     requestAnimationFrame(function () { tabs.classList.remove('no-ink'); });
     window.addEventListener('resize', function () { moveInk(tabs.querySelector('.tab.is-active')); });
@@ -152,7 +161,7 @@
   }
 
   /* Öffnungszeiten: heute markieren + Status */
-  var hours = { 0: null, 1: [14, 19], 2: [14, 19], 3: null, 4: [14, 19], 5: [10, 19], 6: [10, 19] }; /* laut Google-Unternehmensprofil */
+  var hours = { 0: null, 1: [15, 20], 2: [15, 20], 3: null, 4: [15, 20], 5: [10, 20], 6: [10, 20] }; /* laut Inhaberin, Stand 29.09.2026 */
   var now = new Date(); var d = now.getDay(); var h = now.getHours() + now.getMinutes() / 60;
   var row = document.querySelector('#hours tr[data-d="' + d + '"]'); if (row) row.classList.add('today');
   var status = document.getElementById('status');
@@ -165,6 +174,13 @@
     status.textContent = 'Geschlossen · öffnet ' + (i === 1 ? 'morgen' : names[n]) + ' um ' + hours[n][0] + ':00 Uhr';
   }
   var y = document.getElementById('y'); if (y) y.textContent = now.getFullYear();
+
+  /* Links auf eine FAQ-Frage klappen die Antwort gleich auf */
+  var openFaq = function () {
+    var t = location.hash && document.getElementById(location.hash.slice(1));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  };
+  window.addEventListener('hashchange', openFaq); openFaq();
 
   /* Schwebender WhatsApp-Button: erst nach dem ersten Scrollen */
   var fab = document.getElementById('wa-fab');

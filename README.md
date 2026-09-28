@@ -113,7 +113,7 @@ Im Code mit gelbem `todo`-Hintergrund markiert (`class="todo"`):
 
 **Inhalt**
 - [ ] Zahlungsarten klären: Website/AGB nennen bar und Karte, Treatwell listet nur Barzahlung
-- [x] Öffnungszeiten laut Google-Unternehmensprofil: Mo/Di/Do 14–19, Fr/Sa 10–19, Mi/So zu
+- [x] Öffnungszeiten laut Inhaberin (29.09.2026): Mo/Di/Do 15–20, Fr/Sa 10–20, Mi/So zu, andere Termine nach Vereinbarung
       (Treatwell zeigt noch bis 20 Uhr – dort angleichen)
 - [ ] Bewertungszahlen (Google 68, Treatwell 44) gelegentlich aktualisieren
 - [ ] Vorher/Nachher-Bilder: Einwilligung der Kundinnen liegt vor?
