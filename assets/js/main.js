@@ -92,6 +92,15 @@
       });
     });
     document.querySelectorAll('[data-tab]').forEach(function (a) { a.addEventListener('click', function () { activate(a.getAttribute('data-tab')); }); });
+    /* Anker wie #byonik oder #slimyonik öffnen den passenden Tab */
+    var fromHash = function () {
+      var h = location.hash.slice(1);
+      if (!h || !document.getElementById('tab-' + h)) return;
+      activate(h);
+      requestAnimationFrame(function () { tabs.scrollIntoView({ block: 'start' }); });
+    };
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
     tabs.classList.add('no-ink'); moveInk(tabs.querySelector('.tab.is-active'));
     requestAnimationFrame(function () { tabs.classList.remove('no-ink'); });
     window.addEventListener('resize', function () { moveInk(tabs.querySelector('.tab.is-active')); });
@@ -165,6 +174,13 @@
     status.textContent = 'Geschlossen · öffnet ' + (i === 1 ? 'morgen' : names[n]) + ' um ' + hours[n][0] + ':00 Uhr';
   }
   var y = document.getElementById('y'); if (y) y.textContent = now.getFullYear();
+
+  /* Links auf eine FAQ-Frage klappen die Antwort gleich auf */
+  var openFaq = function () {
+    var t = location.hash && document.getElementById(location.hash.slice(1));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  };
+  window.addEventListener('hashchange', openFaq); openFaq();
 
   /* Schwebender WhatsApp-Button: erst nach dem ersten Scrollen */
   var fab = document.getElementById('wa-fab');

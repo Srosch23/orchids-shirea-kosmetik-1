@@ -40,7 +40,7 @@
 <link rel="preload" href="assets/fonts/Figtree-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/schahira.webp" as="image" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/style.css?v=20260928o">
+<link rel="stylesheet" href="assets/css/style.css?v=20260929b">
 
 <script type="application/ld+json">
 {
@@ -126,6 +126,7 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {"@type": "Question", "name": "Gibt es ein Angebot für Neukunden?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Neukundinnen und Neukunden erhalten 20 % Rabatt auf ihre erste Behandlung, zum Beispiel Aquafacial mit Microneedling für 144 € statt 180 €. Code NEU20 bei der Buchung oder im Studio nennen. Einmal pro Person, nicht mit anderen Aktionen kombinierbar."}},
         {"@type": "Question", "name": "Was kostet eine Gesichtsbehandlung in München bei SHIREÁ?", "acceptedAnswer": {"@type": "Answer", "text": "Eine klassische Gesichtsbehandlung kostet 99 €, Aquafacial oder Mikrodermabrasion 100 €, Microneedling ab 150 €. Aquafacial mit Microneedling kostet 180 € statt 250 €. Alle Preise inklusive Mehrwertsteuer und Hautanalyse."}},
         {"@type": "Question", "name": "Ist Microneedling schmerzhaft?", "acceptedAnswer": {"@type": "Answer", "text": "Es kribbelt und an Stirn und Nase pikst es etwas. Auf Wunsch wird vorher eine Betäubungscreme aufgetragen."}},
         {"@type": "Question", "name": "Wie lange ist die Haut nach Microneedling gerötet?", "acceptedAnswer": {"@type": "Answer", "text": "Nach dem Microneedling ist die Haut ein bis zwei Tage gerötet, ähnlich einem leichten Sonnenbrand. Nach einem Aquafacial allein gibt es keine Ausfallzeit."}},
@@ -169,7 +170,7 @@
   <div class="wrap">
     <a href="#stimmen"><span><span class="stars" aria-hidden="true"><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg></span> 5,0 bei Google · 4,9 bei Treatwell</span></a>
     <span class="hide-sm"><svg class="i"><use href="#award"/></svg> Staatlich anerkannte Fachkosmetikerin</span>
-    <span class="hide-sm"><svg class="i"><use href="#pin"/></svg> Sonnenstraße 4 · am Stachus</span>
+    <a class="hide-sm" href="#neukunden"><span><svg class="i"><use href="#gift"/></svg> Neukunden 20 % auf die erste Behandlung</span></a>
   </div>
 </div>
 
@@ -183,9 +184,9 @@
     <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="#signature">Empfehlung</a>
       <a href="#behandlungen">Gesichtsbehandlungen</a>
-      <a href="#ergebnisse">Ergebnisse</a>
+      <a href="#byonik">BYONIK®</a>
+      <a href="#slimyonik">SLIMYONIK®</a>
       <a href="#schahira">Über mich</a>
-      <a href="#preise">Preise</a>
       <a href="#kontakt">Kontakt</a>
       <a class="btn btn--sm" href="#buchen" data-book=""><svg class="i"><use href="#cal"/></svg> Termin buchen</a>
     </nav>
@@ -232,7 +233,7 @@
   <ul>
     <li><svg class="i"><use href="#award"/></svg> Staatlich anerkannte Fachkosmetikerin</li>
     <li><svg class="i"><use href="#spark"/></svg> Zertifiziert für Microneedling &amp; BYONIK®</li>
-    <li><svg class="i"><use href="#leaf"/></svg> Medizinische Kosmetik von Dr. Schrammek</li>
+    <li><svg class="i"><use href="#leaf"/></svg> Dr. Schrammek, NOREL &amp; BYONIK®</li>
     <li><svg class="i"><use href="#shield"/></svg> Höchste Hygienestandards, ein Termin zur Zeit</li>
   </ul>
 </div>
@@ -260,6 +261,8 @@
           <span class="price-block__was"><s>250 €</s>bei Einzelbuchung</span>
           <span class="save"><svg class="i"><use href="#gift"/></svg> 70 € Vorteil</span>
         </div>
+
+        <p class="offer" id="neukunden"><svg class="i"><use href="#gift"/></svg><span><strong>Neukundenangebot</strong> 20 % auf Ihre erste Behandlung, beim Kombi-Paket also <strong>144 € statt 180 €</strong>. Nennen Sie einfach den Code NEU20 bei der Buchung oder im Studio. <a class="link" href="#faq-neukunden">Bedingungen</a></span></p>
 
         <p class="sig-text">Ideal bei großen Poren, fahlem Teint, ersten Fältchen und Aknenarben. Bereits nach der ersten Behandlung wirkt die Haut feiner und ebenmäßiger. Mit drei bis vier Sitzungen im Abstand von vier Wochen erreichen Sie ein nachhaltiges Ergebnis.</p>
 
@@ -340,9 +343,9 @@
 
     <div class="tabs" id="preise" role="tablist" aria-label="Behandlungskategorien">
       <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab-gesicht" id="tabbtn-gesicht" type="button">Gesicht</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-byonik" id="tabbtn-byonik" type="button" tabindex="-1">BYONIK® Laser</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-byonik" id="tabbtn-byonik" type="button" tabindex="-1">BYONIK®</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-augen" id="tabbtn-augen" type="button" tabindex="-1">Wimpern &amp; Brauen</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-koerper" id="tabbtn-koerper" type="button" tabindex="-1">Körper</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-slimyonik" id="tabbtn-slimyonik" type="button" tabindex="-1">SLIMYONIK®</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-massage" id="tabbtn-massage" type="button" tabindex="-1">Massage</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-waxing" id="tabbtn-waxing" type="button" tabindex="-1">Waxing</button>
       <span class="tabs__ink" aria-hidden="true"></span>
@@ -360,7 +363,8 @@
         </div>
         <div>
           <p class="card__price" style="text-align:right;margin-bottom:14px">180 € <s style="font-size:1rem;color:#a8a29e;font-family:var(--sans);font-weight:400">250 €</s></p>
-          <div class="btn-row"><a class="btn btn--light" href="#buchen" data-book="Aquafacial + Microneedling (180 €)"><svg class="i"><use href="#cal"/></svg> Termin sichern</a></div>
+          <p class="card__offer">Neukunden 144 € mit Code NEU20</p>
+          <div class="btn-row"><a class="btn btn--light" href="#buchen" data-book="Aquafacial + Microneedling (180 €, Neukundenangebot 144 € mit Code NEU20)"><svg class="i"><use href="#cal"/></svg> Termin sichern</a></div>
         </div>
       </article>
       </div>
@@ -374,6 +378,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Die Hydro-Dermabrasion reinigt die Poren mit Wasser und Unterdruck und schleust Hyaluron in die Haut ein. Schmerzfrei und ohne Ausfallzeit. Das Aquafacial in München für sofort sichtbare Frische.</p>
+            <p class="trow__incl">Enthalten Tiefenreinigung, Peeling, Ausreinigung und intensive Wirkstoffversorgung mit dem Aquafacial-Gerät.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Aquafacial (100 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a><a class="link small" href="#signature">Mit Microneedling 180 €</a></div>
           </div>
         </li>
@@ -385,6 +390,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Feinste Nadeln setzen kontrollierte Mikroreize, auf die die Haut mit neuem Kollagen und Elastin reagiert. Auf Wunsch mit Betäubungscreme. <span class="muted">Gesicht 150 € · mit Hals 170 € · mit Dekolleté 190 €</span></p>
+            <p class="trow__incl">Enthalten Reinigung, Hautdiagnose, Peeling, Microneedling mit hochkonzentriertem Wirkstoffserum, Intensivmaske und Abschlusspflege.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Microneedling (ab 150 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a><a class="link small" href="#signature">Als Kombination 180 €</a></div>
           </div>
         </li>
@@ -396,6 +402,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Mechanisches Diamant-Peeling, das die oberste Hautschicht sanft abträgt. Die Haut wird sofort glatter und nimmt Wirkstoffe deutlich besser auf.</p>
+            <p class="trow__incl">Enthalten Reinigung, Hautdiagnose, Peeling, Mikrodermabrasion, Intensivmaske und Abschlusspflege.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Mikrodermabrasion (100 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a><a class="link small" href="#signature">Mit Microneedling 180 €</a></div>
           </div>
         </li>
@@ -418,6 +425,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Hochkonzentrierte Seren mit Hyaluron und Peptiden, eine straffende Konturenmassage und eine intensive Anti-Falten-Maske.</p>
+            <p class="trow__incl">Enthalten Reinigung, Hautdiagnose, Peeling, Hyaluron- und Vitaminampulle, tiefenwirksame Wirkstoffmaske und reichhaltige Abschlusspflege.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Anti-Aging Behandlung (120 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a></div>
           </div>
         </li>
@@ -429,6 +437,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Professionelle manuelle Ausreinigung, antibakterielle Wirkstoffe und eine talgregulierende Maske für nachhaltig klarere Haut.</p>
+            <p class="trow__incl">Enthalten Reinigung, Hautdiagnose, Peeling, intensive Ausreinigung, klärende Maske und abschließende Pflege.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Gesichtsbehandlung für unreine Haut (120 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a></div>
           </div>
         </li>
@@ -440,6 +449,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Die klassische Gesichtsbehandlung in der ausführlichen Variante mit intensiver Massage, hochwirksamen Ampullen und einer exklusiven Maske. 90 Minuten Pflege auf höchstem Niveau.</p>
+            <p class="trow__incl">Enthalten Reinigung, Hautdiagnose, sanftes Peeling, SkinScrubber, Ausreinigung, Augenbrauenkorrektur, Massage, hochwertige Wirkstoffampulle, individuell abgestimmte Maske und abschließende Pflege.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Luxus Gesichtsbehandlung (140 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a></div>
           </div>
         </li>
@@ -451,6 +461,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Hautanalyse, Reinigung, Peeling, Ausreinigung, typgerechte Maske und Abschlusspflege. Der ideale Einstieg beim ersten Besuch.</p>
+            <p class="trow__incl">Enthalten Reinigung, Hautdiagnose, Peeling, Ausreinigung, Massage, individuell abgestimmte Maske und abschließende Pflege.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Klassische Gesichtsbehandlung (99 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a></div>
           </div>
         </li>
@@ -484,6 +495,7 @@
           </button>
           <div class="trow__body" hidden>
             <p>Reinigung, Peeling und Feuchtigkeitsboost in 30 Minuten, für frische Haut zwischendurch oder vor einem Anlass.</p>
+            <p class="trow__incl">Enthalten Reinigung, Peeling, Maske und Abschlusspflege.</p>
             <div class="btn-row"><a class="btn btn--gold btn--sm" href="#buchen" data-book="Express Glow Gesichtsbehandlung (60 €)"><svg class="i"><use href="#cal"/></svg> Buchen</a></div>
           </div>
         </li>
@@ -492,13 +504,16 @@
 
       <div class="tabpanel" id="tab-byonik" role="tabpanel" aria-labelledby="tabbtn-byonik" hidden>
         <div class="panel-intro">
-          <img src="assets/img/byonik-geraet.webp" alt="BYONIK Lasergerät im Studio SHIREÁ" width="800" height="1067" loading="lazy">
+          <img src="assets/img/byonik-geraet.webp" alt="BYONIK Puls Triggered Laser im Studio SHIREÁ" width="800" height="1067" loading="lazy">
           <div>
-            <h3>BYONIK® Lasertherapie</h3>
-            <p>Die BYONIK®-Methode synchronisiert Laserimpulse mit Ihrem Puls und gibt Licht genau dann ab, wenn die Zellen am aufnahmefähigsten sind. Kombiniert mit hochmolekularem Hyaluron entsteht eine tiefenwirksame Hautverjüngung ohne Nadeln und ohne Ausfallzeit. Derzeit zu Aktionspreisen.</p>
+            <h3>BYONIK® Puls Triggered Laser</h3>
+            <p>Die BYONIK®-Methode ist eine pulsgesteuerte Laserbehandlung. Der Kaltlaser arbeitet synchron mit Ihrem Herzschlag und transportiert patentierte, hochkonzentrierte Hyaluron-Gele tief in die Haut. Dort spenden sie intensive Feuchtigkeit, polstern die Haut von innen auf und sorgen für ein sichtbar strafferes Hautbild.</p>
+            <ul class="facts"><li>Schmerzfrei, ohne Ausfallzeit</li><li>Sofort sichtbare Wirkung</li><li>Für jeden Hauttyp</li></ul>
             <a class="btn btn--sm" href="#buchen" data-book="BYONIK® Behandlung"><svg class="i"><use href="#cal"/></svg> BYONIK® buchen</a>
           </div>
         </div>
+        <h3 class="plist-title">BYONIK® Preisliste</h3>
+        <p class="plist-note">Die genannten Preise sind BYONIK® Aktionspreise.</p>
         <ul class="plist plist--grid">
             <li><span class="n">Lift PTL Facial · Gesicht</span><span class="dots"></span><span class="d">60 Min.</span><span class="p">179 €</span></li>
             <li><span class="n">Lift PTL Deluxe · Gesicht &amp; Halskontur</span><span class="dots"></span><span class="d">75 Min.</span><span class="p">199 €</span></li>
@@ -514,6 +529,20 @@
             <li><span class="n">Show your Legs</span><span class="dots"></span><span class="d">60 Min.</span><span class="p">169 €</span></li>
             <li><span class="n">Clean &amp; Smooth</span><span class="dots"></span><span class="d">30 Min.</span><span class="p">99 €</span></li>
           </ul>
+        <div class="twocol">
+          <div>
+            <h4>Wirkung und Vorteile</h4>
+            <ul class="ticks">
+              <li>Tiefenwirksame Hautverjüngung</li><li>Sofortige Straffung und Lifting-Effekt</li><li>Bessere Durchblutung und Sauerstoffversorgung</li><li>Anregung der Kollagenproduktion</li><li>Weniger Falten und feine Linien</li><li>Verfeinertes Hautbild</li><li>Strahlender, frischer Teint</li><li>Intensive Feuchtigkeitsversorgung</li><li>Milderung von Couperose</li><li>Regulierung unreiner Haut</li><li>Biolifting durch Aktivierung der elastischen Fasern</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Wann nicht geeignet</h4>
+            <ul class="ticks ticks--no">
+              <li>Schwangerschaft und Stillzeit</li><li>Akute Hautinfektionen oder Entzündungen</li><li>Offene Wunden im Behandlungsbereich</li><li>Einnahme von Blutverdünnern</li><li>Epilepsie</li><li>Herzschrittmacher</li><li>Aktive Herpes-Infektion</li><li>Krebserkrankungen</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="tabpanel" id="tab-augen" role="tabpanel" aria-labelledby="tabbtn-augen" hidden>
@@ -537,19 +566,30 @@
           </ul>
       </div>
 
-      <div class="tabpanel" id="tab-koerper" role="tabpanel" aria-labelledby="tabbtn-koerper" hidden>
+      <div class="tabpanel" id="tab-slimyonik" role="tabpanel" aria-labelledby="tabbtn-slimyonik" hidden>
         <div class="panel-intro">
-          <img src="assets/img/slimyonik.webp" alt="Slimyonik Air Bodystyler Anwendung" width="800" height="625" loading="lazy">
+          <img src="assets/img/slimyonik.webp" alt="SLIMYONIK Air Bodystyler Anwendung im Studio SHIREÁ" width="800" height="625" loading="lazy">
           <div>
-            <h3>Slimyonik® Air Bodystyler</h3>
-            <p>Der Slimyonik® Air Bodystyler kombiniert eine Druckwellenmassage mit Sauerstoffinhalation. Der Lymphfluss wird angeregt, Wassereinlagerungen reduziert und der Stoffwechsel aktiviert. Ideal bei schweren Beinen und als Begleitung zur Gewichtsreduktion. Als Kur besonders wirksam.</p>
-            <a class="btn btn--sm" href="#buchen" data-book="Slimyonik® Air"><svg class="i"><use href="#cal"/></svg> Termin buchen</a>
+            <h3>SLIMYONIK® Air Bodystyler</h3>
+            <p>Effektive Körperformung mit tiefenwirksamen Ergebnissen. Der SLIMYONIK® Air Bodystyler kombiniert eine sanfte Druckwellenmassage mit Sauerstoffinhalation, aktiviert das Lymphsystem und wirkt von innen und außen. Medizinisch zugelassen, individuell anpassbar und entspannend.</p>
+            <ul class="facts"><li>Bei Cellulite und müden Beinen</li><li>Zur Umfangsreduktion</li><li>Für straffere Haut</li></ul>
+            <a class="btn btn--sm" href="#buchen" data-book="SLIMYONIK® Air"><svg class="i"><use href="#cal"/></svg> SLIMYONIK® buchen</a>
           </div>
         </div>
+        <h3 class="plist-title">Programme</h3>
+        <ul class="programs">
+          <li><strong>Slim Massage</strong><span>Für effektive Körperformung</span></li>
+          <li><strong>Cellulite Massage</strong><span>Gegen Orangenhaut</span></li>
+          <li><strong>Lymph Massage</strong><span>Aktiviert das Lymphsystem</span></li>
+          <li><strong>Relax Massage</strong><span>Für tiefe Entspannung</span></li>
+          <li><strong>Sport Massage</strong><span>Regeneration für Sportler</span></li>
+          <li><strong>Laser-Lipolyse RF</strong><span>High-Tech Fettreduktion</span></li>
+        </ul>
+        <h3 class="plist-title">SLIMYONIK® Preisliste</h3>
         <ul class="plist">
-            <li><span class="n">Einzelbehandlung</span><span class="dots"></span><span class="d">45 Min.</span><span class="p">59 €</span></li>
-            <li><span class="n">Basic-Kur (10 Behandlungen)</span><span class="dots"></span><span class="d"></span><span class="p"><s>590 €</s>499 €</span></li>
-            <li><span class="n">Professional-Kur (12 Behandlungen)</span><span class="dots"></span><span class="d"></span><span class="p"><s>708 €</s>599 €</span></li>
+            <li><span class="n">Einzelbehandlung<small>Perfekt zum Kennenlernen</small></span><span class="dots"></span><span class="d">45 Min.</span><span class="p">59 €</span></li>
+            <li><span class="n">Basic-Kur (10 Behandlungen)<small>Inklusive Behandlungsgutschein für Familie und Freunde</small></span><span class="dots"></span><span class="d"></span><span class="p"><s>590 €</s>499 €</span></li>
+            <li><span class="n">Professional-Kur (12 Behandlungen)<small>Inklusive Behandlungsgutschein und einem kostenlosen Produkt</small></span><span class="dots"></span><span class="d"></span><span class="p"><s>708 €</s>599 €</span></li>
           </ul>
       </div>
 
@@ -622,17 +662,27 @@
       <p class="eyebrow">Ihre Expertin</p>
       <h2 id="about-title">Schahira <em>Scharar</em></h2>
       <p class="lead">Staatlich anerkannte Fachkosmetikerin mit Schwerpunkt auf apparativer Kosmetik und Problemhaut.</p>
-      <p>Ich habe SHIREÁ mit einem klaren Anspruch gegründet. Jede Behandlung beruht auf einer fundierten Hautanalyse, jede Methode hat eine nachweisbare Wirkung, und ich verwende ausschließlich Produkte, die ich uneingeschränkt empfehlen kann. Ich arbeite mit der medizinischen Kosmetik von Dr. Schrammek und der BYONIK®-Lasertherapie, beide tierversuchsfrei, und bilde mich kontinuierlich weiter, damit Sie vom aktuellen Stand der Kosmetik profitieren.</p>
-      <ul class="quals">
-        <li><svg class="i"><use href="#check"/></svg> Staatlich anerkannte Fachkosmetikerin</li>
-        <li><svg class="i"><use href="#check"/></svg> Zertifiziert für Microneedling, Mikrodermabrasion und Fruchtsäurepeeling</li>
-        <li><svg class="i"><use href="#check"/></svg> Schwerpunkt Problemhaut (Akne, Couperose, Rosacea)</li>
-        <li><svg class="i"><use href="#check"/></svg> BYONIK® Laser und Slimyonik® Air</li>
-        <li><svg class="i"><use href="#check"/></svg> Brow Lifting und Lash Lifting</li>
-        <li><svg class="i"><use href="#check"/></svg> Ausgebildete Visagistin</li>
-      </ul>
+      <p>Ich habe SHIREÁ mit einem klaren Anspruch gegründet. Jede Behandlung beruht auf einer fundierten Hautanalyse, jede Methode hat eine nachweisbare Wirkung, und ich verwende ausschließlich Produkte, die ich uneingeschränkt empfehlen kann. Ich arbeite mit drei Marken, von deren Qualität ich überzeugt bin, und bilde mich kontinuierlich weiter, damit Sie vom aktuellen Stand der Kosmetik profitieren.</p>
       <blockquote>„Schöne Haut ist kein einmaliges Ergebnis, sondern das Resultat aus Kontinuität, regelmäßigen Behandlungen und der richtigen Pflege.“</blockquote>
       <a class="btn" href="#buchen" data-book=""><svg class="i"><use href="#cal"/></svg> Termin vereinbaren</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h3 class="block-title reveal">Qualifikationen &amp; Weiterbildungen</h3>
+    <div class="qual-grid">
+      <div class="qual reveal"><h4>Ausbildung</h4><ul><li>Staatlich anerkannte Fachkosmetikerin</li><li>Zertifizierte Visagistin</li></ul></div>
+      <div class="qual reveal"><h4>Haut &amp; Anti-Aging</h4><ul><li>Zertifizierte Expertin für Microneedling, Mikrodermabrasion und Chemical Peelings</li><li>Spezialisierung auf Problemhaut, Akne, Couperose und Rosacea</li></ul></div>
+      <div class="qual reveal"><h4>Augenbrauen &amp; Wimpern</h4><ul><li>Brow Lifting und Lash Lifting zertifiziert</li><li>Färben, Formen und Stylen von Augenbrauen</li><li>Präzisions-Haarentfernung mit Waxing</li></ul></div>
+      <div class="qual reveal"><h4>Spezialbehandlungen</h4><ul><li>BYONIK® Lasertherapie zertifiziert</li><li>SLIMYONIK® Air Bodystyler Expertin</li></ul></div>
+      <div class="qual reveal"><h4>Zusatzkompetenzen</h4><ul><li>Regelmäßige Weiterbildungen in modernen Behandlungsmethoden</li><li>Hygienemanagement nach aktuellen Richtlinien</li></ul></div>
+    </div>
+
+    <h3 class="block-title reveal" id="marken">Meine Marken</h3>
+    <div class="brands">
+      <figure class="brand-card reveal"><img src="assets/img/marke-schrammek.webp" alt="Dr. Schrammek Produkte im Studio SHIREÁ" width="900" height="675" loading="lazy"><figcaption><strong>Dr. Schrammek</strong><span>Medizinische Kosmetik mit hochwirksamen Wirkstoffen, bewährt bei Problemhaut, Pigmentflecken und Anti-Aging.</span></figcaption></figure>
+      <figure class="brand-card reveal"><img src="assets/img/marke-norel.webp" alt="NOREL Dr. Wilsz Produktsortiment im Studio SHIREÁ" width="900" height="675" loading="lazy"><figcaption><strong>NOREL Dr. Wilsz</strong><span>Professionelle Pflegeserien und Ampullen für jeden Hauttyp, in der Behandlung und für die Pflege zu Hause.</span></figcaption></figure>
+      <figure class="brand-card reveal"><img src="assets/img/marke-byonik.webp" alt="BYONIK Pflegeprodukte im Studio SHIREÁ" width="900" height="675" loading="lazy"><figcaption><strong>BYONIK®</strong><span>Pulsgesteuerte Lasertherapie und Pflege mit hochkonzentrierten Hyaluron-Gelen für eine tiefenwirksame Hautverjüngung.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -730,6 +780,7 @@
       <h2 id="faq-title">Gut zu wissen <em>vor Ihrer Gesichtsbehandlung</em></h2>
     </div>
     <div class="faq">
+      <details id="faq-neukunden"><summary>Gibt es ein Angebot für Neukunden?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Ja. Neukundinnen und Neukunden erhalten 20 % Rabatt auf ihre erste Behandlung, zum Beispiel das Kombi-Paket aus Aquafacial und Microneedling für 144 € statt 180 €. Nennen Sie dafür den Code NEU20 bei der Buchung per WhatsApp, als Anmerkung bei Treatwell oder direkt im Studio. Der Rabatt wird bei der Bezahlung abgezogen. Das Angebot gilt einmal pro Person und lässt sich nicht mit anderen Aktionen oder Treatwell-Rabatten kombinieren.</p></div></details>
       <details><summary>Was kostet eine Gesichtsbehandlung in München bei SHIREÁ?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Eine klassische Gesichtsbehandlung kostet 99 €, ein Aquafacial oder eine Mikrodermabrasion 100 €, Microneedling ab 150 €. Unsere Empfehlung, Aquafacial mit Microneedling, kostet 180 € statt 250 € bei Einzelbuchung. Alle Preise verstehen sich inklusive Mehrwertsteuer und Hautanalyse.</p></div></details>
       <details><summary>Ist Microneedling schmerzhaft?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Es kribbelt und an Stirn und Nase pikst es etwas. Die meisten sagen hinterher, sie hätten es sich schlimmer vorgestellt. Wenn Sie empfindlich sind, trage ich vorher eine Betäubungscreme auf, die braucht etwa 20 Minuten.</p></div></details>
       <details><summary>Wie lange ist die Haut danach gerötet?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Nach dem Microneedling sieht die Haut ein bis zwei Tage aus wie nach einem leichten Sonnenbrand. An dem Tag bitte kein Make-up, keine Sauna, kein Sport, und in der Woche danach Sonnenschutz. Nach einem Aquafacial allein können Sie sofort wieder unter Leute.</p></div></details>
@@ -815,8 +866,9 @@
       <ul>
         <li><a href="#signature">Aquafacial + Microneedling</a></li>
         <li><a href="#behandlungen">Gesichtsbehandlungen</a></li>
-        <li><a href="#preise" data-tab="byonik">BYONIK® Laser</a></li>
-        <li><a href="#preise" data-tab="augen">Wimpern &amp; Brauen</a></li>
+        <li><a href="#byonik">BYONIK® Laser</a></li>
+        <li><a href="#slimyonik">SLIMYONIK® Air</a></li>
+        <li><a href="#augen">Wimpern &amp; Brauen</a></li>
         <li><a href="#preise">Alle Preise</a></li>
       </ul>
     </div>
@@ -859,6 +911,6 @@
   </div>
 </dialog>
 
-<script src="assets/js/main.js?v=20260928o" defer></script>
+<script src="assets/js/main.js?v=20260929b" defer></script>
 </body>
 </html>
