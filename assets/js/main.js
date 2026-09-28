@@ -92,6 +92,15 @@
       });
     });
     document.querySelectorAll('[data-tab]').forEach(function (a) { a.addEventListener('click', function () { activate(a.getAttribute('data-tab')); }); });
+    /* Anker wie #byonik oder #slimyonik öffnen den passenden Tab */
+    var fromHash = function () {
+      var h = location.hash.slice(1);
+      if (!h || !document.getElementById('tab-' + h)) return;
+      activate(h);
+      requestAnimationFrame(function () { tabs.scrollIntoView({ block: 'start' }); });
+    };
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
     tabs.classList.add('no-ink'); moveInk(tabs.querySelector('.tab.is-active'));
     requestAnimationFrame(function () { tabs.classList.remove('no-ink'); });
     window.addEventListener('resize', function () { moveInk(tabs.querySelector('.tab.is-active')); });
