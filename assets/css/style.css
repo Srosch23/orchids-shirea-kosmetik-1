@@ -506,6 +506,25 @@ h1 em,h2 em{font-weight:300}
 .wa-fab:hover{background:#333}
 @media (max-width:899px){.wa-fab{left:16px;bottom:calc(16px + env(safe-area-inset-bottom))}}
 
+/* Cookie-Einwilligung */
+.cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:90;display:flex;justify-content:center;opacity:0;transform:translateY(16px);transition:opacity .3s,transform .3s;pointer-events:none}
+.cc.is-in{opacity:1;transform:none;pointer-events:auto}
+.cc[hidden],.cc [hidden]{display:none!important}
+.cc__in{width:min(760px,100%);background:var(--linen);color:var(--ink);border:1px solid var(--ink);padding:22px 24px;box-shadow:0 20px 50px -20px rgba(0,0,0,.45);max-height:calc(100vh - 32px);overflow:auto}
+.cc__title{font-size:1.35rem;margin:0 0 8px}
+.cc__text{font-size:.9rem;line-height:1.55;color:var(--ink-2);margin:0 0 14px}
+.cc__text a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.cc__opts{display:grid;gap:10px;margin:0 0 16px}
+.cc__opt{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--sand);font-size:.86rem;line-height:1.45;color:var(--ink-2);cursor:pointer}
+.cc__opt input{width:18px;height:18px;margin-top:2px;accent-color:#111;flex:none}
+.cc__opt strong{display:block;color:var(--ink);font-weight:600;font-size:.92rem}
+.cc__btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cc__btn{min-height:46px;flex:1 1 180px}
+.cc__link{background:none;border:0;padding:8px 4px;font:600 .8rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+html.cc-open .wa-fab{opacity:0!important;pointer-events:none!important}
+.footer .cookie-link{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+@media (max-width:560px){.cc{left:0;right:0;bottom:0}.cc__in{padding:18px 16px calc(18px + env(safe-area-inset-bottom));border-left:0;border-right:0;border-bottom:0}.cc__btn{flex-basis:100%}}
+
 /* Booking dialog */
 .dlg{border:0;padding:0;border-radius:var(--radius-lg);width:min(480px,calc(100vw - 32px));background:var(--linen);color:var(--ink);box-shadow:var(--shadow-lg)}
 .dlg::backdrop{background:rgba(26,26,26,.55);backdrop-filter:blur(3px)}
