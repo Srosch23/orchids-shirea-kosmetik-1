@@ -161,7 +161,7 @@
   }
 
   /* Öffnungszeiten: heute markieren + Status */
-  var hours = { 0: null, 1: [14, 19], 2: [14, 19], 3: null, 4: [14, 19], 5: [10, 19], 6: [10, 19] }; /* laut Google-Unternehmensprofil */
+  var hours = { 0: null, 1: [15, 20], 2: [15, 20], 3: null, 4: [15, 20], 5: [10, 20], 6: [10, 20] }; /* laut Inhaberin, Stand 29.09.2026 */
   var now = new Date(); var d = now.getDay(); var h = now.getHours() + now.getMinutes() / 60;
   var row = document.querySelector('#hours tr[data-d="' + d + '"]'); if (row) row.classList.add('today');
   var status = document.getElementById('status');

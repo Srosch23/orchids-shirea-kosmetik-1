@@ -414,9 +414,12 @@ h1 em,h2 em{font-weight:300}
 
 /* Qualifikationen und Marken */
 .block-title{font-size:clamp(1.5rem,2.6vw,2rem);margin:clamp(48px,6vw,72px) 0 20px}
-.qual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.qual{background:var(--sand);padding:18px 20px}
-.qual h4{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+.qual-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.qual{background:var(--sand);padding:18px 16px}
+@media (max-width:999px){.qual-grid{grid-template-columns:1fr 1fr}.qual:last-child{grid-column:1/-1}}
+@media (max-width:599px){.qual-grid{grid-template-columns:1fr}}
+.qual h4{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px;white-space:nowrap}
+@media (max-width:1150px) and (min-width:1000px){.qual h4{white-space:normal}}
 .qual ul{list-style:none;margin:0;padding:0;font-size:.92rem;color:var(--ink-2);line-height:1.45}
 .qual li{padding-left:14px;position:relative;margin-bottom:6px}
 .qual li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;background:var(--ink)}
@@ -476,6 +479,7 @@ h1 em,h2 em{font-weight:300}
 .hours{width:100%;border-collapse:collapse;font-size:.88rem}
 .hours td{padding:2px 0;color:#c9c9c9}
 .hours td:last-child{text-align:right}
+.hours-note{margin:8px 0 0;font-size:.82rem;color:#c9c9c9;line-height:1.45}
 .hours tr.today td{color:#ffffff;font-weight:500}
 .hours tr.today td:first-child::after{content:" · heute";color:var(--gold-soft);font-weight:400;font-size:.82rem}
 .status{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;margin-bottom:6px;color:#c9c9c9}
