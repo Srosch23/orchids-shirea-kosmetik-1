@@ -202,6 +202,10 @@ h1 em,h2 em{font-weight:300}
 .sig-media__label{position:absolute;left:20px;top:20px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:4px;padding:8px 14px;font-size:.84rem;font-weight:500;color:var(--ink)}
 .sig-body{padding:clamp(28px,4.5vw,56px)}
 .sig-body h3{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;margin-bottom:.3em}
+.offer{display:flex;gap:12px;align-items:flex-start;margin:-6px 0 22px;padding:14px 16px;background:var(--sand);border-left:3px solid var(--ink);font-size:.93rem;line-height:1.5;color:var(--ink-2)}
+.offer .i{width:20px;height:20px;margin-top:2px;color:var(--ink);flex:none}
+.offer strong{color:var(--ink);font-weight:600}
+.card__offer{text-align:right;margin:-6px 0 14px;font-size:.85rem;font-weight:600;color:#fff}
 .sig-text{color:var(--ink-2);margin-bottom:22px}
 .sig-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0 0 26px;padding:0;list-style:none;counter-reset:f}
 .sig-flow li{counter-increment:f;padding-top:10px;border-top:2px solid var(--line);font-size:.86rem;line-height:1.3;color:var(--ink-2)}
@@ -284,7 +288,7 @@ h1 em,h2 em{font-weight:300}
 .help p span{display:block;font-family:var(--sans);font-size:.9rem;color:var(--ink-2);margin-top:4px}
 @media (max-width:1000px){.cards{grid-template-columns:1fr 1fr}.card--feature{grid-column:span 2}}
 @media (max-width:640px){.help{padding:20px}.help .btn{width:100%;padding:0 18px;white-space:normal;text-align:center;line-height:1.3}.help p{font-size:1.2rem}}
-@media (max-width:680px){.cards{grid-template-columns:1fr}.card--feature{grid-column:span 1;grid-template-columns:1fr}.card--feature .btn-row{justify-content:flex-start}}
+@media (max-width:680px){.card__offer{text-align:left}.cards{grid-template-columns:1fr}.card--feature{grid-column:span 1;grid-template-columns:1fr}.card--feature .btn-row{justify-content:flex-start}}
 
 /* Process */
 .process{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,40px);counter-reset:p}

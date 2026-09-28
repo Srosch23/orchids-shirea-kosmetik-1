@@ -166,6 +166,13 @@
   }
   var y = document.getElementById('y'); if (y) y.textContent = now.getFullYear();
 
+  /* Links auf eine FAQ-Frage klappen die Antwort gleich auf */
+  var openFaq = function () {
+    var t = location.hash && document.getElementById(location.hash.slice(1));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  };
+  window.addEventListener('hashchange', openFaq); openFaq();
+
   /* Schwebender WhatsApp-Button: erst nach dem ersten Scrollen */
   var fab = document.getElementById('wa-fab');
   if (fab) {

@@ -40,7 +40,7 @@
 <link rel="preload" href="assets/fonts/Figtree-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/schahira.webp" as="image" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/style.css?v=20260928o">
+<link rel="stylesheet" href="assets/css/style.css?v=20260929a">
 
 <script type="application/ld+json">
 {
@@ -126,6 +126,7 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {"@type": "Question", "name": "Gibt es ein Angebot für Neukunden?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Neukundinnen und Neukunden erhalten 20 % Rabatt auf ihre erste Behandlung, zum Beispiel Aquafacial mit Microneedling für 144 € statt 180 €. Code NEU20 bei der Buchung oder im Studio nennen. Einmal pro Person, nicht mit anderen Aktionen kombinierbar."}},
         {"@type": "Question", "name": "Was kostet eine Gesichtsbehandlung in München bei SHIREÁ?", "acceptedAnswer": {"@type": "Answer", "text": "Eine klassische Gesichtsbehandlung kostet 99 €, Aquafacial oder Mikrodermabrasion 100 €, Microneedling ab 150 €. Aquafacial mit Microneedling kostet 180 € statt 250 €. Alle Preise inklusive Mehrwertsteuer und Hautanalyse."}},
         {"@type": "Question", "name": "Ist Microneedling schmerzhaft?", "acceptedAnswer": {"@type": "Answer", "text": "Es kribbelt und an Stirn und Nase pikst es etwas. Auf Wunsch wird vorher eine Betäubungscreme aufgetragen."}},
         {"@type": "Question", "name": "Wie lange ist die Haut nach Microneedling gerötet?", "acceptedAnswer": {"@type": "Answer", "text": "Nach dem Microneedling ist die Haut ein bis zwei Tage gerötet, ähnlich einem leichten Sonnenbrand. Nach einem Aquafacial allein gibt es keine Ausfallzeit."}},
@@ -169,7 +170,7 @@
   <div class="wrap">
     <a href="#stimmen"><span><span class="stars" aria-hidden="true"><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg><svg class="i i--fill"><use href="#star"/></svg></span> 5,0 bei Google · 4,9 bei Treatwell</span></a>
     <span class="hide-sm"><svg class="i"><use href="#award"/></svg> Staatlich anerkannte Fachkosmetikerin</span>
-    <span class="hide-sm"><svg class="i"><use href="#pin"/></svg> Sonnenstraße 4 · am Stachus</span>
+    <a class="hide-sm" href="#neukunden"><span><svg class="i"><use href="#gift"/></svg> Neukunden 20 % auf die erste Behandlung</span></a>
   </div>
 </div>
 
@@ -260,6 +261,8 @@
           <span class="price-block__was"><s>250 €</s>bei Einzelbuchung</span>
           <span class="save"><svg class="i"><use href="#gift"/></svg> 70 € Vorteil</span>
         </div>
+
+        <p class="offer" id="neukunden"><svg class="i"><use href="#gift"/></svg><span><strong>Neukundenangebot</strong> 20 % auf Ihre erste Behandlung, beim Kombi-Paket also <strong>144 € statt 180 €</strong>. Nennen Sie einfach den Code NEU20 bei der Buchung oder im Studio. <a class="link" href="#faq-neukunden">Bedingungen</a></span></p>
 
         <p class="sig-text">Ideal bei großen Poren, fahlem Teint, ersten Fältchen und Aknenarben. Bereits nach der ersten Behandlung wirkt die Haut feiner und ebenmäßiger. Mit drei bis vier Sitzungen im Abstand von vier Wochen erreichen Sie ein nachhaltiges Ergebnis.</p>
 
@@ -360,7 +363,8 @@
         </div>
         <div>
           <p class="card__price" style="text-align:right;margin-bottom:14px">180 € <s style="font-size:1rem;color:#a8a29e;font-family:var(--sans);font-weight:400">250 €</s></p>
-          <div class="btn-row"><a class="btn btn--light" href="#buchen" data-book="Aquafacial + Microneedling (180 €)"><svg class="i"><use href="#cal"/></svg> Termin sichern</a></div>
+          <p class="card__offer">Neukunden 144 € mit Code NEU20</p>
+          <div class="btn-row"><a class="btn btn--light" href="#buchen" data-book="Aquafacial + Microneedling (180 €, Neukundenangebot 144 € mit Code NEU20)"><svg class="i"><use href="#cal"/></svg> Termin sichern</a></div>
         </div>
       </article>
       </div>
@@ -730,6 +734,7 @@
       <h2 id="faq-title">Gut zu wissen <em>vor Ihrer Gesichtsbehandlung</em></h2>
     </div>
     <div class="faq">
+      <details id="faq-neukunden"><summary>Gibt es ein Angebot für Neukunden?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Ja. Neukundinnen und Neukunden erhalten 20 % Rabatt auf ihre erste Behandlung, zum Beispiel das Kombi-Paket aus Aquafacial und Microneedling für 144 € statt 180 €. Nennen Sie dafür den Code NEU20 bei der Buchung per WhatsApp, als Anmerkung bei Treatwell oder direkt im Studio. Der Rabatt wird bei der Bezahlung abgezogen. Das Angebot gilt einmal pro Person und lässt sich nicht mit anderen Aktionen oder Treatwell-Rabatten kombinieren.</p></div></details>
       <details><summary>Was kostet eine Gesichtsbehandlung in München bei SHIREÁ?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Eine klassische Gesichtsbehandlung kostet 99 €, ein Aquafacial oder eine Mikrodermabrasion 100 €, Microneedling ab 150 €. Unsere Empfehlung, Aquafacial mit Microneedling, kostet 180 € statt 250 € bei Einzelbuchung. Alle Preise verstehen sich inklusive Mehrwertsteuer und Hautanalyse.</p></div></details>
       <details><summary>Ist Microneedling schmerzhaft?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Es kribbelt und an Stirn und Nase pikst es etwas. Die meisten sagen hinterher, sie hätten es sich schlimmer vorgestellt. Wenn Sie empfindlich sind, trage ich vorher eine Betäubungscreme auf, die braucht etwa 20 Minuten.</p></div></details>
       <details><summary>Wie lange ist die Haut danach gerötet?<span class="plus"><svg class="i"><use href="#chev"/></svg></span></summary><div><p>Nach dem Microneedling sieht die Haut ein bis zwei Tage aus wie nach einem leichten Sonnenbrand. An dem Tag bitte kein Make-up, keine Sauna, kein Sport, und in der Woche danach Sonnenschutz. Nach einem Aquafacial allein können Sie sofort wieder unter Leute.</p></div></details>
@@ -859,6 +864,6 @@
   </div>
 </dialog>
 
-<script src="assets/js/main.js?v=20260928o" defer></script>
+<script src="assets/js/main.js?v=20260929a" defer></script>
 </body>
 </html>
