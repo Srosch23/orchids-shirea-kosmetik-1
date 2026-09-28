@@ -1,5 +1,111 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo keine Abhaengigkeiten",
+  "buildCommand": "node build.mjs",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/ueber-mich",
+      "destination": "/#schahira",
+      "permanent": true
+    },
+    {
+      "source": "/leistungen",
+      "destination": "/#behandlungen",
+      "permanent": true
+    },
+    {
+      "source": "/preise",
+      "destination": "/#behandlungen",
+      "permanent": true
+    },
+    {
+      "source": "/galerie",
+      "destination": "/#studio",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/#kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/behandlungen/:path*",
+      "destination": "/#behandlungen",
+      "permanent": true
+    },
+    {
+      "source": "/impressum",
+      "destination": "/impressum.html",
+      "permanent": true
+    },
+    {
+      "source": "/datenschutz",
+      "destination": "/datenschutz.html",
+      "permanent": true
+    },
+    {
+      "source": "/agb",
+      "destination": "/agb.html",
+      "permanent": true
+    },
+    {
+      "source": "/Preisliste_Shirea.pdf",
+      "destination": "/#behandlungen",
+      "permanent": true
+    },
+    {
+      "source": "/Datenschutzerklaerung_Shirea.pdf",
+      "destination": "/datenschutz.html",
+      "permanent": true
+    },
+    {
+      "source": "/AGB_Shirea_Kosmetikstudio.pdf",
+      "destination": "/agb.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
   ]
 }

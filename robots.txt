@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/img/src/
+
+Sitemap: https://www.shirea-kosmetik.de/sitemap.xml
