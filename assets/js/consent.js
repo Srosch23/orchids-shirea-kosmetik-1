@@ -11,7 +11,11 @@
   var ADS_ID = 'AW-18478823197';
   /* Conversion-Labels aus Google Ads (Zielvorhaben > Conversions > Aktion > Tag einrichten).
      Leer lassen, solange es die Aktion nicht gibt; dann wird kein Conversion-Ereignis gesendet. */
-  var CONVERSIONS = { treatwell: '', whatsapp: '', telefon: '' };
+  var CONVERSIONS = {
+    treatwell: 'B1gQCMuU5IkdEJ3usetE', // Termin vereinbaren (Klick Online-Buchung)
+    whatsapp: 'DZLVCLz94IkdEJ3usetE', // Kontakt
+    telefon: 'sZs_CMGf5IkdEJ3usetE'   // Kontakt Telefonnummer
+  };
 
   var KEY = 'shirea-consent-v1';
   var MAX_AGE_DAYS = 365; // danach wird erneut gefragt
