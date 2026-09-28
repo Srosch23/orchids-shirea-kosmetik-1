@@ -1,7 +1,7 @@
 # SHIREÁ – Facial & Beauty Space by Schahira
 
 Neue Website für [shirea-kosmetik.de](https://www.shirea-kosmetik.de). Reines HTML/CSS/JS – kein
-Framework, kein Build-Schritt, keine externen Ressourcen, keine Cookies. Läuft auf jedem
+Framework, keine externen Ressourcen ohne Einwilligung. Läuft auf jedem
 Hosting-Paket (statische Dateien reichen; PHP ist nicht nötig).
 
 ## Lokal ansehen
@@ -71,6 +71,23 @@ und Figtree (alles andere). Keine Kursivschnitte im Einsatz.
 
 **Tonalität der Texte:** professionell, vertrauensbildend, ergebnisorientiert; Ich-Form nur
 in der Vorstellung von Schahira. Keine Verkleinerungen („kleines Studio“), keine Floskeln.
+
+## Cookie-Einwilligung und Google Ads
+
+`assets/js/consent.js` zeigt beim ersten Besuch den Banner (auf allen Seiten eingebunden) und
+setzt Google Consent Mode v2 im Basis-Modus um: Vor der Zustimmung wird kein Google-Skript
+geladen, keine Anfrage an Google gesendet und kein Cookie gesetzt (lokal geprüft). Nach
+„Alle akzeptieren“ bzw. Marketing-Zustimmung wird das Google-Tag `AW-18478823197` geladen,
+Consent-Signale erst `denied`, dann `granted`. Entscheidung im localStorage
+(`shirea-consent-v1`), nach 12 Monaten wird neu gefragt. Widerruf über „Cookie-Einstellungen“
+im Footer löscht die `_gcl_*`-Cookies und lädt die Seite neu.
+
+Klicks auf Treatwell, WhatsApp und Telefon werden als Ereignis `buchung_klick` gesendet. Echte
+Google-Ads-Conversions werden erst gezählt, wenn die Conversion-Labels oben in
+`consent.js` (`CONVERSIONS`) eingetragen sind.
+
+Content-Security-Policy in `vercel.json` und `.htaccess` erlaubt dafür nur die nötigen
+Google-Domains.
 
 ## Animationen
 
