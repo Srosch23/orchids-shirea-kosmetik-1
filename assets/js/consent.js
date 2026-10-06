@@ -80,7 +80,7 @@
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a || !tagLoaded || !window.gtag) return;
     var href = a.getAttribute('href');
-    var method = /treatwell\./.test(href) ? 'treatwell' : /^https:\/\/wa\.me\//.test(href) ? 'whatsapp' : /^tel:/.test(href) ? 'telefon' : '';
+    var method = /treatwell\.|trea\.tw\//.test(href) ? 'treatwell' : /^https:\/\/wa\.me\//.test(href) ? 'whatsapp' : /^tel:/.test(href) ? 'telefon' : '';
     if (!method) return;
     gtag('event', 'buchung_klick', { method: method });
     if (CONVERSIONS[method]) gtag('event', 'conversion', { send_to: ADS_ID + '/' + CONVERSIONS[method] });
