@@ -4,7 +4,7 @@
   document.documentElement.classList.remove('no-js');
 
   var WA = '4915565510880';
-  var TW = 'https://www.treatwell.de/ort/shirea-kosmetik/';
+  var TW = 'https://trea.tw/ufLB7sLU8j5c4z423';
 
   /* Header-Schatten beim Scrollen */
   var header = document.querySelector('.header');
